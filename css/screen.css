@@ -26,3 +26,25 @@ html {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
 }
+
+/*                         navigation                                  */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+.nav-menu li {
+    list-style: none;
+    text-decoration: none;
+}
+.logo {
+
+}
