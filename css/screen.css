@@ -44,9 +44,20 @@ html {
 .nav-menu li {
     list-style: none;
     text-decoration: none;
-}
+} 
 .logo {
-
+    border: 1.5px solid var(--main-background);
+    border-radius: 10px;
+    background-color: var(--footer-background);
+    width: 54px;
+    height: 50px;
+    position: fixed;
+    top: 20px;
+    left: 36.7px;
+    height: auto;
+    cursor: pointer;
+    padding: .3rem .1rem;
+    z-index: 1000;
 }
 
 .wrapper {
