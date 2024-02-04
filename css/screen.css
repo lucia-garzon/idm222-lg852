@@ -36,7 +36,7 @@ main {
     
 }
 
-/*                         navigation                                  */
+/* --__--__--_----__--__--_----__--__--_--  navigation   --__--__--_----__--__--_-_--_--  */
 .nav-wrapper {
     display: flex;
     align-items: center;
@@ -70,6 +70,7 @@ main {
 }
 
 .wrapper {
+    /* display: grid; */
     width: 100%;
     /* max-width: 300 px; */
     margin: 0 auto;
@@ -77,6 +78,15 @@ main {
     padding-right: 1.875rem;
 }
 
+/* --__--__--_----__--__--_----__--__--_--    index     --__--__--_--__--__--__--_-- */
 .lucia-presenting {
     border-radius: 200px 200px 0 0; 
+    max-width: 100%;
+}
+.intro-section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
 }
