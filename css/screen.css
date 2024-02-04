@@ -40,7 +40,7 @@ html {
     --font-primary: rubik, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     
     --project-1: #004265;
-    --project-2: #AF0B42;
+    --project-2: #CC3467;
     --project-3: #529797;
     --project-4: #4B5A2B;
 }
@@ -126,7 +126,12 @@ h1, h2, h3 {
     align-items: center;
     justify-content: space-between;
 }
-.proj1-card {
+.project-1-card {
     border: 6px solid var(--project-1); /* Set border width and color */
     border-radius: 37px; 
 }
+.project-2-card {
+    border: 6px solid var(--project-2); /* Set border width and color */
+    border-radius: 37px; 
+}
+
