@@ -41,7 +41,7 @@ html {
     
     --project-1: #004265;
     --project-2: #CC3467;
-    --project-3: #529797;
+    --project-3: #154445;
     --project-4: #4B5A2B;
 }
 
@@ -132,6 +132,10 @@ h1, h2, h3 {
 }
 .project-2-card {
     border: 6px solid var(--project-2); /* Set border width and color */
+    border-radius: 37px; 
+}
+.project-3-card {
+    border: 6px solid var(--project-3); /* Set border width and color */
     border-radius: 37px; 
 }
 
