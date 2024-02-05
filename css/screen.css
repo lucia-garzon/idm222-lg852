@@ -127,15 +127,20 @@ h1, h2, h3 {
     justify-content: space-between;
 }
 .project-1-card {
-    border: 6px solid var(--project-1); /* Set border width and color */
+    border: 6px solid var(--project-1); 
     border-radius: 37px; 
 }
 .project-2-card {
-    border: 6px solid var(--project-2); /* Set border width and color */
+    border: 6px solid var(--project-2); 
     border-radius: 37px; 
 }
 .project-3-card {
-    border: 6px solid var(--project-3); /* Set border width and color */
+    border: 6px solid var(--project-3); 
     border-radius: 37px; 
 }
+.project-4-card {
+    border: 6px solid var(--project-4); 
+    border-radius: 37px; 
+}
+
 
