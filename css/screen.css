@@ -130,6 +130,13 @@ h1, h2, h3 {
     align-items: center;
     justify-content: space-between;
 }
+.projects-grid {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem 3rem;
+    justify-content: center;
+}
 .project-1-card {
     border: 6px solid var(--project-1); 
     border-radius: 37px; 
@@ -146,5 +153,10 @@ h1, h2, h3 {
     border: 6px solid var(--project-4); 
     border-radius: 37px; 
 }
+.index-header-projects {
+    margin: 2rem auto 5.625rem auto;
+    text-align: center;
+}
+
 
 
