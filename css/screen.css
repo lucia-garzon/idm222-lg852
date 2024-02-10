@@ -67,10 +67,12 @@ main {
 p {
     color: var(--primary-text);
     font-family: var(--font-primary);
+    line-height: 28px;
 }
 ul li {
     color: var(--primary-text);
     font-family: var(--font-primary);
+    line-height: 28px;
 }
 
 h1, h2, h3 {
@@ -80,6 +82,7 @@ h1, h2, h3 {
     font-style: bold;
     max-width: 100%;
 }
+
 
 /* --__--__--_----__--__--_----__--__--_--  navigation   --__--__--_----__--__--_-_--_--  */
 .nav-wrapper {
@@ -188,6 +191,7 @@ h1, h2, h3 {
 
 .project-header {
     text-align: center;
+    margin: 6vh auto 2vh auto;
 }
 
 
