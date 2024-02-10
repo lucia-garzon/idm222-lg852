@@ -116,31 +116,52 @@ h1, h2, h3 {
 
 .wrapper {
     /* display: grid; */
-    width: 100%;
+    display: flex;
+    background-color: brown;
+    flex-flow: column nowrap;
+    width: 90%;
     /* max-width: 300 px; */
     margin: 0 auto;
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
 }
 
+
+
 /* --__--__--_----__--__--_----__--__--_--    index     --__--__--_--__--__--__--_-- */
+.intro {
+    padding-left: 6.5vw;
+    padding-right: 6.5vw;
+}
+
+.index-title-name {
+    margin: 6vh auto 4vh auto;
+    text-align: center;
+}
+.index-intro-blurb {
+    text-align: center;
+}
+
 .lucia-presenting {
+    align-items: center;
     border-radius: 200px 200px 0 0; 
     max-width: 100%;
+    margin: 2vh auto;
 }
 .intro-section {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 3fr 1fr;
     column-gap: 2rem;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
-.projects-grid {
-    display: grid;
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    /* display: grid;
     grid-template-columns: 500px 500px;
     grid-template-rows: 1fr 1fr;
     gap: 2rem 3rem;
-    justify-content: center;
+    justify-content: center; */
 }
 .project-1-card {
     border: 6px solid var(--project-1); 
