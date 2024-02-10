@@ -189,9 +189,19 @@ h1, h2, h3 {
 
 /*   projects  */
 
+.project-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
 .project-header {
     text-align: center;
     margin: 6vh auto 2vh auto;
+}
+.rounded-image {
+    border-radius: 14px;
+    max-width: 100%;
+    margin: 1vh auto;
+    height: auto;
 }
 
 
