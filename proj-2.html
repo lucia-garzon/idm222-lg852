@@ -8,7 +8,25 @@
 </head>
 <body>
     <header>
-        
+        <div class="nav-wrapper">
+            <a href="index.html">
+                <img alt="logo" src="images/Logo.webp" class="logo">
+            </a>
+            <ul class="nav-menu">
+                <li>
+                    <a class="nav-link" href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="resume.html">Resume</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="creative.html">Creative</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -19,7 +37,7 @@
 
         <div class="project-wrapper">
             <div class="project-title">
-                <h1>La Michoacana Website Redesign</h1>
+                <h1 class="proj2-title">La Michoacana Website Redesign</h1>
             </div>
 
             <div class="overview">
@@ -36,79 +54,158 @@
                     <p>UI Design, UX Research, Information Architecture</p>
                     <p>Figma, Photoshop</p>
                 </div>
+                <!-- <div class="project-highlighted project2-highlighted">                
+                    <p class="project-highlighted-text"></p>
+                </div> -->
             </div>
 
             <div class="michoacana-buttons">
                 <div class="button-project2-desktop"><a href="https://shorturl.at/gqrV9" target="_blank" class="button-text">Desktop Prototype</a></div>
+                
                 <div class="button-project2-tablet"><a href="https://shorturl.at/yBX47" target="_blank" class="button-text">Tablet Prototype</a></div>
+                
                 <div class="button-project2-mobile"><a href="https://www.figma.com/proto/sXqXDfXzAJLnvH4Byil7Xc/lg852_IDM212_002_Final?page-id=3%3A296&type=design&node-id=880-4632&viewport=-37%2C269%2C0.06&t=bmMVx1JoZtSA0BzV-1&scaling=scale-down&starting-point-node-id=994%3A7848&mode=design" target="_blank" class="button-text">Mobile Prototype</a></div>
             </div>
 
 
             <div class="project-content"> 
-                <div class="project-highlighted project2-highlighted">                
-                    <p class="project-highlighted-text"> I <b>redesigned</b> La Michoacana company's cluttered and outdated interface through a revamped <b>Home page</b>, <b>Product page</b>, and various <b>Product description pages</b>, ultimately <b>enhancing brand identity</b> and fueling interest in the company's products to <b>drive increased sales</b>.</p>
-                </div>
-
-                <h2 id="lamichoacana-intro" class="project_header">Intro</h2>
+                <h2 class="project-header">Intro</h2>
                     <p>As the final project for my UI Design class, I <b>redesigned the website of La Michoacana</b>, a Mexican-inspired ice cream retailer <b>across desktop</b>, <b>tablet</b>, and <b>mobile interfaces</b>. The original website can be found here: <a href="https://www.michoacana.com/" target="_blank">Michoacana.com</a>.</p>
+                    
                     <p>Since the <b>company's goal</b> is to <b>promote</b> the popular <b>Mexican tradition of eating paletas</b> (popsicles), its existing customer base is Latinos and Hispanics. I identified the <b>target user</b> as a <b>Hispanic mom</b> living in the U.S., who wants to remain connected to her culture.</p>
 
-                <img src="images/Michoacana-Homepage.webp" alt="La Michoacana Homepage" class="rounded-image">
-                <img src="images/Michoacana-Homepage-Zoomed-Out.webp" alt="La Michoacana Homepage Zoomed Out" class="rounded-image">
+        <!-- !!!!!!!!      ADD USER PERSONA IMAGE      !!!!!!! -->
 
-                <h2 id="lamichoacana-critique" class="project_header">Critique</h2>
+                <h2 class="project-header">
+                    Critique
+                </h2>
+
                     <p>Although the website has <b>vibrant colors</b> that help to convey its brand identity, by the bottom half of the homepage there are too many colors to look at and the <b>brand image gets lost</b> in the colors of the different background images.</p>
+
+                    <div class="proj2-column1">
+                        <img src="images/Michoacana-Homepage.webp" alt="La Michoacana Homepage" class="rounded-image">
+                        <img src="images/Michoacana-Homepage-Zoomed-Out.webp" alt="La Michoacana Homepage Zoomed Out" class="rounded-image">
+                    </div>
+                    
                     <p><b>Not enough emphasis</b> is placed on <b>where to buy products</b>, as the company chooses to promote blog posts first on the homepage.</p>
+                    
                     <p>After organizing a <b>card sort</b>, I changed the information architecture of the website to focus more on the company's products.</p>
                 
-                <h2 id="lamichoacana-process" class="project_header">Process</h2>
-                    <p>Through Figma, I <b>redesigned new and existing pages</b> of the website and <b>enhanced the website's branding</b> overall across three interfaces. </p>
+                <h2 class="project-header">
+                    My First wireframes
+                </h2>
+                    <p>Based on the results of my <b>card sort</b>, I created the initial wireframes for the home page. Content wise, I added a new Our Purpose section and removed the original website's carousel of blog posts. I did this with the intent of <b>listening</b> to the users and <b>displaying more engaging content</b>.</p>
+
+                    <p>While I explored the content and appearance differently, I admittedly <b>stuck too close</b> to the original website design, and <b>sought to improve</b> my design by continually ideating and <b>asking questions</b>.</p>
+
+            <!-- !!!!!!!!      ADD WIREFRAMES IMAGE       !!!!!!!!!! -->
+                
+                
+                <h2 class="project-header">
+                    Reevaluating the design
+                </h2>
+                    <p>Through Figma, I <b>redesigned new and existing pages</b> of the website and <b>enhanced</b> the website's <b>branding</b> overall across three interfaces.</p>
                     
-                    <p>For example, I determined the two colors <b>hot pink and bright yellow</b> best <b>represent La Michoacana's brand</b> and strategically <b>altered the typography</b> of the website to better <b>reflect the playful design</b> of the previous website.</p>
+                    <p>For example, in my atomic design system I determined the two colors <b>hot pink</b> and <b>bright yellow</b> best <b>represent La Michoacana's brand</b>. Hot pink is the color most featured in their current logo and website, and yellow signifies the tropical fruit flavors that the company is most recognizable for.</p>
 
-                    <img src="images/Michoacana-Product-Page-Before.webp" alt="La Michoacana product page before" class="rounded-image">
-                    <figure>
-                        <img alt="La Michoacana product page after" src="images/Michoacana-Product-Page-After.webp" class="rounded-image"/>    
-                        <figcaption>The user discovers products in a more engaging format.</figcaption>
-                    </figure>
+                    <p>Furthermore, I strategically <b>altered the typography</b> in the redesign to better <b>reflect the playful personality</b> of the previous website, focusing on a brush font to encourage that message and using a sans-serif font for the copy to maintain readability.</p>
+                
+            <!-- !!!!!!!!      ADD ATOMIC DESIGN IMAGE       !!!!!!!!!! -->       
 
-                    <p>My <b>user journey</b> consists of learning about the company through an <b>Our Story page</b>, navigating to the <b>Products page</b>, exploring the <b>Product Description page</b> to learn about the paletas sold by this company, and finding out about how to purchase them.</p>
-
-                    <img src="images/Michoacana-Product-Desc-Before.webp" alt="Inkling interaction guides" class="rounded-image">
-                    <figure>
-                        <img alt="La Michoacana product description page after" src="images/Michoacana-Product-Desc-After.webp" class="rounded-image"/>    
-                        <figcaption>Reevaluation of the Product Description page</figcaption>
-                    </figure>
-
+                <h2 class="project-header">
+                    Improving the customer journey
+                </h2>
+                    <p>
+                        Other changes made include a showing <b>clearer separation of content</b>, adding <b>signifiers</b> where necessary, and following <b>touch-size targets</b> in the buttons to adhere to usability standards.
+                    </p>
+                    <p>
+                        My <b>user journey</b> consists of learning about the company through an <b>Our Story page</b>, navigating to the <b>Products page</b> of product types offered, pressing popsicles and looking at the different flavors in the <b>Popsicle Flavors page</b>, then finding out how to purchase the product in the <b>Product Description page</b>.
+                    </p>
                     <ul>
-                        <li><p>In my redesign, I streamlined the Product page and <b>modernized</b> the Paleta product pages to <b>encourage interest in the user</b>in learning more about La Michoacana's products.</p></li>
-                        <li><p>Below is this <b>product discovery user flow</b> illustrated in all three devices.</p></li>
-                        <li>I also encourage you to visit my prototypes to <b>discover my animations</b> which enhanced this flow. </li>
+                        <li>
+                            The experience of product discovery is improved through <b>Figma-animated microinteractions</b> in the Popsicle Flavors page, <b>increasing more space</b> in the Product Description page, and utilizing a textured <b>Photoshop brush background</b> throughout the site.
+                        </li>
                     </ul>
                     
-                    <img src="images/Michoacana-Final-Desktop.webp" alt="Final design desktop" class="rounded-image">
-                    <img src="images/Michoacana-Final-Tablet.webp" alt="Final design tablet" class="rounded-image">
-                    <img src="images/Michoacana-Final-Mobile.webp" alt="Final design mobile" class="rounded-image">
-                
-                <h2 id="lamichoacana-reflection" class="project_header">Reflection</h2>
-                    <p>This project pushed me to explore designing on multiple sizes, and how best to utilize the space given. Overall, I am proud of how I reflected the company's <b>branding</b> through <b>strategic typography</b> and <b>creative graphical designs</b> to define the look of the website. I learned more about <b>Figma animations</b>, and how to utilize them to intrigue the user.</p>
-
-                    <p>If I could go back on my work, <b>I would conduct another card sort</b> to evaluate the IA further. I realized <b>it's never wrong to engage in user testing multiple times</b> since it produces designs better informed by their target user.</p>
-
-                    <p>I have much more to learn about <b>how UX intermingles with UI design</b> and I am excited about future opportunities in this field.</p>
-
-                    <p>To further understand the interface I have redesigned and the user journey I have illustrated, <b>I urge you to explore my prototypes</b> on Figma.</p>
-
-                    <div class="michoacana-buttons-bottom">
-                        <div class="button-project2-desktop"><a href="https://shorturl.at/gqrV9" target="_blank" class="button-text">Desktop Prototype</a></div>
-                        <div class="button-project2-tablet"><a href="https://shorturl.at/yBX47" target="_blank" class="button-text">Tablet Prototype</a></div>
-                        <div class="button-project2-mobile"><a href="https://www.figma.com/proto/sXqXDfXzAJLnvH4Byil7Xc/lg852_IDM212_002_Final?page-id=3%3A296&type=design&node-id=880-4632&viewport=-37%2C269%2C0.06&t=bmMVx1JoZtSA0BzV-1&scaling=scale-down&starting-point-node-id=994%3A7848&mode=design" target="_blank" class="button-text">Mobile Prototype</a></div>
+                    <!-- add animation here w opacity, the images r on top of each other -->
+                    <div class="before-after-1">
+                        <img src="images/Michoacana-Product-Page-Before.webp" alt="La Michoacana product page before" class="rounded-image">
+                        
+                        <figure>
+                            <img alt="La Michoacana product page after" src="images/Michoacana-Product-Page-After.webp" class="rounded-image"/>    
+                            <figcaption>The user discovers products in a more engaging format.</figcaption>
+                        </figure>
                     </div>
-            </div>
 
+                    <div class="before-after-2">
+                        <img src="images/Michoacana-Product-Desc-Before.webp" alt="La Michoacana product description page before" class="rounded-image">
+                        <figure>
+                            <img alt="La Michoacana product description page after" src="images/Michoacana-Product-Desc-After.webp" class="rounded-image"/>    
+                            <figcaption>Before and after of the Product Description page</figcaption>
+                        </figure>
+                    </div>
+                    
+                    <h2 class="project-header">
+                        Final Mockups
+                    </h2>
+                        <p>
+                            Below is this <b>product discovery user flow</b> illustrated in all three devices. I encourage you to visit my prototypes to <b>discover my animations</b> which enhanced this flow.</p>
+
+                        <div class="michoacana-buttons-bottom">
+                            <div class="button-project2-desktop"><a href="https://shorturl.at/gqrV9" target="_blank" class="button-text">Desktop Prototype</a></div>
+                            
+                            <div class="button-project2-tablet"><a href="https://shorturl.at/yBX47" target="_blank" class="button-text">Tablet Prototype</a></div>
+                            
+                            <div class="button-project2-mobile"><a href="https://www.figma.com/proto/sXqXDfXzAJLnvH4Byil7Xc/lg852_IDM212_002_Final?page-id=3%3A296&type=design&node-id=880-4632&viewport=-37%2C269%2C0.06&t=bmMVx1JoZtSA0BzV-1&scaling=scale-down&starting-point-node-id=994%3A7848&mode=design" target="_blank" class="button-text">Mobile Prototype</a></div>
+                        </div>
+                    
+                        <img src="images/Michoacana-Final-Desktop.webp" alt="Final design desktop" class="rounded-image">
+                        
+                        <img src="images/Michoacana-Final-Tablet.webp" alt="Final design tablet" class="rounded-image">
+                        
+                        <img src="images/Michoacana-Final-Mobile.webp" alt="Final design mobile" class="rounded-image">
+                
+                
+                    <h2 class="project-header">Building a responsive design proved exciting</h2>
+                    
+                        <p>
+                            This project pushed me to explore designing on multiple sizes, and how best to utilize the space given. Overall, I am proud of how I reflected the company's <b>branding</b> through <b>strategic typography</b> and <b>creative graphical designs</b> to define the look of the website. I learned more about <b>Figma animations</b>, and how to utilize them to intrigue the user.
+                        </p>
+
+                        <p>
+                            If I could go back on my work, <b>I would conduct another card sort</b> to evaluate the IA further. I realized <b>it's never wrong to engage in user testing multiple times</b> since it produces designs better informed by their target user.
+                        </p>
+
+                        <p>
+                            I have much more to learn about <b>how UX intermingles with UI design</b> and I am excited about future opportunities in this field.
+                        </p>
+
+                        <p>
+                            To further understand the interface I have redesigned and the user journey I have illustrated, <b>I urge you to explore my prototypes</b> on Figma.
+                        </p>
+
+                <div class="more-projects">
+                    <h3 class="project-header">
+                        More Projects
+                    </h3>
+                    <div class="more-projects-images">
+                        <div>
             
-        </div>
+                        </div>
+                
+                        <div>
+                
+                        </div>
+                
+                        <div>
+                
+                        </div>
+                        
+                        </div>
+                </div>
+            </div>  <!-- project-content excluding overview section -->
+        </div>   <!-- project-wrapper -->
+        
 
     </main>
 
