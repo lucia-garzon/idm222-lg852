@@ -68,6 +68,11 @@ p {
     color: var(--primary-text);
     font-family: var(--font-primary);
 }
+ul li {
+    color: var(--primary-text);
+    font-family: var(--font-primary);
+}
+
 h1, h2, h3 {
     color: var(--primary-text);
     font-family: var(--font-header);
@@ -155,6 +160,12 @@ h1, h2, h3 {
 }
 .index-header-projects {
     margin: 2rem auto 3rem auto;
+    text-align: center;
+}
+
+/*   projects  */
+
+.project-header {
     text-align: center;
 }
 
