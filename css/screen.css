@@ -32,9 +32,10 @@ html {
     --secondary-text: #ffffff;
     --text-link-before: #005C46;
     --main-background: #FFFEE2;
-    --footer-background: #9B4D36;
+    --footer-background: #884430;
     --button-color: #344D00;
     --case-study: #165954;
+    --hover-icon: #FFD80B;
 
     --font-header: montserrat, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --font-primary: rubik, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -85,7 +86,7 @@ h1, h2, h3 {
 
 
 
-/* --__--__--_----__--__--_----__--__--_--  navigation   --__--__--_----__--__--_-_--_--  */
+/* --__--__--_----__--__--_----__--__--_--  navigation and footer   --__--__--_----__--__--_-_--_--  */
 .nav-wrapper {
     display: flex;
     align-items: center;
@@ -161,6 +162,10 @@ footer {
 .footer-icons a {
     text-decoration: none;
 }
+/* img:hover {
+    filter: saturate(120%);
+    filter: drop-shadow(2px 2px 5px #99D0EF);
+} */
 
 
 /* --__--__--_----__--__--_----__--__--_--    index     --__--__--_--__--__--__--_-- */
