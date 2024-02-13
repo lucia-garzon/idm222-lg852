@@ -251,6 +251,12 @@ footer {
     margin: 1vh auto;
     height: auto;
 }
-
+.proj1-cover {
+    border-radius: 14px;
+    margin-top: 4vh;
+    height: auto;
+    width: 100%;
+    
+}
 
 
