@@ -175,6 +175,10 @@ footer {
 
 
 .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
     padding-left: 6.5vw;
     padding-right: 6.5vw;
 }
@@ -188,7 +192,6 @@ footer {
 }
 
 .lucia-presenting {
-    align-items: center;
     border-radius: 200px 200px 0 0; 
     max-width: 100%;
     margin: 2vh auto;
