@@ -271,11 +271,16 @@ footer {
 }
 
 
+
+
 .proj1-cover {
     border-radius: 14px;
     margin-top: 4vh;
     height: auto;
     width: 100%;
+}
+.proj1-title {
+    color: var(--project-1-dark);
 }
 .overview-proj1 {
     background-color: var(--project-1-light);
