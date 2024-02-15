@@ -268,5 +268,17 @@ footer {
 .secondary-text {
     color: var(--secondary-text);
 }
+.bubbles {
+    display: flex;
+    flex-flow: row wrap;
+    /* row-gap: 1vh; */
+}
+.bubble {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--project-1-light);
+    border-radius: 20px;
+    border: 2px solid var(--project-1-dark);
+}
 
 
