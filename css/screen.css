@@ -94,7 +94,8 @@ h1, h2, h3 {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: #9b4d36; /* Brown color */
+    background-color: var(--main-background); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .nav-menu {
     display: flex;
@@ -102,7 +103,7 @@ h1, h2, h3 {
 }
 .nav-link {
     text-decoration: none;
-    color: var(--secondary-text);
+    color: var(--primary-text);
 }
 .nav-menu li {
     list-style: none;
@@ -242,6 +243,10 @@ footer {
 .project-wrapper {
     display: flex;
     flex-flow: column nowrap;
+}
+.project-title {
+    text-align: center;
+    margin-top: 2vh;
 }
 .project-header {
     text-align: center;
