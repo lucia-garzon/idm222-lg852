@@ -28,11 +28,10 @@
 
 
 html {
-    --primary-text: #55280C;
-     /*5D2B0E  */
+    --primary-text: #08201E;
     --secondary-text: #ffffff;
     --text-link-before: #005C46;
-    --main-background: #FFFEE2;
+    --main-background: #DDFFFD;
     --footer-background: #884430;
     --button-color: #344D00;
     --case-study: #165954;
