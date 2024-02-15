@@ -49,9 +49,6 @@
             width="430"
             class="proj1-cover">
         <div class="project-wrapper">
-            
-            
-
             <!-- phillyreach title before content -->
             <div class="project-title">
                 <h1 class="proj1-title">PhillyReach</h1>
@@ -68,7 +65,13 @@
                     <h3>Details</h3>
                     <h3>UI/UX Intern</h3>
                     <p>May-Aug 2023</p>
-                    <p>UI/UX Design &amp Research, Product Validation, Branding</p>
+                    
+                    <div class="bubbles">
+                        <p class="bubble">UI/UX Design &amp Research</p>
+                        <p class="bubble">Product Validation</p>
+                        <p class="bubble">Branding</p>
+                    </div>
+
                     <p>Figma, Miro</p>
                 </div>
             </div>
@@ -92,6 +95,7 @@
                     
                     <!-- desk research image -->
                     <img alt="PhillyReach Desk Research" class="rounded-image" src="images/PhillyReach-Desk-Research.webp"> 
+                    <!-- Phillyreach-desk-research-mobile.svg -->
 
                     <p>The solution that we came up with is <b>PhillyReach</b>, <b>a program-finding desktop website for working parents in Philadelphia</b>.</p>
                     <ul>
@@ -119,7 +123,14 @@
 
                     <!-- laura user persona image -->
                     <div class="proj1-columns1">
-                        <img alt="Phillyreach user persona" class="rounded-image" src="images/PhillyReach-Laura.webp">
+                        <!-- <img alt="Phillyreach user persona" class="rounded-image" src="images/PhillyReach-Laura.webp 855w, PhillyReach-Laura-mobile-optimized.jpg"> -->
+
+                        <picture>
+                            <source media="(min-width: 600px)" srcset="graphics/PhillyReach-Laura-desktop-optimized.jpg, graphics/PhillyReach-Laura-tablet-optimized.jpg 730w, graphics/PhillyReach-Laura-mobile-optimized.jpg 300w"
+                                    sizes="(min-width: 600px) 33.3vw, 100vw">
+                            <img src="graphics/PhillyReach-Laura-mobile-optimized.jpg" alt="Phillyreach user persona">
+                        </picture>
+                        
 
                         <p>This is demonstrated with Laura, our user persona who is a single working mother <b>struggling</b> from a lack of free time and <b>scattered resources</b> for support.</p>
                     </div>
@@ -205,7 +216,7 @@
 
                 <div class="proj1-reflection">
                     <h2 class="project-header">
-                        What I learned from this prooject
+                        What I learned from this project
                     </h2>
                         <p>Despite the efforts I placed in this project, <b>I feel more could be done to solve this problem</b>. At week 9 of the design process, I <b>presented my work to industry professionals at Comcast</b> as part of my internship program in order to receive critiques. <b>The advice I received</b> back was not only kind but also <b>very insightful</b> in ways I could have expanded on my design.</p>
                         <ul>
