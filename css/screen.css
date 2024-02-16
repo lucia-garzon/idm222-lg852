@@ -26,7 +26,6 @@
     font-style: italic;
 }
 
-
 html {
     --primary-text: #08201E;
     --secondary-text: #ffffff;
@@ -243,6 +242,9 @@ footer {
 .project-wrapper {
     display: flex;
     flex-flow: column nowrap;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 .project-title {
     text-align: center;
@@ -253,6 +255,7 @@ footer {
     margin: 7vh auto 2vh auto;
 }
 .rounded-image {
+    display: block;
     border-radius: 14px;
     max-width: 100%;
     margin: 1vh auto;
@@ -304,5 +307,10 @@ footer {
     border-radius: 20px;
     border: 2px solid var(--project-1-dark);
 }
-
+.proj1-columns1 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
 
