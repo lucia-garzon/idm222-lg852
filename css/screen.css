@@ -42,7 +42,8 @@ html {
     
     --project-1-light: #92CEF1;
     --project-1-dark: #004265;
-    --project-2-dark: #CC3467;
+    --project-2-dark: #A31945; 
+    /* #CC3467 */
     --project-2-light: #FFD5E3;
     --project-3-dark: #154445;
     --project-4-dark: #4B5A2B;
@@ -107,6 +108,10 @@ h1, h2, h3, h4 {
     h4 {
         font-size: 18px;
     }
+    .button {
+        font-size: 1rem;
+        line-height: 24px;
+    }
     caption {
         font-size: 16px;
     }
@@ -128,7 +133,7 @@ h1, h2, h3, h4 {
     h4 {
         font-size: 18px;
     }
-    button {
+    .button {
         font-size: 1rem;
         line-height: 24px;
     }
@@ -153,7 +158,7 @@ h1, h2, h3, h4 {
     h4 {
         font-size: 22px;
     }
-    button {
+    .button {
         font-size: 1rem;
         line-height: 24px;
     }
@@ -336,19 +341,55 @@ footer {
     margin: 1vh auto;
     height: auto;
 }
-.button-prototype {
+
+
+
+/* .button-prototype {
     background-color: var(--button-color);
     color: white;
     font-family: var(--font-primary);
-    padding: 17px;
     border: none;
     border-radius: 44px;
     cursor: pointer;
     font-size: 1rem;
     text-decoration: none; 
+    margin: 1vh;
+    padding: 17px 40px;
+    
+}
+proj2-buttons {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1vh auto;
+} */
+
+.button-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
 }
 
+.button {
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 44px;
+    cursor: pointer;
+    background-color: var(--button-color);
+}
+.button-prototype {
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    margin: .7rem;
+    width: fit-content;
+}
 
+@media screen and (min-width: 576px) {
+    .button-container {
+        flex-direction: row; /* Buttons will be in a row on screens wider than 576px */
+        justify-content: center; /* Centers the buttons horizontally */
+    }
+}
 
 
 .proj1-cover {
@@ -393,8 +434,6 @@ footer {
 .bubble-4 {
     border: 2px solid var(--project-4-dark);
 }
-    
-
 .proj1-columns1 {
     display: flex;
     flex-flow: column nowrap;
@@ -402,6 +441,9 @@ footer {
     justify-content: center;
 }
 
+.proj2-title {
+    color: var(--project-2-dark);
+}
 .overview-blurb-proj2 {
     background-color: var(--project-2-light);
     padding: 20px 30px 20px 30px;
