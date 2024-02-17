@@ -380,8 +380,21 @@ footer {
     padding: 5px 10px;
     background-color: var(--main-background);
     border-radius: 20px;
+}
+.bubble-1 {
     border: 2px solid var(--project-1-dark);
 }
+.bubble-2 {
+    border: 2px solid var(--project-2-dark);
+}
+.bubble-3 {
+    border: 2px solid var(--project-3-dark);
+}
+.bubble-4 {
+    border: 2px solid var(--project-4-dark);
+}
+    
+
 .proj1-columns1 {
     display: flex;
     flex-flow: column nowrap;
