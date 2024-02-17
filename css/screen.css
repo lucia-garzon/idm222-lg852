@@ -29,7 +29,7 @@
 html {
     --primary-text: #08201E;
     --secondary-text: #ffffff;
-    --text-link-before: #005C46;
+    --link-before: #005C46; 
     --main-background: #DDFFFD;
     --footer-background: #884430;
     --button-color: #005C46;
@@ -86,6 +86,66 @@ h1, h2, h3, h4 {
     font-weight: 700;
     font-style: bold;
     max-width: 100%;
+}
+
+/* transition: [property] [duration] [timing-function] [delay]; */
+a {
+    color: var(--link-before);
+    /* transition: color .5s ease-in .1s,
+    font-style .5s ease-out .1s; */
+
+    transition: background-color 0.3s ease-in, color 0.3s, font-style .3s ease-out;
+}
+a:hover {
+    background-color: #08201E; /* Dark color for hover state */
+    color: #ffffff;
+    font-style: italic;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.button {
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 44px;
+    cursor: pointer;
+    background-color: var(--button-color);
+
+    transition: transform 0.3s;
+}
+.button-prototype {
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    margin: .7rem;
+    width: fit-content;
+}
+
+.button:hover {
+    font-style: normal;
+    animation: overshoot 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+@keyframes overshoot {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    
+    100% {
+        transform: scale(1); 
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .button-container {
+        flex-direction: row; /* Buttons will be in a row on screens wider than 576px */
+        justify-content: center; /* Centers the buttons horizontally */
+    }
 }
 
 /* Mobile styles */
@@ -363,33 +423,6 @@ proj2-buttons {
     margin: 1vh auto;
 } */
 
-.button-container {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-}
-
-.button {
-    color: white;
-    font-family: var(--font-primary);
-    font-size: 1rem;
-    text-decoration: none;
-    border-radius: 44px;
-    cursor: pointer;
-    background-color: var(--button-color);
-}
-.button-prototype {
-    padding: 1rem 2rem; /* Adjust padding as needed */
-    margin: .7rem;
-    width: fit-content;
-}
-
-@media screen and (min-width: 576px) {
-    .button-container {
-        flex-direction: row; /* Buttons will be in a row on screens wider than 576px */
-        justify-content: center; /* Centers the buttons horizontally */
-    }
-}
 
 
 .proj1-cover {
