@@ -42,9 +42,10 @@ html {
     
     --project-1-light: #92CEF1;
     --project-1-dark: #004265;
-    --project-2: #CC3467;
-    --project-3: #154445;
-    --project-4: #4B5A2B;
+    --project-2-dark: #CC3467;
+    --project-2-light: #FFD5E3;
+    --project-3-dark: #154445;
+    --project-4-dark: #4B5A2B;
 }
 
 * {
@@ -359,7 +360,7 @@ footer {
 .proj1-title {
     color: var(--project-1-dark);
 }
-.overview-proj1 {
+.overview-blurb-proj1 {
     background-color: var(--project-1-light);
     padding: 20px 30px 20px 30px;
     border-radius: 14px;
@@ -386,5 +387,12 @@ footer {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+}
+
+.overview-blurb-proj2 {
+    background-color: var(--project-2-light);
+    padding: 20px 30px 20px 30px;
+    border-radius: 14px;
+    border: 2px solid var(--project-2-dark);
 }
 
