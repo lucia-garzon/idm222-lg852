@@ -95,6 +95,9 @@ a {
     font-style .5s ease-out .1s; */
 
     transition: background-color 0.3s ease-in, color 0.3s, font-style .3s ease-out;
+
+    padding: 0.5rem 1rem; 
+    border-radius: 20px; 
 }
 a:hover {
     background-color: #08201E; /* Dark color for hover state */
