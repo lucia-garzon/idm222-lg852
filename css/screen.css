@@ -78,7 +78,7 @@ ul li {
     line-height: 28px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     color: var(--primary-text);
     font-family: var(--font-header);
     font-weight: 700;
@@ -103,6 +103,9 @@ h1, h2, h3 {
         font-size: 20px;
         line-height: 33px;
     }
+    h4 {
+        font-size: 18px;
+    }
     caption {
         font-size: 16px;
     }
@@ -118,8 +121,11 @@ h1, h2, h3 {
         line-height: 33px;
     }
     h3 {
-        font-size: 20px;
+        font-size: 22px;
         line-height: 33px;
+    }
+    h4 {
+        font-size: 18px;
     }
     button {
         font-size: 1rem;
@@ -142,6 +148,9 @@ h1, h2, h3 {
     h3 {
         font-size: 24px;
         line-height: 33px;
+    }
+    h4 {
+        font-size: 22px;
     }
     button {
         font-size: 1rem;
