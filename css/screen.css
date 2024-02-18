@@ -31,7 +31,7 @@ html {
     --secondary-text: #ffffff;
     --link-before: #005C46; 
     --main-background: #DDFFFD;
-    --footer-background: #884430;
+    --footer-background: #005454;
     --button-color: #005C46;
     /* 344D00 */
     --case-study: #165954;
@@ -179,7 +179,6 @@ a:hover {
         font-size: 16px;
     }
 }
-
   /* Tablet styles */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     h1 {
@@ -204,7 +203,6 @@ a:hover {
         font-size: 14px;
     }
 }
-
   /* Desktop styles */
 @media screen and (min-width: 1024px) {
     h1 {
@@ -349,6 +347,50 @@ footer {
     align-items: center;
     justify-content: space-between; */
 }
+.card-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    row-gap: .75rem;
+}
+
+.button-card {
+    color: var(--secondary-text);
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer; 
+    transition: all .3s ease .1s;
+}
+.button-card1 {
+    border: 2px solid var(--project-1-dark); 
+    background-color: var(--project-1-dark);
+}
+.button-card1:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 44px;
+    background-color: var(--project-1-dark);
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .projects {
     display: flex;
     justify-content: center;
@@ -360,7 +402,7 @@ footer {
     justify-content: center; */
 }
 .project-1-card {
-    border: 6px solid var(--project-1); 
+    border: 6px solid var(--project-1-dark); 
     border-radius: 37px; 
 }
 .project-2-card {
