@@ -352,12 +352,21 @@ footer {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    border: 5px solid var(--project-1-dark); 
+    border-radius: 44px;
+    height: auto;
+    width: fit-content;
+    padding: 2vh;
+}
+.card-text {
+    margin: .5vh;
 }
 .card-icons {
     display: flex;
     flex-flow: row nowrap;
     gap: .75rem;
     height: 5vh;
+    margin-top: 2vh;
 }
 
 .button-card {
@@ -367,11 +376,11 @@ footer {
     text-decoration: none;
     cursor: pointer; 
     transition: all .3s ease .1s;
+    margin-top: 3vh;
 }
 .button-card1 {
     border: 2px solid var(--project-1-dark); 
     background-color: var(--project-1-dark);
-    margin-top: 3vh;
 }
 .button-card1:hover {
     font-style: normal;
@@ -380,7 +389,9 @@ footer {
     background-color: var(--project-1-dark);
     transform: translateY(-5px);
 }
-
+.card-image {
+    margin-top: 3vh;
+}
 
 
 
