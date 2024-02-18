@@ -356,7 +356,8 @@ footer {
 .card-icons {
     display: flex;
     flex-flow: row nowrap;
-    row-gap: .75rem;
+    gap: .75rem;
+    height: 5vh;
 }
 
 .button-card {
@@ -370,6 +371,7 @@ footer {
 .button-card1 {
     border: 2px solid var(--project-1-dark); 
     background-color: var(--project-1-dark);
+    margin-top: 3vh;
 }
 .button-card1:hover {
     font-style: normal;
