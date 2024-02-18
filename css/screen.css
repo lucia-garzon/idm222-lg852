@@ -124,7 +124,7 @@ a:hover {
     transition: transform 0.3s;
 }
 .button-prototype {
-    padding: 1rem 2rem; /* Adjust padding as needed */
+    padding: 1rem 2rem; 
     margin: .7rem;
     width: fit-content;
 }
@@ -276,6 +276,7 @@ a:hover {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 footer {
     display: flex;
@@ -448,6 +449,7 @@ footer {
     justify-content: center;
     flex-flow: column nowrap;
     gap: 3vh;
+    margin-bottom: 8vh;
     /* display: grid;
     grid-template-columns: 500px 500px;
     grid-template-rows: 1fr 1fr;
@@ -589,3 +591,47 @@ proj2-buttons {
 .proj4-title {
     color: var(--project-4-dark);
 }
+
+/*  resume */
+.resume-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.resume-job-title, .resume-links {
+    margin: 0;
+}
+.resume-job-title {
+    border: 1.5px solid black;
+    border-radius: 7px;
+    padding-left: 1vw;
+    padding-right: 2vw;
+    width: fit-content;
+}
+
+.button-resume-header {
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 44px;
+    cursor: pointer;
+    background-color: var(--button-color);
+
+    padding: 1rem 2rem; 
+    margin: .7rem;
+    width: fit-content;
+
+    margin-top: 5vh;
+}
+.line-break {
+    border: none;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-top: 3px solid var(--primary-text);
+    margin: 10px 0;
+}
+
