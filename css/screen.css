@@ -42,10 +42,12 @@ html {
     
     --project-1-light: #92CEF1;
     --project-1-dark: #004265;
+    --project-2-light: #FFD5E3;
     --project-2-dark: #A31945; 
     /* #CC3467 */
-    --project-2-light: #FFD5E3;
+    --project-3-light: #E2FFFF;
     --project-3-dark: #154445;
+    --project-4-light: #E4FCCF;
     --project-4-dark: #4B5A2B;
 }
 
@@ -352,11 +354,25 @@ footer {
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    border: 5px solid var(--project-1-dark); 
     border-radius: 44px;
     height: auto;
     width: fit-content;
-    padding: 2vh;
+}
+.card-1 {
+    border: 5px solid var(--project-1-dark); 
+    background-color: #C6ECFF;
+}
+.card-2 {
+    border: 5px solid var(--project-2-dark); 
+    background-color: var(--project-2-light)
+}
+.card-3 {
+    border: 5px solid var(--project-3-dark); 
+    background-color: var(--project-3-light)
+}
+.card-4 {
+    border: 5px solid var(--project-4-dark); 
+    background-color: var(--project-4-light)
 }
 .card-text {
     margin: .5vh;
@@ -368,7 +384,14 @@ footer {
     height: 5vh;
     margin-top: 2vh;
 }
-
+.card-image-1 {
+    margin-top: 3vh;
+    border-radius: 0 0 39px 0; 
+}
+.card-image-2 {
+    margin-top: 3vh;
+    border-radius: 0 0 39px 39px; 
+}
 .button-card {
     color: var(--secondary-text);
     font-family: var(--font-primary);
@@ -379,8 +402,16 @@ footer {
     margin-top: 3vh;
 }
 .button-card1 {
-    border: 2px solid var(--project-1-dark); 
     background-color: var(--project-1-dark);
+}
+.button-card2 {
+    background-color: var(--project-2-dark);
+}
+.button-card3 {
+    background-color: var(--project-3-dark);
+}
+.button-card4 {
+    background-color: var(--project-4-dark);
 }
 .button-card1:hover {
     font-style: normal;
@@ -389,9 +420,28 @@ footer {
     background-color: var(--project-1-dark);
     transform: translateY(-5px);
 }
-.card-image {
-    margin-top: 3vh;
+.button-card2:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 44px;
+    background-color: var(--project-2-dark);
+    transform: translateY(-5px);
 }
+.button-card3:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 44px;
+    background-color: var(--project-3-dark);
+    transform: translateY(-5px);
+}
+.button-card4:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: 44px;
+    background-color: var(--project-4-dark);
+    transform: translateY(-5px);
+}
+
 
 
 
@@ -542,3 +592,10 @@ proj2-buttons {
     border: 2px solid var(--project-2-dark);
 }
 
+.proj3-title {
+    color: var(--project-3-dark);
+}
+
+.proj4-title {
+    color: var(--project-4-dark);
+}
