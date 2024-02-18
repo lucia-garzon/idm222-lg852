@@ -443,21 +443,11 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .projects {
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
+    gap: 3vh;
     /* display: grid;
     grid-template-columns: 500px 500px;
     grid-template-rows: 1fr 1fr;
