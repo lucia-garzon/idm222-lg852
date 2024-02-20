@@ -267,15 +267,14 @@ a:hover {
 }
 
 .wrapper {
-    /* display: grid; */
     grid-area: content;
     display: flex;
     flex-flow: column nowrap;
     width: 90%;
-    /* max-width: 300 px; */
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 
 footer {
@@ -321,6 +320,47 @@ footer {
 
 
 .intro {
+    flex: 1; /* Allows the text section to grow */
+    padding: 20px; /* Adjust as needed */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.intro-blurb {
+    margin: 10vh auto 5vh auto;
+    font-size: 3vh;
+    line-height: 4vh;
+}
+
+@media screen and (min-width: 768px) { 
+    .intro-blurb {
+        margin-right: 5vh;
+    }
+}
+
+.index-title-name, .index-intro-blurb {
+    text-align: left; /* Align text to the left */
+    margin: 10px 0; /* Adjust spacing as needed */
+}
+
+.lucia-presenting {
+    border-radius: 200px 200px 0 0; 
+    width: 30vw;
+    height: fit-content;
+}
+
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .intro {
+        flex-direction: column;
+    }
+    
+    .intro, .lucia-presenting {
+        width: 100%; 
+    }
+}
+
+/* .intro {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -343,9 +383,9 @@ footer {
     max-width: 100%;
     margin: 2vh auto;
     height: 500px;
-}
+} */
 
-.card-container {
+/* .card-container {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -353,7 +393,31 @@ footer {
     border-radius: 44px;
     height: auto;
     width: fit-content;
+} */
+
+/* .card-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 44px;
+    height: auto;
+    max-width: 90%; 
+    overflow: hidden; 
+    margin: 0 auto; 
+    
+} */
+
+.card-container {
+    align-items: center;
+    border-radius: 44px;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+
 }
+
+
 .card-1 {
     border: 5px solid var(--project-1-dark); 
     background-color: #C6ECFF;
@@ -383,10 +447,12 @@ footer {
 .card-image-1 {
     margin-top: 3vh;
     border-radius: 0 0 39px 0; 
+    width: 100%;
 }
 .card-image-2 {
     margin-top: 3vh;
     border-radius: 0 0 39px 39px; 
+    width: 100%;
 }
 .button-card {
     color: var(--secondary-text);
