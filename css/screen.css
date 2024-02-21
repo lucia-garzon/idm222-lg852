@@ -417,14 +417,15 @@ footer {
 
 .card-text {
     margin: .5vh;
-    padding: 1.5vh;
+    /* padding: 1.5vh; */
     text-wrap: pretty;
 }
 .card-icons {
     display: flex;
     flex-flow: row nowrap;
     gap: .75rem;
-    height: 5vh;
+    height: 3vh;
+    justify-content: center;
 }
 .card-image-1 {
     margin-top: 3vh;
