@@ -350,13 +350,16 @@ footer {
 }
 
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+@media (max-width: 768px) { 
+    
     .intro {
         flex-direction: column;
-    }
-    
-    .intro, .lucia-presenting {
         width: 100%; 
+        align-items: center;
+    }
+
+    .lucia-presenting {
+        width: 90%; 
     }
 }
 
@@ -367,8 +370,8 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
-
 }
+
 
 .projects {
     display: flex;
@@ -382,6 +385,16 @@ footer {
     gap: 2rem 3rem;
     justify-content: center; */
 }
+@media (min-width: 768px) { 
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem 2rem;
+        justify-content: center;
+    }
+}
+
 .card-1 {
     border: 5px solid var(--project-1-dark); 
     background-color: #C6ECFF;
