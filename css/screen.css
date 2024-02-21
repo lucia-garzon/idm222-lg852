@@ -371,6 +371,11 @@ footer {
     flex-flow: column nowrap;
     text-align: center;
 }
+@media (max-width: 768px) { 
+    .card-container {
+        height: fit-content;
+    }
+}
 
 
 .projects {
