@@ -338,6 +338,14 @@ footer {
     }
 }
 
+@media screen and (min-width: 1100px) { 
+    .intro-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .index-title-name, .index-intro-blurb {
     text-align: left; /* Align text to the left */
     margin: 10px 0; /* Adjust spacing as needed */
@@ -350,8 +358,7 @@ footer {
 }
 
 
-@media (max-width: 768px) { 
-    
+@media screen and (max-width: 768px) { 
     .intro {
         flex-direction: column;
         width: 100%; 
@@ -360,6 +367,12 @@ footer {
 
     .lucia-presenting {
         width: 90%; 
+    }
+}
+@media screen and (min-width: 1220px) {
+    .lucia-presenting  {
+        width: 20vw;
+        height: fit-content;
     }
 }
 
