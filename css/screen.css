@@ -384,13 +384,24 @@ footer {
     margin-bottom: 8vh;
 
 }
-@media (min-width: 768px) { 
+@media screen and (min-width: 768px) { 
     .projects {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 }
+@media screen and (min-width: 1130px) {
+    .projects {
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        grid-template-rows: 47vw 47vw;
+    }
+    .card-container {
+        height: fit-content;
+    }
+}
+
 .card-container {
     align-items: center;
     border-radius: 44px;
