@@ -370,6 +370,7 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
+    align-self: stretch;
 }
 @media (max-width: 768px) { 
     .card-container {
@@ -421,7 +422,6 @@ footer {
     flex-flow: row nowrap;
     gap: .75rem;
     height: 5vh;
-    margin-top: 2vh;
 }
 .card-image-1 {
     margin-top: 3vh;
@@ -431,6 +431,11 @@ footer {
 .card-image-2 {
     margin-top: 3vh;
     border-radius: 0 0 39px 39px; 
+    width: 100%;
+}
+.card-image-1, .card-image-2 {
+    margin-top: auto; 
+    border-radius: 0 0 39px 39px;
     width: 100%;
 }
 .button-card {
