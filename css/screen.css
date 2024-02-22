@@ -391,16 +391,27 @@ footer {
         grid-template-rows: 1fr 1fr;
     }
 }
-@media screen and (min-width: 1130px) {
+@media screen and (min-width: 1130px) and (max-width: 1220px) {
     .projects {
         display: grid;
-        grid-template-columns: 30vw 30vw;
+        grid-template-columns: 33vw 30vw;
         grid-template-rows: 47vw 47vw;
     }
     .card-container {
         height: fit-content;
     }
 }
+@media screen and (min-width: 1220px) {
+    .projects {
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        grid-template-rows: 1fr 1fr;
+    }
+    .card-container {
+        height: fit-content;
+    }
+}
+
 
 .card-container {
     align-items: center;
