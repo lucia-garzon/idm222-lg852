@@ -639,6 +639,18 @@ proj2-buttons {
     border-radius: 14px;
     border: 2px solid var(--project-2-dark);
 }
+@media screen and (min-width: 768px) {
+    .proj2-column1 {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2.5vw;
+
+    }
+    .proj2-image {
+        width: 100%;
+    }
+
+}
 
 .proj3-title {
     color: var(--project-3-dark);
