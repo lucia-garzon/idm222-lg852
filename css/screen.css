@@ -235,6 +235,9 @@ a:hover {
 .burger {
     display: none;
 }
+.burger-x {
+    display: none;
+}
 @media screen and (min-width: 0px) and (max-width: 768px) {
     .burger {
         display: block;
@@ -274,11 +277,11 @@ nav {
     position: fixed;
     right: 0;
     top: 0;
-    width: 53vw;
+    width: 100vw;
     z-index: 100;
 
-    transform: translateX(380px);
-    transition: transform 225ms ease-in-out;
+    transform: translateX(100vw);
+    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 nav.open {
@@ -301,6 +304,19 @@ header nav {
         color: var(--secondary-text);
         font-size: 3.5vh;
         line-height: 9vh;
+    }
+    .nav-menu {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        margin: 20vh auto;
+    }
+    .burger-x {
+        display: block;
+        background-color: var(--footer-background);
+        border: none;
+        margin-top: 1rem;
     }
 }
 .nav-menu li {
