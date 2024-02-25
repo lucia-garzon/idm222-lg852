@@ -232,20 +232,55 @@ a:hover {
 }
 
 /* --__--__--_----__--__--_----__--__--_--  navigation and footer   --__--__--_----__--__--_-_--_--  */
-.nav-wrapper {
+
+@media screen and (min-width: 768px) {
+    .nav-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     background-color: var(--main-background); 
 }
-.nav-menu {
-    display: flex;
-    justify-content: space-around;
 }
+nav {
+    /* background-color: var(--gray-100);
+    border-left: 1px solid var(--dark-blue); */
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 53vw;
+    z-index: 100;
+
+    transform: translateX(380px);
+    transition: transform 225ms ease-in-out;
+}
+
+nav.open {
+    transform: none;
+}
+
+header nav {
+    background-color: var(--footer-background);
+}
+
 .nav-link {
     text-decoration: none;
     color: var(--primary-text);
+}
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    nav ul {
+        display: block;
+    }
+    .nav-link {
+        color: var(--secondary-text);
+        font-size: 3.5vh;
+        line-height: 9vh;
+    }
 }
 .nav-menu li {
     list-style: none;
