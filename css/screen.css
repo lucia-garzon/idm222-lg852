@@ -244,6 +244,9 @@ h1, h2, h3, h4 {
     justify-items: center;
     margin-bottom: 4rem
 }
+.more-link {
+    text-decoration: none;
+}
 .more-img {
     width: 28vw;
     border-radius: 14px;
