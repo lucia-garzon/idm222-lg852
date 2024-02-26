@@ -701,6 +701,9 @@ proj2-buttons {
     height: auto;
     width: 100%;
 }
+.proj3-cover {
+    border: 1.4px solid var(--case-study);
+}
 .proj1-title {
     color: var(--project-1-dark);
 }
