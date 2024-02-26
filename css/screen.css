@@ -233,6 +233,7 @@ h1, h2, h3, h4 {
 
 
 .more-projects {
+    column-gap: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 8rem 1fr 5rem;
@@ -240,7 +241,6 @@ h1, h2, h3, h4 {
 	'title title title'
 	'more1 more2 more3'
 	'word1 word2 word3';
-    gap: 1rem;
     justify-items: center;
     margin-bottom: 4rem
 }
