@@ -692,8 +692,6 @@ proj2-buttons {
     margin: 1vh auto;
 } */
 
-
-
 .proj1-cover {
     border-radius: 14px;
     margin-top: 4vh;
@@ -816,3 +814,9 @@ proj2-buttons {
     margin: 10px 0;
 }
 
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .cover {
+        margin-top: 10.8vh;
+    }
+}
