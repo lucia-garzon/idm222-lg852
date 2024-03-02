@@ -399,6 +399,7 @@ footer {
     flex-flow: column wrap;
     background-color: var(--footer-background);
     max-width: 100%;
+    margin-top: 15vh;
 }
 .footer-icons a {
     margin-left: 1rem; 
@@ -876,7 +877,7 @@ h3 + .line-break-light {
     border-top: 2px solid var(--footer-background);
     margin: 10px 0;
 }
-.resume-job-title, .resume-links {
+.resume-job-title {
     margin: 0;
 }
 .resume-job-title {
@@ -885,6 +886,7 @@ h3 + .line-break-light {
     padding-left: 1vw;
     padding-right: 2vw;
     width: fit-content;
+    margin: 1.5rem auto .5rem 0px;
 }
 
 .button-resume-header {
@@ -902,11 +904,20 @@ h3 + .line-break-light {
     margin-top: 13vh;
 }
 
-
-
-
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .cover {
         margin-top: 10.8vh;
+    }
+}
+.resume-links {
+    margin-top: .5vh;
+    margin-left: 0;
+}
+@media screen and (min-width: 0px) and (max-width: 873px) {
+    
+    /* Apply styling to each link */
+    .resume-links a {
+        display: block; /* Ensure each link appears on a new line */
+        padding: .5rem 1rem;
     }
 }
