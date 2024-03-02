@@ -677,7 +677,50 @@ footer {
     height: auto;
 }
 
+figure {
+    margin: 0 auto;
+    position: relative; /* Ensure proper positioning of absolutely positioned elements */
+    height: auto; 
+}
+figcaption {
+    font-family: var(--font-primary);
+    font-size: .813rem; /* 13 px */
+    font-weight: 500; /* semi-bold */
+    margin-top: 10px; 
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+img+figcaption {
+    margin-top: 10px;
+}
 
+.fig-before {
+    position: absolute;
+    opacity: 0; /* Initially hide both figures */
+    z-index: 2; /* Ensure fig 1 is above fig 2 initially */
+    animation: fadeInOut 1.5s infinite alternate forwards; /* Apply fade-in-out animation */
+}
+
+.fig-after {
+    display: block;
+    border-radius: 14px;
+    max-width: 100%;
+    height: auto;
+}
+
+.fig-before:hover {
+    opacity: 0; /* When hovering, reveal fig 2 */
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+}
 
 /* .button-prototype {
     background-color: var(--button-color);
