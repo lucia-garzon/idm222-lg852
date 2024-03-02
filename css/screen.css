@@ -849,6 +849,33 @@ proj2-buttons {
     margin: 0 auto;
     padding: 0 20px;
 }
+.resume-title-name {
+    margin-top: 5vh;
+    margin-bottom: .5vw;
+}
+.resume-title + ul {
+    margin-top: .5vw;
+    margin-bottom: .5vw;
+}
+.line-break {
+    border: none;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-top: 3px solid var(--primary-text);
+    margin: 10px 0;
+}
+h3 + .line-break-light {
+    margin-top: .5vw;
+}
+.line-break-light {
+    border: none;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-top: 2px solid var(--footer-background);
+    margin: 10px 0;
+}
 .resume-job-title, .resume-links {
     margin: 0;
 }
@@ -870,19 +897,12 @@ proj2-buttons {
     background-color: var(--button-color);
 
     padding: 1rem 2rem; 
-    margin: .7rem;
     width: fit-content;
 
-    margin-top: 5vh;
+    margin-top: 13vh;
 }
-.line-break {
-    border: none;
-    border-top-width: medium;
-    border-top-style: none;
-    border-top-color: currentcolor;
-    border-top: 3px solid var(--primary-text);
-    margin: 10px 0;
-}
+
+
 
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
