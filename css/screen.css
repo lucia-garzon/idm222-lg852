@@ -696,22 +696,45 @@ footer {
     height: auto;
 }
 
-figure {
+/* figure {
     margin: 0 auto;
-    position: relative; /* Ensure proper positioning of absolutely positioned elements */
+    position: relative; 
     height: auto; 
 }
 figcaption {
     font-family: var(--font-primary);
-    font-size: .813rem; /* 13 px */
-    font-weight: 500; /* semi-bold */
+    font-size: .813rem; 
+    font-weight: 500; 
     margin-top: 10px; 
     margin-bottom: 1.5rem;
     text-align: center;
 }
 img+figcaption {
     margin-top: 10px;
+} */
+
+.creative-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+figure {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each figure */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
 
 .fig-before {
     position: absolute;
@@ -920,4 +943,12 @@ h3 + .line-break-light {
         display: block; /* Ensure each link appears on a new line */
         padding: .5rem 1rem;
     }
+}
+
+/* --__--__--_----__--__--_----__--__--_--  creative   --__--__--_----__--__--_-_--_--  */
+
+/* --__--__--_----__--__--_----__--__--_--  about   --__--__--_----__--__--_-_--_--  */
+
+.about-title {
+    margin-top: 13vh;
 }
