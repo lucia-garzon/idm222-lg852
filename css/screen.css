@@ -400,6 +400,24 @@ footer {
     background-color: var(--footer-background);
     max-width: 100%;
 }
+.footer-icons a {
+    margin-left: 1rem; 
+}
+@media screen and (min-width: 768px) {
+    footer {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 1rem 1rem 2.5rem 1rem;
+    }
+    .footer-first {
+        order: 1;
+        margin-left: 4vw;
+    }
+    .footer-icons {
+        order: 3;
+        margin-right: 4vw;
+    }
+}
 .footer-text {
     color: var(--secondary-text);
     text-align: center;
