@@ -252,13 +252,26 @@ h1, h2, h3, h4 {
     justify-items: center;
     margin-bottom: 4rem
 }
-.more-link {
-    text-decoration: none;
-}
 .more-img {
     width: 28vw;
     border-radius: 14px;
     border: 2px solid var(--button-color);
+}
+@media screen and (min-width:0px) and (max-width: 767px) {
+    .more-projects {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 100%;
+    }
+    .more-img {
+        width: 100%;
+        border-radius: 14px;
+        border: 2px solid var(--button-color);
+    }
+}
+.more-link {
+    text-decoration: none;
 }
 
 .more1 {
@@ -591,6 +604,10 @@ footer {
 .card-1 {
     border: 5px solid var(--project-1-dark); 
     background-color: #C6ECFF;
+}
+.card-1:hover {
+    box-shadow: 3px 3px var(--project-1-dark);
+    transform: translate(-1px, -1px);
 }
 .card-2 {
     border: 5px solid var(--project-2-dark); 
