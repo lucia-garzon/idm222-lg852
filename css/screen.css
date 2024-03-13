@@ -119,6 +119,7 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column; 
     align-items: center;
+    gap: 3vh;
 }
 .button {
     color: white;
@@ -137,10 +138,20 @@ h1, h2, h3, h4 {
     width: fit-content;
     margin-top: 2vh;
 }
+.michoacana-button {
+    margin: 3vh .1rem;
+}
 
 .button:hover {
     font-style: normal;
     animation: overshoot 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+.michoacana-button:hover {
+    font-style: normal;
+    animation: none;
+    transition: all 0.3s ease;
+    transform: translateY(-5px);
+    background-color: var(--project-2-dark);
 }
 @keyframes overshoot {
     0% {
@@ -913,9 +924,10 @@ proj2-buttons {
     padding: 5px 10px;
     background-color: #75fff63b;
     border-radius: 20px;
+    border: 2px solid var(--case-study);
 
 }
-.bubble-1 {
+/* .bubble-1 {
     border: 2px solid var(--case-study);
 }
 .bubble-2 {
@@ -926,7 +938,7 @@ proj2-buttons {
 }
 .bubble-4 {
     border: 2px solid var(--case-study);
-}
+} */
 
 
 
@@ -957,6 +969,28 @@ proj2-buttons {
         width: 100%;
     }
 
+}
+.proj2-final-images {
+    margin-top: 3vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2vh;
+}
+.proj2-final-text {
+    align-self: center;
+    justify-self: center;
+    display: grid;
+}
+.proj2-final-text:hover {
+    padding: 8vh;
+    border-radius: 30px;
+    background-color: #ffd5e3ad;
+    transition: all 0.3s ease;
+
+}
+.mockup-title {
+    margin-bottom: 7px;
 }
 
 .proj3-title {
