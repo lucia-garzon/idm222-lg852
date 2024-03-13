@@ -135,6 +135,7 @@ h1, h2, h3, h4 {
     padding: 1rem 2rem; 
     margin: .7rem auto;
     width: fit-content;
+    margin-top: 2vh;
 }
 
 .button:hover {
@@ -328,7 +329,8 @@ h1, h2, h3, h4 {
 @media screen and (min-width: 768px) {
     .nav-menu {
         display: flex;
-        justify-content: space-around;
+        /* justify-content: space-around; */
+        margin-right: 8vh;
     }
     .nav-wrapper {
         display: flex;
@@ -760,7 +762,7 @@ footer {
 }
 .project-title {
     text-align: center;
-    margin-top: 2vh;
+    margin-top: 4vh;
 }
 .project-header {
     text-align: center;
@@ -861,7 +863,7 @@ proj2-buttons {
 }
 
 .details {
-    line-height: 2vh;
+    line-height: 1vh;
 }
 .details-proj {
     margin-top: 4vh;
@@ -870,9 +872,20 @@ proj2-buttons {
     font-weight: 650;
     margin-top: 1vh;
 }
-
-.overview-title {
+.details-job {
     font-weight: 600;
+    font-size: 2.5vh;
+}
+
+@media screen and (min-width: 768px) {
+    .overview-details {
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        gap: 8vw;
+    }
+}
+.overview-title {
+    font-weight: 650;
 }
 .overview-blurb-proj1, .overview-blurb-proj2, .overview-blurb-proj3, .overview-blurb-proj4 {
     margin-top: 2vh;
@@ -891,6 +904,8 @@ proj2-buttons {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     /* gap: 10px; */
 }
 .bubble {
