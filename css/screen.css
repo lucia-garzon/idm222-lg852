@@ -807,9 +807,9 @@ img+figcaption {
 
 .fig-before {
     position: absolute;
-    opacity: 0; /* Initially hide both figures */
-    z-index: 2; /* Ensure fig 1 is above fig 2 initially */
-    animation: fadeInOut 1.5s infinite alternate forwards; /* Apply fade-in-out animation */
+    opacity: 0; 
+    z-index: 2; 
+    animation: fadeInOut 1.5s infinite alternate forwards; 
 }
 
 .fig-after {
@@ -820,7 +820,7 @@ img+figcaption {
 }
 
 .fig-before:hover {
-    opacity: 0; /* When hovering, reveal fig 2 */
+    opacity: 0; 
 }
 
 @keyframes fadeInOut {
