@@ -777,7 +777,7 @@ footer {
 }
 .project-header {
     text-align: center;
-    margin: 7vh auto 2vh auto;
+    margin: 8vh auto 2vh auto;
 }
 .rounded-image, .creative-img {
     display: block;
@@ -885,7 +885,7 @@ proj2-buttons {
 }
 .details-job {
     font-weight: 600;
-    font-size: 2.5vh;
+    font-size: 2.3vh;
 }
 
 @media screen and (min-width: 768px) {
