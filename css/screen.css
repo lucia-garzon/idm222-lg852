@@ -783,9 +783,20 @@ footer {
     display: block;
     border-radius: 14px;
     max-width: 100%;
-    margin: 1vh auto;
+    margin: 2vh auto;
     height: auto;
 }
+.video {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+}
+video {
+    border-radius: 30px;
+    margin: 1rem;
+}
+
 
 /* figure {
     margin: 0 auto;
@@ -1072,6 +1083,30 @@ proj2-buttons {
 .proj3-title {
     color: var(--project-3-dark);
 }
+.image-grid {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+.ink {
+    height: 33vh;
+    width: 45vh;
+}
+@media screen and (min-width: 600px) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: -63vh;
+    }
+    .ink {
+        width: 50vw;
+        height:30vw;
+    }
+}
+
+
 
 .proj4-title {
     color: var(--project-4-dark);
