@@ -908,6 +908,27 @@ proj2-buttons {
     border: 2px solid var(--project-1-dark);
     box-shadow: 3px 3px var(--project-1-dark);
 }
+.overview-blurb-proj2 {
+    background-color: var(--project-2-light);
+    padding: 20px 30px 20px 30px;
+    border-radius: 14px;
+    border: 2px solid var(--project-2-dark);
+    box-shadow: 3px 3px var(--project-2-dark);
+}
+.overview-blurb-proj3 {
+    background-color: var(--project-3-light);
+    padding: 20px 30px 20px 30px;
+    border-radius: 14px;
+    border: 2px solid var(--project-3-dark);
+    box-shadow: 3px 3px var(--project-3-dark);
+}
+.overview-blurb-proj4 {
+    background-color: var(--project-4-light);
+    padding: 20px 30px 20px 30px;
+    border-radius: 14px;
+    border: 2px solid var(--project-4-dark);
+    box-shadow: 3px 3px var(--project-4-dark);
+}
 .secondary-text {
     color: var(--secondary-text);
 }
