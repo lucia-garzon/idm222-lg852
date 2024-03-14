@@ -805,7 +805,8 @@ img+figcaption {
 } */
 
 
-.fig-before {
+
+/* .fig-before {
     position: absolute;
     opacity: 0; 
     z-index: 2; 
@@ -831,7 +832,7 @@ img+figcaption {
       to {
         opacity: 1;
       }
-}
+} */
 
 /* .button-prototype {
     background-color: var(--button-color);
