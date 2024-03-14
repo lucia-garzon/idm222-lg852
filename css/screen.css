@@ -1114,8 +1114,50 @@ h3 + .line-break-light {
 .about-title {
     margin-top: 13vh;
 }
-/* .about-lucia {
+.about-wrapper {
+    display: flex;
+    flex-flow: column-reverse;
+    gap: 8vh;
+}
+.about-lucia {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 14px;
+}
+@media screen and (min-width:768px) {
+    .about-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 1rem;
+        gap: 5vh;
 
+    }
+}
+.button-resume {
+    padding: 1rem 2rem; 
+    margin: .7rem auto;
+    margin-top: 1rem;
+    
+}
+.button-resume:hover {
+    font-style: normal;
+    animation: overshoot 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    transform: translateY(-5px);
+}
+/* @media screen and (min-width:900px) {
+    .button-resume {
+        padding: 1rem 2rem; 
+        margin: .7rem auto;
+        margin-top: -.7vh;
+        
+    }
+}
+@media screen and (min-width:1300px) {
+    .button-resume {
+        padding: 1rem 2rem; 
+        margin: .7rem auto;
+        margin-top: -9.7vh;
+    }
 } */
 
 
