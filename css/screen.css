@@ -49,6 +49,8 @@ html {
     --project-3-dark: #154445;
     --project-4-light: #E4FCCF;
     --project-4-dark: #4B5A2B;
+
+    --border-radius: 14px;
 }
 
 * {
@@ -267,7 +269,7 @@ h1, h2, h3, h4 {
 }
 .more-img {
     width: 28vw;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     border: 2px solid var(--button-color);
 }
 @media screen and (min-width:0px) and (max-width: 767px) {
@@ -279,7 +281,7 @@ h1, h2, h3, h4 {
     }
     .more-img {
         width: 100%;
-        border-radius: 14px;
+        border-radius: var(--border-radius);
         border: 2px solid var(--button-color);
         margin-top: 2vh;
     }
@@ -554,7 +556,7 @@ footer {
 }
 
 .lucia-presenting {
-    border-radius: 200px 200px 14px 14px; 
+    border-radius: 200px 200px var(--border-radius) var(--border-radius); 
     width: 30vw;
     height: fit-content;
     /* box-shadow: 10px 10px 0px 0px var(--button-color); */
@@ -780,7 +782,7 @@ footer {
 }
 .rounded-image, .creative-img {
     display: block;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     max-width: 100%;
     margin: 2vh auto;
     height: auto;
@@ -893,7 +895,7 @@ proj2-buttons {
 
 
 .proj1-cover {
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     margin-top: 4vh;
     height: auto;
     width: 100%;
@@ -943,28 +945,28 @@ proj2-buttons {
 .overview-blurb-proj1 {
     background-color: var(--project-1-light);
     padding: 20px 30px 20px 30px;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     border: 2px solid var(--project-1-dark);
     box-shadow: 3px 3px var(--project-1-dark);
 }
 .overview-blurb-proj2 {
     background-color: var(--project-2-light);
     padding: 20px 30px 20px 30px;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     border: 2px solid var(--project-2-dark);
     box-shadow: 3px 3px var(--project-2-dark);
 }
 .overview-blurb-proj3 {
     background-color: var(--project-3-light);
     padding: 20px 30px 20px 30px;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     border: 2px solid var(--project-3-dark);
     box-shadow: 3px 3px var(--project-3-dark);
 }
 .overview-blurb-proj4 {
     background-color: var(--project-4-light);
     padding: 20px 30px 20px 30px;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     border: 2px solid var(--project-4-dark);
     box-shadow: 3px 3px var(--project-4-dark);
 }
@@ -1015,7 +1017,7 @@ proj2-buttons {
 .overview-blurb-proj2 {
     background-color: var(--project-2-light);
     padding: 20px 30px 20px 30px;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     border: 2px solid var(--project-2-dark);
 }
 @media screen and (min-width: 768px) {
@@ -1206,7 +1208,7 @@ h3 + .line-break-light {
 .about-lucia {
     width: 100%;
     margin: 0 auto;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
 }
 @media screen and (min-width:768px) {
     .about-wrapper {
@@ -1276,7 +1278,7 @@ h3 + .line-break-light {
     display: grid;
     grid-template-areas: "card";
     place-items: end;
-    border-radius: 14px;
+    border-radius: var(--border-radius);
     overflow: hidden;
 }
 
