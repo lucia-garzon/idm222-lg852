@@ -50,7 +50,7 @@ html {
     --project-4-light: #E4FCCF;
     --project-4-dark: #4B5A2B;
 
-    --border-radius: 14px;
+    --border-radius: 20px;
 }
 
 * {
@@ -625,7 +625,7 @@ footer {
 
 .card-container {
     align-items: center;
-    border-radius: 44px;
+    border-radius: var(--border-radius);
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -644,6 +644,11 @@ footer {
 }
 
 
+.card-title {
+    /* margin-bottom: 0; */
+    top: 17px;
+    position: relative;
+}
 .card-1 {
     border: 5px solid var(--project-1-dark); 
     background-color: #C6ECFF;
@@ -679,8 +684,9 @@ footer {
 
 .card-text {
     margin: .5vh;
-    /* padding: 1.5vh; */
+    padding: 0 1.5vh 0 1.5vh;
     text-wrap: pretty;
+    width: 30ch;
 }
 .card-icons {
     display: flex;
@@ -732,28 +738,28 @@ footer {
 .button-card1:hover {
     font-style: normal;
     font-weight: 500;
-    border-radius: 44px;
+    border-radius: var(--border-radius);
     background-color: var(--project-1-dark);
     transform: translateY(-5px);
 }
 .button-card2:hover {
     font-style: normal;
     font-weight: 500;
-    border-radius: 44px;
+    border-radius: var(--border-radius);
     background-color: var(--project-2-dark);
     transform: translateY(-5px);
 }
 .button-card3:hover {
     font-style: normal;
     font-weight: 500;
-    border-radius: 44px;
+    border-radius: var(--border-radius);
     background-color: var(--project-3-dark);
     transform: translateY(-5px);
 }
 .button-card4:hover {
     font-style: normal;
     font-weight: 500;
-    border-radius: 44px;
+    border-radius: var(--border-radius);
     background-color: var(--project-4-dark);
     transform: translateY(-5px);
 }
