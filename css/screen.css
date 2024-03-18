@@ -143,13 +143,17 @@ h1, h2, h3, h4 {
 .michoacana-button {
     margin: 3vh .1rem;
 }
-
 .button:hover {
     font-style: normal;
     animation: overshoot 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
 }
+.phillyreach-button:hover {
+    animation: none;
+    transition: all 0.3s ease;
+    transform: translateY(-5px);
+    background-color: var(--project-1-dark);
+}
 .michoacana-button:hover {
-    font-style: normal;
     animation: none;
     transition: all 0.3s ease;
     transform: translateY(-5px);
@@ -695,21 +699,24 @@ footer {
     height: 3vh;
     justify-content: center;
 }
+
 .card-image-1 {
-    margin-top: 3vh;
-    border-radius: 0 0 39px 0; 
+    margin-top: 0;
+    border-radius: 0 0 14px 0; 
     width: 100%;
 }
 .card-image-2 {
-    margin-top: 3vh;
-    border-radius: 0 0 39px 39px; 
+    margin-top: 0;
+    border-radius: 0 0 14px 14px; 
     width: 100%;
 }
 .card-image-1, .card-image-2 {
     margin-top: auto; 
-    border-radius: 0 0 39px 39px;
+    border-radius: 0 0 14px 14px;
     width: 100%;
+    
 }
+
 .button-card {
     color: var(--secondary-text);
     font-family: var(--font-primary);
@@ -717,8 +724,8 @@ footer {
     text-decoration: none;
     cursor: pointer; 
     transition: all .3s ease .1s;
-    margin-top: 3vh;
-    margin-bottom: 1vh;
+    margin-top: 1rem;
+    margin-bottom: .8rem;
 
     padding: 0.5rem 1rem; 
     border-radius: 20px; 
@@ -1010,11 +1017,18 @@ proj2-buttons {
 
 
 
-.proj1-columns1 {
+.proj1-column1, .proj1-column2 {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+}
+@media screen and (min-width: 768px) {
+    .proj1-column1, .proj1-column2 {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2.5vw;
+    }
 }
 
 .proj2-title {
