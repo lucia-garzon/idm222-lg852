@@ -861,9 +861,14 @@ footer {
 .rounded-image {
     display: block;
     border-radius: var(--border-radius);
-    max-width: 85ch;
+    max-width: 100%;
     margin: 2vh auto;
     height: auto;
+}
+@media screen and (min-width: 768px) {
+    .rounded-image {
+        max-width: 85ch;
+    }
 }
 .creative-img {
     display: block;
@@ -1195,8 +1200,7 @@ proj2-buttons {
     width: 100%;
 }
 .ink {
-    height: 33vh;
-    width: 45vh;
+    width: 43vw;
 }
 @media screen and (min-width: 600px) {
     .image-grid {
@@ -1207,7 +1211,7 @@ proj2-buttons {
         margin-bottom: -63vh;
     }
     .ink {
-        width: 50vw;
+        width: 43vw;
         height:30vw;
     }
 }
@@ -1283,6 +1287,7 @@ h3 + .line-break-light {
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .cover {
         margin-top: 10.8vh;
+        border-radius: 0px;
     }
 }
 .resume-links {
