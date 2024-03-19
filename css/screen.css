@@ -78,10 +78,9 @@ main {
 .one-rem {
     margin-top: 2rem;
 }
-.project-content {
-    /* width: 85ch; */
+/* .project-content {
     margin: 0 auto;
-}
+} */
 .project-content p, .project-content li {
     max-width: 85ch; 
 }
