@@ -174,45 +174,23 @@ h1, h2, h3, h4 {
 }
 .button:hover {
     font-style: normal;
-    animation: overshoot 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
 }
 .phillyreach-button:hover {
-    animation: none;
-    transition: all 0.3s ease;
-    transform: translateY(-5px);
     background-color: var(--project-1-dark);
 }
 .michoacana-button:hover {
-    animation: none;
-    transition: all 0.3s ease;
-    transform: translateY(-5px);
     background-color: var(--project-2-dark);
 }
 .inkling-button:hover {
-    animation: none;
-    transition: all 0.3s ease;
-    transform: translateY(-5px);
     background-color: var(--project-3-dark);
 }
 .best-fronds-button:hover {
-    animation: none;
-    transition: all 0.3s ease;
-    transform: translateY(-5px);
     background-color: var(--project-4-dark);
 }
 
-@keyframes overshoot {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); 
-    }
-    
-    100% {
-        transform: scale(1); 
-    }
-}
+
 
 @media screen and (min-width: 576px) {
     .button-container {
