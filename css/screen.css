@@ -336,9 +336,7 @@ h1, h2, h3, h4 {
     grid-area: word3;
 }
 /* --__--__--_----__--__--_----__--__--_--  navigation and footer   --__--__--_----__--__--_-_--_--  */
-.burger {
-    display: none;
-}
+
 .burger-x {
     display: none;
 }
@@ -379,6 +377,7 @@ h1, h2, h3, h4 {
 nav.open {
     transform: none;
 }
+
 
 header nav {
     background-color: var(--footer-background);
