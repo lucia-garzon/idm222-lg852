@@ -914,7 +914,7 @@ figcaption {
     margin-top: 10px;
 }
 .fig-after, .fig-before {
-    width: 100%;
+    max-width: 100%;
 }
 .before-after-1 {
     display: flex;
@@ -1142,32 +1142,61 @@ proj2-buttons {
 
 }
 
-/* Hide all groups initially in mobile view */
-.proj2-final-images.mobile-view .image-text-group {
-    display: none;
-}
-.image-text-group {
-    display: none;
-}
-
-/* Show only the specific group in mobile view */
-.proj2-final-images.mobile-view .image-text-group.show {
-    display: block;
-}
-
 
 .proj2-final-images {
     margin-top: 3vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 2vh;
+    display: flex;
+    flex-flow: column;
+    gap: 3vh;
 }
 .proj2-final-text {
+    display: grid;
     align-self: center;
     justify-self: center;
-    display: grid;
     transition: all 0.3s ease;
+}
+
+@media screen and (min-width:768px) {
+    .proj2-final-images {
+        margin-top: 3vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "desktop-image desktop-text"
+        "tablet-text tablet-image"
+        "mobile-image mobile-text"
+        ;
+        gap: 2vh;
+        width: 100%;
+    }
+    .proj2-final-text {
+        align-self: center;
+        justify-self: center;
+        display: grid;
+        transition: all 0.3s ease;
+    }
+    .desktop-image {
+        grid-area: desktop-image;
+        max-width: 100%;
+    }
+    .desktop-text {
+        grid-area: desktop-text;
+    }
+    .tablet-image {
+        grid-area: tablet-image;
+        max-width: 100%;
+    }
+    .tablet-text {
+        grid-area: tablet-text;
+    }
+    .mobile-image {
+        grid-area: mobile-image;
+        max-width: 100%;
+    }
+    .mobile-text {
+        grid-area: mobile-text;
+    }
 }
 .proj2-final-text:hover {
     padding: 8vh;
@@ -1182,12 +1211,6 @@ proj2-buttons {
         padding: 5vh;
         border-radius: 30px;
         background-color: #ffd5e3ad;
-    }
-}
-@media screen and (min-width:0px) and (max-width:767px) {
-    .proj2-final-images {
-        display: flex;
-        flex-flow: column;
     }
 }
 .proj3-title {
