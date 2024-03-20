@@ -337,8 +337,13 @@ h1, h2, h3, h4 {
 }
 /* --__--__--_----__--__--_----__--__--_--  navigation and footer   --__--__--_----__--__--_-_--_--  */
 
+.burger {
+    display: none;
+}
 .burger-x {
     display: none;
+    background-color: none;
+    border: none;
 }
 @media screen and (min-width: 0px) and (max-width: 768px) {
     .burger {
@@ -358,6 +363,10 @@ h1, h2, h3, h4 {
         border-radius: 5px;
         padding: 6px;
         z-index: 1000;
+    }
+    .nav-wrapper {
+        display: flex;
+        flex-flow: column;
     }
 }
 @media screen and (min-width: 768px) {
@@ -445,11 +454,15 @@ header nav {
         justify-content: center;
         margin: 20vh auto;
     }
-    .burger-x {
+    .burger-x.visible {
         display: block;
         background-color: var(--footer-background);
         border: none;
-        margin-top: 5vh;
+    }
+    .burger-x-button {
+        background-color: transparent;
+        border: none;
+        margin: 0 auto;
     }
     nav {
         /* background-color: var(--gray-100);
