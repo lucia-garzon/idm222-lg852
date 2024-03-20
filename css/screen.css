@@ -342,8 +342,6 @@ h1, h2, h3, h4 {
 }
 .burger-x {
     display: none;
-    background-color: none;
-    border: none;
 
 }
 
@@ -477,6 +475,11 @@ header nav {
     
         transform: translateX(100vw);
         transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+}
+@media screen and (min-width: 768px) {
+    .burger-x-button {
+        display: none;
     }
 }
 .nav-menu li {
