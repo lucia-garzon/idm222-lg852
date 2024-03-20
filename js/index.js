@@ -3,18 +3,6 @@ const menu = document.querySelector('nav');
 const btn_close_menu = document.querySelector('.btn_menu_close');
 const btn_open_menu = document.querySelector('.btn_menu_open');
 
-// function toggle_menu() {
-//   console.log('toggle menu')
-//   if (menu) menu.classList.toggle('open')
-// }
-
-// if (btn_close_menu) {
-//   btn_close_menu.addEventListener('click', toggle_menu)
-// }
-
-// if (btn_open_menu) {
-//   btn_open_menu.addEventListener('click', toggle_menu)
-// }
 
 
 
