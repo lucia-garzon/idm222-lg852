@@ -161,8 +161,14 @@
                     <!-- add animation here w opacity, the images r on top of each other -->
                         <div class="before-after-1">
                             <img src="images/Michoacana-Product-Page-Before.webp" alt="La Michoacana product page before" class="rounded-image fig-before">
-                            <img alt="La Michoacana product page after" src="images/Michoacana-Product-Page-After.webp" class="fig-after rounded-image"/>    
-                            <!-- <figcaption>The user discovers products in a more engaging format.</figcaption> -->
+                            <!-- <img alt="La Michoacana product page after" src="images/Michoacana-Product-Page-After.webp" class="fig-after rounded-image"/>   -->
+                            <img class="fig-after" 
+                            srcset="
+                            images/Michoacana-Product-Page-After.webp 327.167w,
+                            graphics/Michoacana-product-page-after-tablet-optimized.jpg 730w"
+                            sizes="(max-width: 600px) 300px, 730px"
+                            src="graphics/Michoacana-product-page-after-mobile-optimized.jpg"
+                            alt="La Michoacana product page after">
                         </div>
                         <figcaption>The user discovers products in a more engaging format</figcaption>
                     
