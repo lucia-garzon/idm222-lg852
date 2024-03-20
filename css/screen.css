@@ -915,6 +915,8 @@ figcaption {
 }
 .fig-after, .fig-before {
     max-width: 100%;
+    border-radius: var(--border-radius);
+    margin: 2vh auto;
 }
 .before-after-1 {
     display: flex;
@@ -927,13 +929,11 @@ figcaption {
         gap: 1rem;
         margin: 3vh auto;    
     }
-}
-@media screen and (min-width: 768px) {
     .fig-after, .fig-before {
-        height: 30vh;
         width: 48vh;
     }
 }
+
 
 /* .fig-before {
     position: absolute;
