@@ -27,10 +27,13 @@ if (menuButtons) {
             console.log('toggle menu');
             if (menu) {
                 menu.classList.toggle('open');
-                burgerX.classList.toggle('visible'); // Toggle visibility of burger-x button
+                burgerX.classList.toggle('visible'); 
             }
         });
     });
 }
+
+
+
 
 

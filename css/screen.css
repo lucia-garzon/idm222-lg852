@@ -344,7 +344,10 @@ h1, h2, h3, h4 {
     display: none;
     background-color: none;
     border: none;
+
 }
+
+
 @media screen and (min-width: 0px) and (max-width: 768px) {
     .burger {
         display: block;
@@ -465,8 +468,6 @@ header nav {
         margin: 0 auto;
     }
     nav {
-        /* background-color: var(--gray-100);
-        border-left: 1px solid var(--dark-blue); */
         height: 100vh;
         position: fixed;
         right: 0;
