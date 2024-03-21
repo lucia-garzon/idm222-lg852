@@ -78,11 +78,13 @@ main {
 .one-rem {
     margin-top: 2rem;
 }
-/* .project-content {
-    margin: 0 auto;
-} */
-.project-content p, .project-content li {
+
+.project-content p {
     max-width: 85ch; 
+}
+.project-content li {
+    max-width: 85ch; 
+    margin: 0 auto;
 }
 p {
     color: var(--primary-text);
