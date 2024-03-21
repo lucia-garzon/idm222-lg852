@@ -596,11 +596,16 @@ footer {
 
 
 .intro {
-    flex: 1; /* Allows the text section to grow */
-    padding: 20px; /* Adjust as needed */
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    /* flex: 1;
+    padding: 20px; 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 .intro-blurb {
     margin: 10vh auto 5vh auto;
@@ -633,23 +638,31 @@ footer {
 
 .lucia-presenting {
     border-radius: 200px 200px var(--border-radius) var(--border-radius); 
-    width: 30vw;
-    height: fit-content;
+    width: 90%;
+    height: auto;
     /* box-shadow: 10px 10px 0px 0px var(--button-color); */
 }
 
 
-@media screen and (max-width: 768px) { 
+@media screen and (min-width: 768px) { 
     .intro {
-        flex-direction: column;
-        width: 100%; 
-        align-items: center;
+        /* display: grid;
+        grid-template-columns: 50ch 300px;
+        grid-template-rows: 1fr; */
+        
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
     }
 
     .lucia-presenting {
-        width: 90%; 
+        width: 300px; 
     }
 }
+
 @media screen and (min-width: 1220px) {
     .lucia-presenting  {
         width: 20vw;
