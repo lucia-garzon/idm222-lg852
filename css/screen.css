@@ -1235,10 +1235,17 @@ proj2-buttons {
 .proj3-title {
     color: var(--project-3-dark);
 }
-.image-grid {
+/* .image-grid {
     display: flex;
     flex-flow: column;
     width: 100%;
+} */
+.image-grid {
+    display: flex;
+    flex-flow: column;
+    align-items: center; /* center horizontally */
+    width: 100%;
+    margin: 0 auto; /* center horizontally */
 }
 .one {
     grid-area: one;
@@ -1253,7 +1260,7 @@ proj2-buttons {
     grid-area: four;
 }
 
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
     .image-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1268,6 +1275,25 @@ proj2-buttons {
         width: 43vw;
         height:30vw;
         margin: 0px;
+    }
+} */
+@media screen and (min-width: 600px) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "one two"
+            "three four"
+        ;
+        gap: 1rem;
+        align-items: unset; /* reset alignment */
+        justify-content: center; /* center horizontally */
+    }
+    .ink {
+        width: 43vw;
+        height:30vw;
+        margin: 0; /* reset margin */
     }
 }
 
