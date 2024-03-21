@@ -877,11 +877,11 @@ footer {
     margin: 2vh auto;
     height: auto;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
     .rounded-image {
         max-width: 85ch;
     }
-}
+} */
 .creative-img {
     display: block;
     border-radius: var(--border-radius);
@@ -943,7 +943,7 @@ figcaption {
         margin: 3vh auto;    
     }
     .fig-after, .fig-before {
-        width: 48vh;
+        width: 100%;
     }
 }
 
