@@ -873,7 +873,7 @@ footer {
 .rounded-image {
     display: block;
     border-radius: var(--border-radius);
-    max-width: 100%;
+    width: 100%;
     margin: 2vh auto;
     height: auto;
 }
