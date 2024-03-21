@@ -1240,17 +1240,34 @@ proj2-buttons {
     flex-flow: column;
     width: 100%;
 }
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+
 @media screen and (min-width: 600px) {
     .image-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "one two"
+            "three four"
+        ;
         gap: 1rem;
-        margin-bottom: -63vh;
     }
     .ink {
         width: 43vw;
         height:30vw;
+        margin: 0px;
     }
 }
 
