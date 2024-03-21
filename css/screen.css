@@ -995,7 +995,6 @@ proj2-buttons {
     margin: 1vh auto;
 } */
 
-
 .proj1-cover {
     border-radius: var(--border-radius);
     margin-top: 4vh;
@@ -1004,6 +1003,12 @@ proj2-buttons {
 }
 .proj3-cover {
     border: 2.5px solid var(--case-study);
+}
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .cover {
+        margin-top: 13vh;
+        border-radius: 0px;
+    }
 }
 @media screen and (max-width: 768px) {
     .proj3-cover {
@@ -1016,6 +1021,7 @@ proj2-buttons {
         display: block;
         width: 90%;
         margin: 0 auto;
+        
     }
 }
 .proj1-title {
@@ -1344,19 +1350,13 @@ h3 + .line-break-light {
     margin-top: 13vh;
 }
 
-@media screen and (min-width: 0px) and (max-width: 767px) {
-    .cover {
-        margin-top: 13vh;
-        border-radius: 0px;
-    }
-}
 .resume-links {
     margin-top: .5vh;
     margin-left: 0;
     display: flex;
     flex-flow: column;
     gap: 1rem;
- 
+
 }
 .resume-links .link {
     line-height: 20px;
