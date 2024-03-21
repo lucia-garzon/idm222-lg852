@@ -875,7 +875,7 @@ footer {
     display: block;
     border-radius: var(--border-radius);
     width: 80vw;
-    margin: 2vh auto;
+    margin: 1rem auto;
     height: auto;
 }
 .rounded-image-100 {
@@ -885,11 +885,7 @@ footer {
     margin: 2vh auto;
     height: auto;
 }
-/* @media screen and (min-width: 768px) {
-    .rounded-image {
-        max-width: 85ch;
-    }
-} */
+
 .video {
     display: flex;
     justify-content: center; 
