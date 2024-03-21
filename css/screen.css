@@ -57,13 +57,6 @@ html {
     box-sizing: border-box;
 }
 
-.project-wrapper {
-    width: 100%;
-    /* max-width: 300 px; */
-    margin: 0 auto;
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
-}
 
 
 body {
@@ -866,6 +859,7 @@ footer {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 .project-title {
     text-align: center;
     margin-top: 3vh;
@@ -879,6 +873,13 @@ footer {
     margin: 1rem auto 2vh auto;
 } */
 .rounded-image {
+    display: block;
+    border-radius: var(--border-radius);
+    width: 80vw;
+    margin: 2vh auto;
+    height: auto;
+}
+.rounded-image-100 {
     display: block;
     border-radius: var(--border-radius);
     width: 100%;
