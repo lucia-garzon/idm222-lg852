@@ -1377,18 +1377,16 @@ h3 + .line-break-light {
 
 /* --__--__--_----__--__--_----__--__--_--  about   --__--__--_----__--__--_-_--_--  */
 
-.about-title {
+.about-text {
     margin-top: 3vh;
-    grid-area: about-title;
+    grid-area: about-text;
 }
 .about-wrapper {
     display: flex;
     flex-flow: column;
     /* gap: 3vh; */
 }
-.about-text {
-    margin: 1.5vh 0;
-}
+
 .about-lucia {
     width: 100%;
     margin: 0 auto;
@@ -1405,14 +1403,17 @@ h3 + .line-break-light {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto; /* Let the rows grow based on content */
         grid-template-areas: 
-        "about-title about-lucia"
-        "about-text about-lucia"; /* The text area spans both columns */
-        gap: 3vh;
+        "about-text about-lucia"
+        "about-text about-lucia"; 
+        column-gap: 1rem;
         margin-top: 13vh;
 
     }
     .about-text {
         margin: 0;
+    }
+    .about-title p {
+        max-width: 70ch;
     }
 }
 .button-resume {
