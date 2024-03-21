@@ -604,13 +604,15 @@ footer {
 }
 .intro-blurb {
     margin: 10vh auto 5vh auto;
-    font-size: 3vh;
-    line-height: 4vh;
+    font-size: 1.75rem;
+    line-height: 2rem;
 }
 
 @media screen and (min-width: 768px) { 
     .intro-blurb {
         margin-right: 5vh;
+        font-size: 2rem;
+        line-height: 3rem;
     }
 }
 @media screen and (min-width: 1348px) { 
@@ -627,10 +629,7 @@ footer {
     }
 }
 
-.index-title-name, .index-intro-blurb {
-    text-align: left; /* Align text to the left */
-    margin: 10px 0; /* Adjust spacing as needed */
-}
+
 
 .lucia-presenting {
     border-radius: 200px 200px var(--border-radius) var(--border-radius); 
@@ -882,6 +881,12 @@ footer {
         max-width: 85ch;
     }
 } */
+.creative-title {
+    margin-top: 13vh;
+}
+.creative-title+.creative-title-desc {
+    margin-top: -10px;
+}
 .creative-img {
     display: block;
     border-radius: var(--border-radius);
