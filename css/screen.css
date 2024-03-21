@@ -646,10 +646,6 @@ footer {
 
 @media screen and (min-width: 768px) { 
     .intro {
-        /* display: grid;
-        grid-template-columns: 50ch 300px;
-        grid-template-rows: 1fr; */
-        
         flex: 1;
         padding: 20px;
         display: flex;
@@ -739,7 +735,7 @@ footer {
     position: relative;
 }
 .card-1 {
-    border: 5px solid var(--project-1-dark); 
+    border: 3px solid var(--project-1-dark); 
     background-color: #C6ECFF;
 }
 .card-1:hover {
@@ -747,7 +743,7 @@ footer {
     transform: translate(-1px, -1px);
 }
 .card-2 {
-    border: 5px solid var(--project-2-dark); 
+    border: 3px solid var(--project-2-dark); 
     background-color: var(--project-2-light)
 }
 .card-2:hover {
@@ -755,7 +751,7 @@ footer {
     transform: translate(-1px, -1px);
 }
 .card-3 {
-    border: 5px solid var(--project-3-dark); 
+    border: 3px solid var(--project-3-dark); 
     background-color: var(--project-3-light)
 }
 .card-3:hover {
@@ -763,7 +759,7 @@ footer {
     transform: translate(-1px, -1px);
 }
 .card-4 {
-    border: 5px solid var(--project-4-dark); 
+    border: 3px solid var(--project-4-dark); 
     background-color: var(--project-4-light)
 }
 .card-4:hover {
@@ -857,7 +853,7 @@ footer {
 }
 
 .index-header-projects {
-    margin: 2rem auto 3rem auto;
+    margin: 3rem auto 2rem auto;
     text-align: center;
 }
 
