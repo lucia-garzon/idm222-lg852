@@ -919,7 +919,7 @@ img+figcaption {
 } */
 
 
-figcaption {
+.figcaption {
     font-family: var(--font-primary);
     font-size: 14px;
     text-align: center;
