@@ -1003,7 +1003,7 @@ proj2-buttons {
     width: 100%;
 }
 .proj3-cover {
-    border: 1.4px solid var(--case-study);
+    border: 2.5px solid var(--case-study);
 }
 @media screen and (min-width: 768px) {
     .cover {
