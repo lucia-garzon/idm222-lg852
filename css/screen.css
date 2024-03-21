@@ -865,10 +865,10 @@ footer {
     text-align: center;
     margin: 8vh auto 2vh auto;
 }
-.reflect-header {
+/* .reflect-header {
     text-align: center;
     margin: 1rem auto 2vh auto;
-}
+} */
 .rounded-image {
     display: block;
     border-radius: var(--border-radius);
@@ -994,7 +994,7 @@ proj2-buttons {
     width: 100%;
 }
 .proj3-cover {
-    border: 2.5px solid var(--case-study);
+    border: 2px solid var(--case-study);
 }
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .cover {
@@ -1129,11 +1129,17 @@ proj2-buttons {
         gap: 2.5vw;
     }
 }
+.reflection-header {
+    margin: 1.75rem auto 10px auto;
+}
 .proj1-reflection {
-    background-color: var(--project-2-light);
+    background-color: var(--project-1-light);
     border-radius: var(--border-radius);
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     margin-top: 10vh;
+    margin-bottom: 3vh;
+    border: 2px solid var(--project-1-dark);
+    box-shadow: 3px 3px var(--project-1-dark);
 }
 
 
@@ -1220,6 +1226,16 @@ proj2-buttons {
     border-radius: 30px;
     background-color: #ffd5e3ad;
 }
+.proj2-reflection {
+    background-color: var(--project-2-light);
+    border-radius: var(--border-radius);
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    border: 2px solid var(--project-2-dark);
+    box-shadow: 3px 3px var(--project-2-dark);
+}
+
 .mockup-title {
     margin-bottom: 7px;
 }
@@ -1273,11 +1289,29 @@ proj2-buttons {
         margin: 0; /* reset margin */
     }
 }
+.proj3-reflection {
+    background-color: var(--project-3-light);
+    border-radius: var(--border-radius);
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    border: 2px solid var(--project-3-dark);
+    box-shadow: 3px 3px var(--project-3-dark);
+}
 
 
 
 .proj4-title {
     color: var(--project-4-dark);
+}
+.proj4-reflection {
+    background-color: var(--project-4-light);
+    border-radius: var(--border-radius);
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    border: 2px solid var(--project-4-dark);
+    box-shadow: 3px 3px var(--project-4-dark);
 }
 
 /*  resume */
@@ -1319,7 +1353,7 @@ h3 + .line-break-light {
     margin: 0;
 }
 .resume-job-title {
-    border: 1.5px solid black;
+    border: 1.5px solid var(--primary-text);
     border-radius: 7px;
     padding-left: 1vw;
     padding-right: 2vw;
