@@ -1005,6 +1005,12 @@ proj2-buttons {
 .proj3-cover {
     border: 2.5px solid var(--case-study);
 }
+@media screen and (max-width: 768px) {
+    .proj3-cover {
+        border-left: none;
+        border-right: none;
+    }
+}
 @media screen and (min-width: 768px) {
     .cover {
         display: block;
@@ -1233,9 +1239,6 @@ proj2-buttons {
     display: flex;
     flex-flow: column;
     width: 100%;
-}
-.ink {
-    width: 43vw;
 }
 @media screen and (min-width: 600px) {
     .image-grid {
