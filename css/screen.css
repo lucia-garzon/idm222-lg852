@@ -1321,7 +1321,7 @@ h3 + .line-break-light {
 
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .cover {
-        margin-top: 10.8vh;
+        margin-top: 13vh;
         border-radius: 0px;
     }
 }
