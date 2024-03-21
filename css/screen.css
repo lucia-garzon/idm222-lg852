@@ -1357,25 +1357,38 @@ h3 + .line-break-light {
 /* --__--__--_----__--__--_----__--__--_--  about   --__--__--_----__--__--_-_--_--  */
 
 .about-title {
-    margin-top: 13vh;
+    margin-top: 3vh;
+    grid-area: about-title;
 }
 .about-wrapper {
     display: flex;
-    flex-flow: column-reverse;
-    gap: 8vh;
+    flex-flow: column;
+    /* gap: 3vh; */
 }
 .about-lucia {
     width: 100%;
     margin: 0 auto;
     border-radius: var(--border-radius);
+    grid-area: about-lucia;
+    margin-top: 3vh;
 }
-@media screen and (min-width:768px) {
-    .about-wrapper {
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 1rem;
-        gap: 5vh;
 
+@media screen and (min-width:730px) {
+    .about-wrapper {
+        display: grid;
+        /* padding-bottom: 1rem;
+        gap: 5vh; */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto; /* Let the rows grow based on content */
+        grid-template-areas: 
+        "about-title about-lucia"
+        "about-text about-lucia"; /* The text area spans both columns */
+        gap: 3vh;
+        margin-top: 13vh;
+
+    }
+    .about-text {
+        margin: 0;
     }
 }
 .button-resume {
