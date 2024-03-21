@@ -1235,11 +1235,7 @@ proj2-buttons {
 .proj3-title {
     color: var(--project-3-dark);
 }
-/* .image-grid {
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-} */
+
 .image-grid {
     display: flex;
     flex-flow: column;
@@ -1260,23 +1256,6 @@ proj2-buttons {
     grid-area: four;
 }
 
-/* @media screen and (min-width: 600px) {
-    .image-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-            "one two"
-            "three four"
-        ;
-        gap: 1rem;
-    }
-    .ink {
-        width: 43vw;
-        height:30vw;
-        margin: 0px;
-    }
-} */
 @media screen and (min-width: 600px) {
     .image-grid {
         display: grid;
