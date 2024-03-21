@@ -459,6 +459,7 @@ header nav {
         display: block;
         background-color: var(--footer-background);
         border: none;
+        margin: 0 45vw;
     }
     .burger-x-button {
         background-color: transparent;
@@ -1364,6 +1365,9 @@ h3 + .line-break-light {
     display: flex;
     flex-flow: column;
     /* gap: 3vh; */
+}
+.about-text {
+    margin: 1.5vh 0;
 }
 .about-lucia {
     width: 100%;
