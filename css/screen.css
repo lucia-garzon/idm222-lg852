@@ -1041,7 +1041,7 @@ img+figcaption {
 
 
 
-.proj1-column1, .proj1-column2 {
+.proj1-column1, .proj1-column2, .proj1-column3 {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -1057,6 +1057,13 @@ img+figcaption {
     .proj1-column2 {
         display: grid;
         grid-template-columns: 30ch 50vw;
+        grid-template-rows: 1fr;
+        gap: 2.5vw;
+    }
+    .proj1-column3 {
+        display: grid;
+        grid-template-columns: 40ch 40vw;
+        grid-template-rows: 1fr;
         gap: 2.5vw;
     }
 }
