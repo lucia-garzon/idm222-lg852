@@ -1258,7 +1258,11 @@ img+figcaption {
     width: 85ch;
 
 }
-
+@media screen and (max-width:768px) {
+    .proj1-reflection, .proj2-reflection, .proj3-reflection, .proj4-reflection {
+        width: 100%;
+    }
+}
 /*  resume */
 .resume-wrapper {
     display: flex;
