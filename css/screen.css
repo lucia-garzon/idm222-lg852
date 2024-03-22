@@ -1146,6 +1146,9 @@ proj2-buttons {
     margin-bottom: 3vh;
     border: 2px solid var(--project-1-dark);
     box-shadow: 3px 3px var(--project-1-dark);
+    margin: 4vh auto;
+    width: 85ch;
+
 }
 
 
@@ -1241,6 +1244,8 @@ proj2-buttons {
     margin-bottom: 3vh;
     border: 2px solid var(--project-2-dark);
     box-shadow: 3px 3px var(--project-2-dark);
+    margin: 4vh auto;
+    width: 85ch;
 }
 
 .mockup-title {
@@ -1304,6 +1309,9 @@ proj2-buttons {
     margin-bottom: 3vh;
     border: 2px solid var(--project-3-dark);
     box-shadow: 3px 3px var(--project-3-dark);
+    margin: 4vh auto;
+    width: 85ch;
+
 }
 
 .proj4-title {
@@ -1317,6 +1325,9 @@ proj2-buttons {
     margin-bottom: 3vh;
     border: 2px solid var(--project-4-dark);
     box-shadow: 3px 3px var(--project-4-dark);
+    margin: 4vh auto;
+    width: 85ch;
+
 }
 
 /*  resume */
