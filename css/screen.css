@@ -662,7 +662,7 @@ footer {
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
-    gap: 4vh;
+    gap: 3vh;
     margin-bottom: 8vh;
     margin-top: 2vh;
 }
@@ -1003,7 +1003,7 @@ proj2-buttons {
 }
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .cover {
-        margin-top: 13vh;
+        margin-top: 10vh;
         border-radius: 0px;
     }
 }
@@ -1376,7 +1376,7 @@ h3 + .line-break-light {
     padding: 1rem 2rem; 
     width: fit-content;
 
-    margin-top: 13vh;
+    margin-top: 10vh;
 }
 
 .resume-links {
@@ -1435,7 +1435,7 @@ h3 + .line-break-light {
         "about-text about-lucia"
         "about-text about-lucia"; 
         column-gap: 1rem;
-        margin-top: 13vh;
+        margin-top: 10vh;
 
     }
     .about-text {
@@ -1476,7 +1476,7 @@ h3 + .line-break-light {
 
 
 .creative-title {
-    margin-top: 13vh;
+    margin-top: 10vh;
 }
 .creative-title+.creative-title-desc {
     margin-top: -10px;
