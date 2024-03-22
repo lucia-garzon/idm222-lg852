@@ -1088,11 +1088,15 @@ img+figcaption {
 }
 @media screen and (min-width: 768px) {
     .proj2-column1 {
-        display: flex;
+        /* display: flex;
         flex-flow: row nowrap;
         gap: 2.5vw;
         max-width: 40vw;
-        margin: auto;
+        margin: auto; */
+        display: grid;
+        grid-template-columns: 40vw 40vw;
+        grid-template-rows: 1fr;
+        gap: 2.5vw;
     }
     .proj2-image {
         width: 100%;
