@@ -319,6 +319,7 @@ h1, h2, h3, h4 {
 }
 .more-title {
     grid-area: title;
+    text-align: center;
 }
 .word1 {
     grid-area: word1;
@@ -1163,6 +1164,7 @@ proj2-buttons {
         flex-flow: row nowrap;
         gap: 2.5vw;
         max-width: 40vw;
+        margin: auto;
     }
     .proj2-image {
         width: 100%;
