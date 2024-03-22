@@ -1162,7 +1162,7 @@ proj2-buttons {
         display: flex;
         flex-flow: row nowrap;
         gap: 2.5vw;
-
+        max-width: 40vw;
     }
     .proj2-image {
         width: 100%;
