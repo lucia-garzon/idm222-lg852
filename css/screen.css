@@ -1376,6 +1376,11 @@ h3 + .line-break-light {
     grid-area: about-lucia;
     margin-top: 3vh;
 }
+@media screen and (min-width:0px) and (max-width: 730px) {
+    .about-lucia {
+        margin-top: 9vh;
+    }
+}
 
 @media screen and (min-width:730px) {
     .about-wrapper {
