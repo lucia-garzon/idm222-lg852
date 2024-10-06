@@ -961,8 +961,8 @@ img+figcaption {
         
     }
 }
-.proj1-title {
-    color: var(--project-1-dark);
+.phillyreach-title {
+    color: var(--project-2-dark);
 }
 
 .details {
@@ -1087,8 +1087,8 @@ img+figcaption {
 }
 
 
-.proj2-title {
-    color: var(--project-2-dark);
+.michoacana-title {
+    color: var(--project-3-dark);
 }
 .overview-blurb-proj2 {
     background-color: var(--project-3-light);
@@ -1197,8 +1197,8 @@ img+figcaption {
         background-color: #ffd5e3ad;
     }
 }
-.proj3-title {
-    color: var(--project-3-dark);
+.inkling-title {
+    color: var(--project-4-dark);
 }
 
 .image-grid {
