@@ -162,10 +162,12 @@ h1, h2, h3, h4 {
 .cardtitle, .cardtitle-projects {
     top: 1rem;
     position: relative;
+    max-width: 57vw;
 }
 @media screen and (max-width: 500px) {
     .cardtitle {
         font-size: 18px;
+        max-width: 45vw;
     }
 }
 @media screen and (min-width: 1024px) {
@@ -182,12 +184,21 @@ h1, h2, h3, h4 {
 @media screen and (min-width: 767px) and (max-width: 849px) {
     .cardtitle {
         font-size: 20px;
+        max-width: 26vw;
+    }
+    .cardtitle-phillyreach {
+        max-width: 24vw;
     }
 }
 @media screen and (min-width: 850px) and (max-width: 1023px) {
     .cardtitle {
         font-size: 24px;
         line-height: 33px;
+        max-width: 14ch;
+    }
+    .cardtitle-phillyreach {
+        max-width: 12ch;
+
     }
 }
 
@@ -863,13 +874,13 @@ footer {
     .card-container {
         height: fit-content;
     }
-    .projects-page {
+    /* .projects-page {
         grid-template-columns: 40vw 35vw;
         grid-template-rows: 54.5vw 52vw;
-    }
+    } */
 }
 @media screen and (min-width: 1220px) {
-    .projects, .projects-page {
+    .projects {
         display: grid;
         grid-template-columns: 30vw 30vw;
         grid-template-rows: 1fr 1fr;
@@ -951,14 +962,21 @@ footer {
 .card-icons-projects {
     display: flex;
     flex-flow: row nowrap;
-    gap: .75rem;
-    inset-inline-end: -1px;
+    gap: 8px;
+    inset-inline-end: -6px;
     position: absolute;
-    top: 28px;
+    top: 16px;
 }
 @media screen and (min-width: 767px) {
     .card-icons-projects {
-        height: 34px;;
+        height: 34px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .75rem;
+    justify-content: center;
+    inset-inline-end: 10px;
+    position: absolute;
+    top: 22px;
     }
 }
 
