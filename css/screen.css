@@ -1273,7 +1273,9 @@ img+figcaption {
     border: 2px solid var(--case-study);
 
 }
-
+.details-spacing {
+    line-height: 3vh;
+}
 
 
 
