@@ -1216,6 +1216,16 @@ img+figcaption {
 .overview-blurb-proj1, .overview-blurb-proj2, .overview-blurb-proj3, .overview-blurb-proj4 {
     margin-top: 2vh;
 }
+.overview-blurb-amz {
+    background: white;
+  padding: 25px 35px;
+  border-radius: var(--border-radius);
+  border-bottom: 5px solid #8be3e1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border: 1px solid #d1d1d1;
+
+}
 .overview-blurb-proj1 {
     background-color: var(--project-2-light);
     padding: 20px 30px 20px 30px;
