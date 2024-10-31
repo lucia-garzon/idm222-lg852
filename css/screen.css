@@ -109,6 +109,9 @@ p {
 b {
     font-weight: 600;
 }
+.white {
+    color: white;
+}
 .red {
     color: #E9393A;
 }
