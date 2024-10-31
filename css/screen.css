@@ -57,6 +57,13 @@ html {
     --project-5-light: #E4FCCF;
     --project-5-dark: #4B5A2B;
 
+
+    --zeroeyes-dark: #0A0B0E;
+    --zeroeyes-gray: #AAB5BD;
+    --zeroeyes-red: #E9393A;
+    --border-radius: 20px;
+    --amz-dark: #0F1111;
+    --amz-blue: #017185;
     --border-radius: 20px;
 }
 
@@ -91,6 +98,22 @@ p {
     font-family: var(--font-primary);
     line-height: 28px;
     margin: 3vh auto;
+}
+.underline {
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    text-decoration: underline #009A75 dashed 10%;
+    text-underline-offset: 5px; /* Adjust the offset */
+    font-weight: 500;
+}
+b {
+    font-weight: 600;
+}
+.red {
+    color: #E9393A;
+}
+.enter {
+    margin-top: -2vh;
 }
 ul li {
     color: var(--primary-text);
@@ -215,6 +238,10 @@ h1, h2, h3, h4 {
 }
 .card4 {
     background-color: var(--project-4-light);
+    /* box-shadow: 2px 4px 12px #00000014;; */
+}
+.card-ze {
+    background-color: #0A0B0E;
     /* box-shadow: 2px 4px 12px #00000014;; */
 }
 .cardtext {
@@ -1026,6 +1053,10 @@ footer {
 .button-card4 {
     background-color: var(--project-4-dark);
 }
+.button-card-ze {
+    background-color: var(--zeroeyes-gray);
+    color: var(--primary-text);
+}
 .button-card1:hover {
     font-style: normal;
     font-weight: 500;
@@ -1052,6 +1083,13 @@ footer {
     font-weight: 500;
     border-radius: var(--border-radius);
     background-color: var(--project-4-dark);
+    transform: translateY(-5px);
+}
+.button-card-ze:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background-color: #AAB5BD;
     transform: translateY(-5px);
 }
 
@@ -1184,12 +1222,24 @@ img+figcaption {
         
     }
 }
+
+.amz-title {
+    color: var(--amz-dark);
+    line-height: 28px;
+}
+.ze-title {
+    color: var(--zeroeyes-dark);
+}
+
 .phillyreach-title {
     color: var(--project-2-dark);
 }
 
 .details {
     line-height: 1vh;
+}
+.details-spacing {
+    line-height: 28px;
 }
 .details-proj {
     margin-top: 4vh;
@@ -1213,19 +1263,28 @@ img+figcaption {
 .overview-title {
     font-weight: 650;
 }
-.overview-blurb-proj1, .overview-blurb-proj2, .overview-blurb-proj3, .overview-blurb-proj4 {
+.overview-blurb-proj1, .overview-blurb-proj2, .overview-blurb-proj3, .overview-blurb-proj4, .overview-blurb-ze {
     margin-top: 2vh;
 }
 .overview-blurb-amz {
-    background: white;
-  padding: 25px 35px;
-  border-radius: var(--border-radius);
-  border-bottom: 5px solid #8be3e1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  margin-bottom: 30px;
-  border: 1px solid #d1d1d1;
+    border: 1px solid #DDDDDD;
+    /* border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221); */
+    padding: 20px 30px 20px 30px;
+    background: linear-gradient(180deg, #fff, #fbfbfb);
+    border-bottom: 5px solid #01718594;
+    border-radius: var(--border-radius);
 
 }
+.overview-blurb-ze {
+    background-color: var(--zeroeyes-dark);
+    border-radius: var(--border-radius);
+    color: var(--zeroeyes-gray);
+    padding: 20px 30px;
+}
+
+
 .overview-blurb-proj1 {
     background-color: var(--project-2-light);
     padding: 20px 30px 20px 30px;
@@ -1273,11 +1332,29 @@ img+figcaption {
     border: 2px solid var(--case-study);
 
 }
-.details-spacing {
-    line-height: 3vh;
+.bubble-ze {
+    margin: 5px;
+    padding: 5px 10px;
+    /* background-color: var(--zeroeyes-gray); */
+    border-radius: 20px;
+    border: 2px solid var(--zeroeyes-red);
+    color: var(--zeroeyes-dark);
+}
+.bubble-amz {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #01718594;
+    background-color: white;
 }
 
 
+.proj-ze-title {
+    color: white;
+}
+.ze {
+    color: white;
+}
 
 .proj1-column1, .proj1-column2, .proj1-column3 {
     display: flex;
@@ -1308,6 +1385,9 @@ img+figcaption {
 .reflection-header {
     margin: 1.75rem auto 10px auto;
 }
+.ze-header {
+    color: var(--zeroeyes-red);
+}
 .proj1-reflection {
     background-color: var(--project-2-light);
     border-radius: var(--border-radius);
@@ -1320,6 +1400,21 @@ img+figcaption {
     width: 85ch;
 
 }
+.ze-reflection  {
+    background-color: var(--zeroeyes-dark);
+    border-radius: var(--border-radius);
+
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    
+    margin: 4vh auto;
+    width: 85ch;
+}
+.gray {
+    color: var(--zeroeyes-gray);
+}
+
 
 
 .michoacana-title {
