@@ -368,6 +368,11 @@ h1, h2, h3, h4 {
 .michoacana-button {
     margin: 3vh .1rem 0 .1rem;
 }
+.ze-button {
+    display: block;
+    background-color: var(--zeroeyes-dark);
+    margin-top: 4vh;
+}
 .button:hover {
     font-style: normal;
     transform: translateY(-5px);
