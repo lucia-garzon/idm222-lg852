@@ -1230,7 +1230,9 @@ img+figcaption {
         
     }
 }
-
+.ze-cover {
+    border-radius: var(--border-radius);
+}
 .amz-title {
     color: var(--amz-dark);
     line-height: 28px;
