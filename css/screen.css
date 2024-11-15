@@ -1285,6 +1285,18 @@ img+figcaption {
     border-radius: var(--border-radius);
 
 }
+.reflection-amz {
+    border: 1px solid #DDDDDD;
+    /* border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221); */
+    padding: 20px 30px 20px 30px;
+    background: linear-gradient(180deg, #fff, #fbfbfb);
+    border-bottom: 5px solid #01718594;
+    border-radius: var(--border-radius);
+    margin: 4vh auto;
+    width: 85ch;
+}
 .overview-blurb-ze {
     background-color: var(--zeroeyes-dark);
     border-radius: var(--border-radius);
@@ -1418,6 +1430,11 @@ img+figcaption {
     
     margin: 4vh auto;
     width: 85ch;
+
+
+
+    /* border-bottom: 5px solid #01718594; */
+    
 }
 .gray {
     color: var(--zeroeyes-gray);
@@ -1607,7 +1624,7 @@ img+figcaption {
 
 }
 @media screen and (max-width:768px) {
-    .proj1-reflection, .proj2-reflection, .proj3-reflection, .proj4-reflection {
+    .proj1-reflection, .proj2-reflection, .proj3-reflection, .proj4-reflection, .reflection-amz, .ze-reflection {
         width: 100%;
     }
 }
