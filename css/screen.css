@@ -1174,10 +1174,7 @@ footer {
     border-style: solid;
     border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
 }
-/* is this necessary? check later : Ensure the tooltip displays outside the card */
-.cardcontainer-final {
-    overflow: visible; /* Allows the tooltip to overflow */
-}
+
 
 
 .card-image-1 {
