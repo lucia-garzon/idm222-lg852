@@ -64,6 +64,8 @@ html {
     --border-radius: 20px;
     --amz-dark: #0F1111;
     --amz-blue: #017185;
+    --amz-lightblue: #DEFAFE;
+    --amz-navyblue: #095F76;
 
 }
 
@@ -173,6 +175,24 @@ h1, h2, h3, h4 {
 }
 
 /*  new cards    new cards    new cards     new cards     new cards  */
+/* new 2/1 cards */
+.cardcontainer-final {
+    position: relative; 
+    align-items: flex-start;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-self: stretch;
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+/* New hover effect class for enlarged shadow */
+.cardcontainer-final:hover {
+    transform: scale(1.02); /* Increases card size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enlarged shadow effect */
+}
 
 .cardcontainer {
     align-items: flex-start;
@@ -228,7 +248,7 @@ h1, h2, h3, h4 {
     }
 }
 
-.card1 {
+.card1, .card1-final {
     background-color: white;
     /* box-shadow: 2px 4px 12px #00000014;; */
 }
@@ -240,12 +260,11 @@ h1, h2, h3, h4 {
     /* box-shadow: 2px 4px 12px #00000014;; */
 }
 .card4 {
-    background-color: var(--project-4-light);
-    /* box-shadow: 2px 4px 12px #00000014;; */
+    background-color: var(--project-3-light);
 }
 .card-ze {
     background-color: #0A0B0E;
-    /* box-shadow: 2px 4px 12px #00000014;; */
+    color: white;
 }
 .cardtext {
     margin: .5vh;
@@ -253,7 +272,7 @@ h1, h2, h3, h4 {
 }
 @media screen and (min-width: 515px) and (max-width: 732px) { 
     .cardtext {
-        min-width: 39ch;
+        min-width: 32ch;
     }
     
 }
@@ -271,16 +290,17 @@ h1, h2, h3, h4 {
     padding: 0 1rem 0 2rem;
     
 }
+@media screen and (max-width: 400px) {
+    .card-info {
+        padding: 0 1rem 0 1.5rem;
+    }
+}
 .card-left { 
     display: flex;
     flex-flow: column wrap;
     align-self: flex-start;
-    text-align: left;      
-}
-@media screen and (min-width: 767px) {
-    .card-left {
-        width: 33ch;
-    }
+    text-align: left;   
+    width: 33ch;   
 }
 @media screen and (min-width: 767px) {
     .projects-card-left {
@@ -288,7 +308,7 @@ h1, h2, h3, h4 {
         margin-bottom: 10px;
     }
 }
-.card-icons-right, .card-icons-projects {
+.card-icons-projects {
     display: flex;
     flex-flow: row nowrap;
     gap: .75rem;
@@ -299,12 +319,12 @@ h1, h2, h3, h4 {
     height: 30px;
 }
 @media screen and (min-width: 767px) {
-    .card-icons-right, .card-icons-projects {
+    .card-icons-projects {
         height: 39px;
     }
 }
 @media screen and (max-width: 767px) {
-    .card-icons-right, .card-icons-projects {
+    .card-icons-projects {
         inset-inline-end: 3px;
     }
 }
@@ -319,11 +339,49 @@ h1, h2, h3, h4 {
     -webkit-transition-property: transform;
     transition-property: transform;
 }
-.tool-logo:hover, .tool-logo:focus, .tool-logo:active{
-    -webkit-transform: scale(1.1) rotate(4deg);
-    transform: scale(1.1) rotate(4deg);
-    /* cursor: pointer; */
+.tool-logo:hover {
+    transform: scale(1.1) rotate(4deg); 
+    cursor: pointer;
 }
+.tool-logo.clicked-logo {
+    transform: scale(0.85) rotate(8deg); /* Define distinct clicked transformation */
+    opacity: 0.5; /* Ensure opacity is included */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Transition for click animation */
+}
+
+/* new cards 2/1 */
+.tool-logo-final {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: transform 0.3s;
+    max-width: 40px;
+    max-height: 38px;
+    object-fit: contain; 
+}
+.tool-logo-final:hover {
+    transform: scale(1.1) rotate(4deg); 
+    cursor: pointer;
+}
+.tool-logo-final.clicked-logo {
+    transform: scale(0.85) rotate(8deg); /* Define distinct clicked transformation */
+    opacity: 0.5; /* Ensure opacity is included */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Transition for click animation */
+}
+@media screen and (min-width: 1200px) {
+    .tool-logo {
+        height: 35px; 
+    }
+}
+@media screen and (min-width: 370px) and (max-width: 400px){
+    .tool-logo {
+        height: 34px;
+
+    }
+}
+
+
 
 .hvr-grow {
     vertical-align: middle;
@@ -871,13 +929,37 @@ footer {
     }
 }
 
-.projects {
+
+.projects, .projects-final {
     display: flex;
     justify-content: center;
     flex-flow: column nowrap;
     gap: 3vh;
     margin-bottom: 8vh;
     margin-top: 2vh;
+}
+/* new cards 2/1 */
+@media screen and (min-width: 732px) { 
+    .projects-final {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+}
+@media screen and (min-width: 1130px) and (max-width: 1200px) {
+    .projects-final {
+        display: grid;
+        grid-template-columns: 33vw 33vw;
+        grid-template-rows: 47vw 47vw;
+    }
+}
+@media screen and (min-width: 1220px) {
+    .projects-final {
+        display: grid;
+        grid-template-columns: 30vw 30vw;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 
 .projects-page {
@@ -952,9 +1034,32 @@ footer {
 }
 
 
-.card-title {
+.card-title-final {
     top: 17px;
     position: relative;
+    margin-bottom: 19px;
+    font-size: 20px;
+}
+@media screen and (min-width: 500px) and (max-width: 730px) {
+    .card-title-final {
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .card-title-final {
+        font-size: 24px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .card-title-final {
+        font-size: 28px;
+    }
+}
+@media screen and (min-width: 730px) and (max-width: 780px) {
+    .card-title-final {
+        font-size: 18px;
+    }
 }
 .card-1 {
     border: 3px solid var(--project-1-dark); 
@@ -994,6 +1099,20 @@ footer {
     padding: 0 1.5vh 0 1.5vh;
     max-width: 30ch;
 }
+
+.card-icons-final {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.75rem;
+    top: 28px; 
+    right: 24px; 
+    height: 39px;
+    transition: transform 0.3s ease; 
+
+    z-index: 2; 
+
+}
 .card-icons-projects {
     display: flex;
     flex-flow: row nowrap;
@@ -1015,6 +1134,51 @@ footer {
     }
 }
 
+/* new cards 2/1 wrapper for logo icons and tooltip */
+.logo-wrapper {
+    position: relative;
+    display: inline-block; /* Keeps logo and tooltip grouped */
+    text-align: center; /* Ensures alignment */
+
+}
+/* show Tooltip on Hover */
+.logo-wrapper:hover .tooltip {
+    transform: translateX(-50%) scale(1); 
+    opacity: 1; 
+}
+.tooltip {
+    position: absolute;
+    bottom: calc(-100% + -.5vh);
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    font-family: var(--font-primary);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 999;
+}
+/* Tooltip Arrow */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
+/* is this necessary? check later : Ensure the tooltip displays outside the card */
+.cardcontainer-final {
+    overflow: visible; /* Allows the tooltip to overflow */
+}
+
 
 .card-image-1 {
     margin-top: 0;
@@ -1032,26 +1196,129 @@ footer {
     width: 100%;
     
 }
+/* new cards 2/1*/
+.snapshot-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+}
+.snapshot-image:hover {
+    transform: scale(1.1); /* Zoom in by 10% */
+}
+.hover-bar {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;  /* At the bottom of the card */
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);  /* Initially hidden below */
+    background-color: var(--amz-dark);
+    color: white;
+    padding: 0.5rem;
+    font-family: var(--font-primary);
+    color: var(--zeroeyes-gray);
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    z-index: 2;  
+    width: 100%;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.5s ease; 
+}
+/* show hover bar when card is hovered */
+.cardcontainer-final:hover .hover-bar {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);  /* animate up */
+}
+/* text inside the hover bar */
+.hover-text {
+    font-size: 1rem; 
+    transition: font-weight 0.3s ease; 
+}
+@media (min-width: 730px) and (max-width: 900px) {
+    .hover-text {
+        font-size: 0.8rem; /* Slightly smaller font size on smaller screens */
+    }
+}
+@media (min-width: 370px) and (max-width: 440px) {
+    .hover-text {
+        font-size: 0.85rem; /* Slightly smaller font size on smaller screens */
+    }
+}
+/* hover-bar amz */
+.hb-amz {
+    background-color: var(--amz-navyblue);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-amz:hover {
+    background-color: #074454;
+}
+/* hover-text amz */
+.ht-amz {
+    color: var(--amz-lightblue);
+}
+.hb-ze {
+    background-color: var(--zeroeyes-gray);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-ze:hover {
+    background-color: #858E96;
+}
+.ht-ze {
+    color: var(--zeroeyes-dark);
+}
+.hb-cbk {
+    background-color: var(--project-2-dark);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-cbk:hover {
+    background-color: #002538;
+}
+.ht-cbk {
+    color: var(--project-2-light);
+}
+.hb-mich {
+    background-color: var(--project-3-dark);
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease .1s;
+}
+.hb-mich:hover {
+    background-color: #850E34;
+}
+.ht-mich {
+    color: var(--project-3-light);
+}
 
-.button-card {
+/* new cards 2/1 */
+.button-card-final {
     color: var(--secondary-text);
     font-family: var(--font-primary);
     font-size: 1rem;
     text-decoration: none;
     cursor: pointer; 
     transition: all .3s ease .1s;
-    margin-top: 1rem;
-    margin-bottom: .8rem;
-
-    padding: 0.5rem 1rem; 
-    /* maybe:  20px 20px */
-    border-radius: var(--border-radius); 
+    margin-top: 8px;
+    padding: 16px 20px; 
+    border-radius: var(--border-radius);
     text-align: center; 
     width: fit-content;
+    margin-bottom: 1.7rem;
 }
-.button-card1 {
-    background-color: #017185;
+.button-card-final.clicked {
+    transform: scale(0.9);
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.15s ease; 
 }
+.button-card1-final {
+    background-color: var(--amz-blue);
+}
+.button-cardze {
+    background-color: var(--zeroeyes-gray);
+    color: var(--zeroeyes-dark);
+}
+
 .button-card2 {
     background-color: var(--project-2-dark);
 }
@@ -1059,7 +1326,7 @@ footer {
     background-color: var(--project-3-dark);
 }
 .button-card4 {
-    background-color: var(--project-4-dark);
+    background-color: var(--zeroeyes-gray);
 }
 .button-card-ze {
     background-color: var(--zeroeyes-gray);
