@@ -782,6 +782,21 @@ header {
     margin: 0 auto;
     padding: 0 20px;
 }
+.animation-wrapper {
+    margin-top: 8vh;
+}
+.animation-title {
+    margin-top: 5rem;
+}
+.animation-subtitle {
+    margin: 1vh 0 .5rem 0;
+}
+.animation-h4 {
+    margin-bottom: 1rem;
+}
+.animation-desc {
+    margin-top: 1rem;
+}
 
 
 
@@ -1412,8 +1427,15 @@ footer {
     
 }
 video {
-    border-radius: 30px;
-    margin: 1rem;
+    width: 50%;
+    height: auto;
+}
+@media screen and (max-width: 768px) {
+    video {
+        width: 100%;
+        height: auto;
+    }
+
 }
 
 
@@ -2169,4 +2191,5 @@ h3 + .line-break-light {
     transform: translateY(100%);
     }
 }
+
 
