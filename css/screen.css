@@ -1439,6 +1439,8 @@ video {
 }
 
 
+
+
 /* figure {
     margin: 0 auto;
     position: relative; 
@@ -2022,6 +2024,39 @@ h3 + .line-break-light {
     }
 }
 /* --__--__--_----__--__--_----__--__--_--  creative   --__--__--_----__--__--_-_--_--  */
+
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* slightly bigger gap */
+    justify-content: center;
+    padding: 20px;
+}
+
+.video-card {
+    max-width: 600px; /* allow larger max size */
+    text-align: center;
+}
+
+.video-card video {
+    width: 100%; /* video fills the card */
+    height: auto; /* keeps video proportions */
+}
+
+.video-title {
+    margin-top: 10px;
+    font-size: 1.5rem; /* bigger text */
+}
+
+/* Responsive for phones */
+@media (max-width: 600px) {
+    .video-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
 
 /* --__--__--_----__--__--_----__--__--_--  about   --__--__--_----__--__--_-_--_--  */
 
