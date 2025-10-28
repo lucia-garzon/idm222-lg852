@@ -921,6 +921,27 @@ footer {
     height: auto;
 }
 
+.frog {
+    width: 50%;
+    max-width: 640px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media (min-width: 760px) and  (max-width: 780px) {
+    .frog {
+        width: 90%;
+    }
+}
+
+@media (min-width: 780px) and (max-width: 1243px) {
+    .frog {
+        width: 130%;
+    }
+}
+
 
 @media screen and (min-width: 768px) { 
     .intro {
