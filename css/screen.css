@@ -886,6 +886,10 @@ footer {
     flex-direction: row;
     justify-content: space-between; */
 }
+
+.intro-text {
+    margin-right: 3vh;
+}
 .intro-blurb {
     margin: 10vh auto 5vh auto;
     font-size: 1.75rem;
@@ -894,7 +898,6 @@ footer {
 
 @media screen and (min-width: 768px) { 
     .intro-blurb {
-        margin-right: 5vh;
         font-size: 2rem;
         line-height: 3rem;
     }
@@ -922,23 +925,34 @@ footer {
 }
 
 .frog {
-    width: 50%;
+    width: 40%;
     max-width: 640px;
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-
-@media (min-width: 760px) and  (max-width: 780px) {
+@media (min-width: 300px) and  (max-width: 600px) {
     .frog {
-        width: 90%;
+        width: 70%;
     }
 }
 
-@media (min-width: 780px) and (max-width: 1243px) {
+@media (min-width: 760px) and  (max-width: 767px) {
+    .frog {
+        width: 40%;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1000px) {
     .frog {
         width: 130%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .frog {
+        width: 70%;
     }
 }
 
