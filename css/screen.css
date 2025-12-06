@@ -67,6 +67,9 @@ html {
     --amz-lightblue: #DEFAFE;
     --amz-navyblue: #095F76;
 
+    --grad-light:#E9F1FD;
+    --grad-dark: #5298E9; 
+
 }
 
 * {
@@ -258,6 +261,9 @@ h1, h2, h3, h4 {
 .card3 {
     background-color: var(--micho-light);
     /* box-shadow: 2px 4px 12px #00000014;; */
+}
+.card-grad {
+    background-color: var(--secondary-text);
 }
 .card-micho {
     background-color: var(--micho-light);
@@ -1337,6 +1343,12 @@ footer {
 .ht-mich {
     color: var(--micho-light);
 }
+.ht-grad {
+    color: var(--grad-light);
+}
+.hb-grad {
+    color: var(--grad-dark);
+}
 
 /* new cards 2/1 */
 .button-card-final {
@@ -1369,6 +1381,9 @@ footer {
 .button-card-cb {
     background-color: var(--project-2-dark);
 }
+.button-card-grad {
+    background-color: var(--grad-dark);
+}
 .button-card-micho {
     background-color: var(--micho-dark);
 }
@@ -1391,6 +1406,13 @@ footer {
     font-weight: 500;
     border-radius: var(--border-radius);
     background-color: var(--project-2-dark);
+    transform: translateY(-5px);
+}
+.button-card-grad:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    background-color: var(--grad-dark);
     transform: translateY(-5px);
 }
 .button-card-micho:hover {
