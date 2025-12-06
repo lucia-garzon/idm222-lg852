@@ -248,7 +248,7 @@ h1, h2, h3, h4 {
     }
 }
 
-.card1, .card1-final {
+.card-amz1, .card-amz1-final {
     background-color: white;
     /* box-shadow: 2px 4px 12px #00000014;; */
 }
@@ -1358,7 +1358,7 @@ footer {
     opacity: 0.9;
     transition: transform 0.3s ease, opacity 0.15s ease; 
 }
-.button-card1-final {
+.button-card-amz1-final {
     background-color: var(--amz-blue);
 }
 .button-cardze {
@@ -1379,7 +1379,7 @@ footer {
     background-color: var(--zeroeyes-gray);
     color: var(--primary-text);
 }
-.button-card1:hover {
+.button-amz1:hover {
     font-style: normal;
     font-weight: 500;
     border-radius: var(--border-radius);
