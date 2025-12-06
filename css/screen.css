@@ -252,7 +252,7 @@ h1, h2, h3, h4 {
     background-color: white;
     /* box-shadow: 2px 4px 12px #00000014;; */
 }
-.card2 {
+.card-cb {
     background-color: var(--project-2-light)
 }
 .card3 {
@@ -1366,7 +1366,7 @@ footer {
     color: var(--zeroeyes-dark);
 }
 
-.button-card2 {
+.button-card-cb {
     background-color: var(--project-2-dark);
 }
 .button-card3 {
@@ -1386,7 +1386,7 @@ footer {
     background-color: var(--project-1-dark);
     transform: translateY(-5px);
 }
-.button-card2:hover {
+.button-card-cb:hover {
     font-style: normal;
     font-weight: 500;
     border-radius: var(--border-radius);
