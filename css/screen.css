@@ -49,8 +49,8 @@ html {
     --project-1-dark: #232F3E;
     --project-2-light: #92CEF1;
     --project-2-dark: #004265;
-    --project-3-light: #FFD5E3;
-    --project-3-dark: #A31945; 
+    --micho-light: #FFD5E3;
+    --micho-dark: #A31945; 
     /* #CC3467 */
     --project-4-light: #E2FFFF;
     --project-4-dark: #154445;
@@ -256,11 +256,11 @@ h1, h2, h3, h4 {
     background-color: var(--project-2-light)
 }
 .card3 {
-    background-color: var(--project-3-light);
+    background-color: var(--micho-light);
     /* box-shadow: 2px 4px 12px #00000014;; */
 }
-.card4 {
-    background-color: var(--project-3-light);
+.card-micho {
+    background-color: var(--micho-light);
 }
 .card-ze {
     background-color: #0A0B0E;
@@ -440,7 +440,7 @@ h1, h2, h3, h4 {
     background-color: var(--project-2-dark);
 }
 .michoacana-button:hover {
-    background-color: var(--project-3-dark);
+    background-color: var(--micho-dark);
 }
 .inkling-button:hover {
     background-color: var(--project-4-dark);
@@ -1128,11 +1128,11 @@ footer {
     transform: translate(-1px, -1px);
 }
 .card-3 {
-    border: 3px solid var(--project-3-dark); 
-    background-color: var(--project-3-light)
+    border: 3px solid var(--micho-dark); 
+    background-color: var(--micho-light)
 }
 .card-3:hover {
-    box-shadow: 3px 3px var(--project-3-dark);
+    box-shadow: 3px 3px var(--micho-dark);
     transform: translate(-1px, -1px);
 }
 .card-4 {
@@ -1327,7 +1327,7 @@ footer {
     color: var(--project-2-light);
 }
 .hb-mich {
-    background-color: var(--project-3-dark);
+    background-color: var(--micho-dark);
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
     transition: all .3s ease .1s;
 }
@@ -1335,7 +1335,7 @@ footer {
     background-color: #850E34;
 }
 .ht-mich {
-    color: var(--project-3-light);
+    color: var(--micho-light);
 }
 
 /* new cards 2/1 */
@@ -1369,8 +1369,8 @@ footer {
 .button-card-cb {
     background-color: var(--project-2-dark);
 }
-.button-card3 {
-    background-color: var(--project-3-dark);
+.button-card-micho {
+    background-color: var(--micho-dark);
 }
 .button-card4 {
     background-color: var(--zeroeyes-gray);
@@ -1393,11 +1393,11 @@ footer {
     background-color: var(--project-2-dark);
     transform: translateY(-5px);
 }
-.button-card3:hover {
+.button-card-micho:hover {
     font-style: normal;
     font-weight: 500;
     border-radius: var(--border-radius);
-    background-color: var(--project-3-dark);
+    background-color: var(--micho-dark);
     transform: translateY(-5px);
 }
 .button-card4:hover {
@@ -1658,11 +1658,11 @@ img+figcaption {
     box-shadow: 3px 3px var(--project-2-dark);
 }
 .overview-blurb-proj2 {
-    background-color: var(--project-3-light);
+    background-color: var(--micho-light);
     padding: 20px 30px 20px 30px;
     border-radius: var(--border-radius);
-    border: 2px solid var(--project-3-dark);
-    box-shadow: 3px 3px var(--project-3-dark);
+    border: 2px solid var(--micho-dark);
+    box-shadow: 3px 3px var(--micho-dark);
 }
 .overview-blurb-proj3 {
     background-color: var(--project-4-light);
@@ -1788,13 +1788,13 @@ img+figcaption {
 
 
 .michoacana-title {
-    color: var(--project-3-dark);
+    color: var(--micho-dark);
 }
 .overview-blurb-proj2 {
-    background-color: var(--project-3-light);
+    background-color: var(--micho-light);
     padding: 20px 30px 20px 30px;
     border-radius: var(--border-radius);
-    border: 2px solid var(--project-3-dark);
+    border: 2px solid var(--micho-dark);
 }
 @media screen and (min-width: 768px) {
     .proj2-column1 {
@@ -1876,13 +1876,13 @@ img+figcaption {
     background-color: #ffd5e3ad;
 }
 .proj2-reflection {
-    background-color: var(--project-3-light);
+    background-color: var(--micho-light);
     border-radius: var(--border-radius);
     padding: 1rem 2rem 2rem 2rem;
     margin-top: 10vh;
     margin-bottom: 3vh;
-    border: 2px solid var(--project-3-dark);
-    box-shadow: 3px 3px var(--project-3-dark);
+    border: 2px solid var(--micho-dark);
+    box-shadow: 3px 3px var(--micho-dark);
     margin: 4vh auto;
     width: 85ch;
 }
