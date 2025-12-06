@@ -1258,6 +1258,12 @@ footer {
 .snapshot-image:hover {
     transform: scale(1.1); /* Zoom in by 10% */
 }
+.ht-grad {
+    color: var(--grad-light);
+}
+.hb-grad {
+    color: var(--grad-dark);
+}
 .hover-bar {
     opacity: 0;
     position: absolute;
@@ -1343,12 +1349,7 @@ footer {
 .ht-mich {
     color: var(--micho-light);
 }
-.ht-grad {
-    color: var(--grad-light);
-}
-.hb-grad {
-    color: var(--grad-dark);
-}
+
 
 /* new cards 2/1 */
 .button-card-final {
