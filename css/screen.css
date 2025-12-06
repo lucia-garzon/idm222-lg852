@@ -931,9 +931,8 @@ footer {
 }
 
 .frog {
-    width: 40%;
-    max-width: 640px;
-    height: auto;
+    width: auto;
+    max-height: 350px;
     display: block;
     margin: 0 auto;
 }
