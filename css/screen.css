@@ -91,18 +91,24 @@ main {
     margin-top: 2rem;
 }
 
+.project-content {
+    max-width: 200ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 .project-content p {
     max-width: 85ch; 
 }
 .project-content li {
     max-width: 85ch; 
-    margin: 0 auto;
 }
 p {
     color: var(--primary-text);
     font-family: var(--font-primary);
     line-height: 28px;
-    margin: 3vh auto;
+    margin: 3vh 0;
 }
 .underline {
     text-transform: uppercase;
