@@ -33,7 +33,7 @@
 html {
     --primary-text: #08201E;
     --secondary-text: #ffffff;
-    --link-before: #005C46; 
+    --primary-dark: #004D48; 
     --main-background: #DDFFFD;
     --footer-background: #005454;
     --button-color: #005C46;
@@ -163,25 +163,11 @@ h1, h2, h3, h4 {
 }
 
 .link {
-	text-decoration: none;
+	text-decoration: underline;
     position: relative;
-    color: var(--primary-text);
+    color: var(--primary-dark);
 }
-.link::before {
-    content: '';
-    background-color: #007D5F59;
-    position: absolute;
-    left: 0;
-    bottom: 0px;
-    width: 100%;
-    height: 8px;
-    z-index: 0;
-    transition: all .3s ease-in-out;
-}
-.link:hover::before {
-    bottom: 0;
-    height: 100%;
-}
+
 
 /*  new cards    new cards    new cards     new cards     new cards  */
 /* new 2/1 cards */
