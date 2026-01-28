@@ -2421,7 +2421,7 @@ h3 + .line-break-light {
   }
 
 :focus-visible {
-    outline: 3px solid var(--teal-400); /* Use a bright accessibility color */
+    outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
     outline-offset: 4px; /* Creates a gap between the element and the ring */
 }
 
