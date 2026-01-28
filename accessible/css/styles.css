@@ -24,7 +24,7 @@
     font-style: normal;
 }
 
-
+/* LINE 247 IS COMMENTED OUT, THAT'S FOR PROJECT PAGE STYLES */
 
 html {
     --neutral-black: #08201E;
@@ -35,7 +35,7 @@ html {
     --primary-dark: #004D48; 
     --primary-mid: #00B3A8;
     --primary-light: #DEFFFD;
-    --secondary-dark: #004D48; 
+    --secondary-dark: #074F57; 
     --secondary-mid: #0D96A5;
     --secondary-light: #B8F3F9;
     --tertiary-dark: #703F2E; 
@@ -103,12 +103,13 @@ main {
 
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -2.5rem;
     left: 0;
     background: var(--neutral-black);
     color: var(--neutral-white);
-    padding: 8px;
+    padding: 0.5rem;
     z-index: 100;
+    font-family: var(--font-primary);
     }
 
 .skip-link:focus { 
@@ -135,14 +136,15 @@ main {
 p {
     color: var(--neutral-black);
     font-family: var(--font-primary);
-    line-height: 28px;
+    line-height: calc(var(--atk-base) * 1.6);
     margin: 3vh 0;
+    font-size: var(--atk-base);
 }
 .underline {
     text-transform: uppercase;
-    letter-spacing: .8px;
+    letter-spacing: 0.05rem;
     text-decoration: underline #009A75 dashed 10%;
-    text-underline-offset: 5px; /* Adjust the offset */
+    text-underline-offset: 0.313rem; /* Adjust the offset */
     font-weight: 500;
 }
 b {
@@ -160,12 +162,12 @@ b {
 ul li {
     color: var(--neutral-black);
     font-family: var(--font-primary);
-    line-height: 28px;
+    line-height: calc(var(--atk-base) * 1.6);
 }
 ul {
     list-style-type: disc;
     padding-left: 1.5rem;
-    line-height: 1.5; /* 24px if font size is 16px */
+    line-height: calc(var(--atk-base) * 1.6);
 }
 
 ul li {
@@ -186,8 +188,22 @@ h1, h2, h3, h4 {
     color: var(--neutral-black);
     font-family: var(--font-header);
     max-width: 100%;
-    font-size: calc(2vh + 1vw); 
+    
     line-height: calc(3vh + 1vw);
+}
+
+h1 {
+    font-size: var(--atk-xl);
+}
+h2 {
+    font-size: var(--atk-lg);
+    font-weight: 600;
+}
+h3 {
+    font-size: var(--atk-md);
+}
+h4 {
+    font-size: var(--atk-sm);
 }
 
 .link {
@@ -210,6 +226,8 @@ h1, h2, h3, h4 {
     transition: transform 0.3s ease, box-shadow 0.3s ease-in;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
+    border: 2px solid var(--secondary-mid);
+    background-color: var(--neutral-white);
 }
 /* New hover effect class for enlarged shadow */
 .cardcontainer-final:hover {
@@ -228,6 +246,9 @@ h1, h2, h3, h4 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden
 }
+
+/* TURN ON LATER FOR PROJECTS PAGE */
+/* 
 .cardtitle, .cardtitle-projects {
     top: 1rem;
     position: relative;
@@ -269,7 +290,7 @@ h1, h2, h3, h4 {
         max-width: 12ch;
 
     }
-}
+} */
 
 .card-amz1, .card-amz1-final {
     background-color: white;
@@ -294,7 +315,6 @@ h1, h2, h3, h4 {
 }
 .cardtext {
     margin: .5vh;
-    max-width: 30ch;
 }
 @media screen and (min-width: 515px) and (max-width: 732px) { 
     .cardtext {
@@ -326,12 +346,12 @@ h1, h2, h3, h4 {
     flex-flow: column wrap;
     align-self: flex-start;
     text-align: left;   
-    width: 33ch;   
+    width: 80%;   
 }
 @media screen and (min-width: 767px) {
     .projects-card-left {
         /* width: 36ch; */
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 }
 .card-icons-projects {
@@ -339,19 +359,19 @@ h1, h2, h3, h4 {
     flex-flow: row nowrap;
     gap: .75rem;
     height: 4vh;
-    inset-inline-end: 15px;
+    inset-inline-end: 0.938rem;
     position: absolute;
-    top: 28px;
-    height: 30px;
+    top: 1.75rem;
+    height: 1.875rem;
 }
 @media screen and (min-width: 767px) {
     .card-icons-projects {
-        height: 39px;
+        height: 2.438rem;
     }
 }
 @media screen and (max-width: 767px) {
     .card-icons-projects {
-        inset-inline-end: 3px;
+        inset-inline-end: 0.188rem;
     }
 }
 .tool-logo {
@@ -359,7 +379,7 @@ h1, h2, h3, h4 {
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0.063rem rgba(0, 0, 0, 0);
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
@@ -382,8 +402,8 @@ h1, h2, h3, h4 {
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     transition: transform 0.3s;
-    max-width: 40px;
-    max-height: 38px;
+    max-width: 2.5rem;
+    max-height: 2.375rem;
     object-fit: contain; 
 }
 .tool-logo-final:hover {
@@ -397,12 +417,12 @@ h1, h2, h3, h4 {
 }
 @media screen and (min-width: 1200px) {
     .tool-logo {
-        height: 35px; 
+        height: 2.188rem; 
     }
 }
 @media screen and (min-width: 370px) and (max-width: 400px){
     .tool-logo {
-        height: 34px;
+        height: 2.125rem;
 
     }
 }
@@ -435,9 +455,9 @@ h1, h2, h3, h4 {
 .button {
     color: white;
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: var(--atk-base);
     text-decoration: none;
-    border-radius: 44px;
+    border-radius: 2.75rem;
     cursor: pointer;
     background-color: var(--primary-dark);
 
@@ -486,78 +506,35 @@ h1, h2, h3, h4 {
 
 /* Mobile styles */
 @media screen and (min-width: 0px) and (max-width: 767px) {
-    html {
-        font-size: 16px;
-        line-height: 28px;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    h2 {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    h3 {
-        font-size: 20px;
-        line-height: 33px;
-    }
-    h4 {
-        font-size: 18px;
-    }
+
     .button {
-        font-size: 1rem;
-        line-height: 24px;
+        font-size: var(--atk-base);
+        /* line-height: 24px; */
     }
     caption {
-        font-size: 16px;
+        font-size: var(--atk-base);
     }
 }
   /* Tablet styles */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    h1 {
-        font-size: 32px;
-    }
-    h2 {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    h3 {
-        font-size: 22px;
-        line-height: 33px;
-    }
-    h4 {
-        font-size: 18px;
-    }
+    
     .button {
-        font-size: 1rem;
-        line-height: 24px;
+        font-size: var(--atk-base);
+        /* line-height: 24px; */
     }
     caption {
-        font-size: 14px;
+        font-size: .875rem;
     }
 }
   /* Desktop styles */
 @media screen and (min-width: 1024px) {
-    h1 {
-        font-size: 40px;
-    }
-    h2 {
-        font-size: 32px;
-        line-height: 33px;
-    }
-    h3 {
-        font-size: 24px;
-        line-height: 33px;
-    }
-    h4 {
-        font-size: 22px;
-    }
+    
     .button {
-        font-size: 1rem;
-        line-height: 24px;
+        font-size: var(--atk-base);
+        /* line-height: 24px; */
     }
     caption {
-        font-size: 14px;
+        font-size: .875rem;
         line-height: normal;
     }
 }
@@ -633,15 +610,33 @@ h1, h2, h3, h4 {
 .logo {
     border-radius: var(--border-radius);
     position: fixed;
-    top: 40px;
-    left: 46.7px;
+    top: calc(2.5rem - 10px); 
+    left: calc(2.919rem - 10px);
+    
     cursor: pointer;
     z-index: 99;
     transition: none;
+    text-decoration: none; 
+    display: inline-flex;
+
+    /* THE FIX: Force a square container and center the image */
+    display: inline-flex;
+    align-items: center;     /* Vertical centering */
+    justify-content: center;  /* Horizontal centering */
+    width: 60px;             /* Adjust this based on your logo size */
+    height: 60px;            /* Must match width to be a perfect circle */
 }
+.logo:focus-visible {
+    /* The Focus Ring */
+    outline: 3px solid var(--teal-400);
+    outline-offset: 5px; 
+}
+
 .logo img {
     transition: transform .3s;
+    display: block; /* Removes tiny extra space at the bottom of images */
 }
+
 .logo img:hover {
     transform: scale(1.2);
 }
@@ -649,14 +644,14 @@ h1, h2, h3, h4 {
 @media screen and (min-width: 0px) and (max-width: 768px) {
     .burger {
         display: block;
-        width: 50px;
-        height: 50px;
+        width: 3.125rem;
+        height: 3.125rem;
         max-width: 100%;
         position: fixed;
 
-        top: 40px;
-        right: 47.7px;
-        border-radius: 10px;
+        top: 2.5rem;
+        right: 2.981rem;
+        border-radius: 0.625rem;
         z-index: 99;
     }
     .nav-wrapper {
@@ -668,6 +663,7 @@ h1, h2, h3, h4 {
     .nav-menu {
         display: flex;
         margin-right: 3vh;
+        gap: var(--atk-xs);
     }
     .nav-wrapper {
         display: flex;
@@ -692,14 +688,15 @@ header nav {
     padding: 0.5rem .3rem; 
     margin-right: 3vh;
     position: relative;
+    font-size: var(--atk-base);
 }
 
 .nav-link::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 4px;
-    border-radius: 4px;
+    height: .25rem;
+    border-radius: .25rem;
     background-color: var(--primary-dark);
     bottom: 0;
     left: 0;
@@ -729,8 +726,8 @@ header nav {
         content: '';
         position: absolute;
         width: 100%;
-        height: 4px;
-        border-radius: 4px;
+        height: 0.25rem;
+        border-radius: 0.25rem;
         background-color: var(--neutral-white);
         bottom: 0;
         left: 0;
@@ -750,6 +747,7 @@ header nav {
         align-items: center;
         justify-content: center;
         margin: 20vh auto;
+        gap: var(--atk-xs);
     }
 
     .burger-x.visible {
@@ -798,7 +796,7 @@ header {
     flex-flow: column nowrap;
     width: 90%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 calc(var(--atk-base) * 1.5);
 }
 
 .creative-wrapper {
@@ -806,7 +804,7 @@ header {
     flex-flow: column nowrap;
     width: 90%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 .animation-wrapper {
     margin-top: 8vh;
@@ -863,16 +861,16 @@ footer {
     align-items: center;
 }
 .footer-philly {
-    margin-top: 24px;
+    margin-top: 5vh;
 }
 .footer-icons {
     display: flex;
     flex-flow: row nowrap;
-    column-gap: 20px;
+    column-gap: 1.25rem;
     align-self: center;
     align-content: space-between;
-    margin-bottom: 24px;
-    margin-top: 20px;
+    margin-bottom: 1.5rem;
+    margin-top: 1.25rem;
 }
 .footer-icons a {
     text-decoration: none;
@@ -880,14 +878,14 @@ footer {
 .icon {
     transition: all 0.3s ease;
     padding: 1rem 1rem .5rem 1rem;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 
 
 }
 .icon:hover {
     transform: translateY(-5px);
     background-color: var(--neutral-black);
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 /* img:hover {
@@ -918,22 +916,28 @@ footer {
 }
 .intro-blurb {
     margin: 10vh auto 5vh auto;
-    font-size: 1.75rem;
-    line-height: 2rem;
-    max-width: 65ch;
+    font-size: var(--atk-xl);
+    line-height: calc(var(--atk-base) * 3.5);
+    max-width: 54vw;
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (max-width: 768px) { 
     .intro-blurb {
-        font-size: 2rem;
-        line-height: 3rem;
+        font-size: var(--atk-lg);
+        line-height: calc(var(--atk-base) * 2.5);
+        max-width: 75ch;
+    }
+}
+/* @media screen and (max-width: 768px) { 
+    .intro-blurb {
+        margin: 15vh auto 5vh auto;
     }
 }
 @media screen and (min-width: 1348px) { 
     .intro-blurb {
         margin-right: 20vh;
     }
-}
+} */
 
 @media screen and (min-width: 1100px) { 
     .intro-text {
@@ -952,41 +956,33 @@ footer {
 }
 
 .frog {
-    width: auto;
-    max-height: 350px;
+    max-width: 23%;
+    /* max-height: 31vh; */
     display: block;
-    margin: 0 auto;
+    margin: 0 1vw;
 }
 
-@media (min-width: 300px) and  (max-width: 600px) {
+@media (min-width: 300px) and  (max-width: 767px) {
     .frog {
-        width: 70%;
+        max-width: 90%;
     }
 }
 
-@media (min-width: 760px) and  (max-width: 767px) {
+@media (min-width: 767px) and  (max-width: 950px) {
     .frog {
-        width: 40%;
+        max-width: 40%;
     }
 }
 
-@media (min-width: 767px) and (max-width: 1000px) {
-    .frog {
-        width: 130%;
-    }
-}
 
-@media (min-width: 1000px) and (max-width: 1300px) {
-    .frog {
-        width: 70%;
-    }
-}
+
+
 
 
 @media screen and (min-width: 768px) { 
     .intro {
         flex: 1;
-        padding: 20px;
+        padding: var(--atk-sm);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -994,7 +990,7 @@ footer {
     }
 
     .lucia-presenting {
-        width: 300px; 
+        width: 18.75rem; 
     }
 }
 
@@ -1111,79 +1107,55 @@ footer {
 
 
 .card-title-final {
-    top: 17px;
+    top: 1vh;
     position: relative;
-    margin-bottom: 19px;
-    font-size: 20px;
-}
-@media screen and (min-width: 500px) and (max-width: 730px) {
-    .card-title-final {
-        font-size: 28px;
-    }
+    margin-bottom: var(--atk-base);
+    font-size: var(--atk-md);
 }
 
-@media screen and (min-width: 850px) {
-    .card-title-final {
-        font-size: 24px;
-    }
-}
-@media screen and (min-width: 1200px) {
-    .card-title-final {
-        font-size: 28px;
-    }
-}
-@media screen and (min-width: 730px) and (max-width: 780px) {
-    .card-title-final {
-        font-size: 18px;
-    }
-}
 .card-1 {
-    border: 3px solid var(--project-1-dark); 
+    border: 0.188rem solid var(--project-1-dark); 
     background-color: var(--project-1-light);
 }
 .card-1:hover {
-    box-shadow: 3px 3px var(--project-1-dark);
+    box-shadow: 0.188rem 0.188rem var(--project-1-dark);
     transform: translate(-1px, -1px);
 }
 .card-2 {
-    border: 3px solid var(--project-2-dark); 
+    border: 0.188rem solid var(--project-2-dark); 
     background-color: var(--project-2-light)
 }
 .card-2:hover {
-    box-shadow: 3px 3px var(--project-2-dark);
+    box-shadow: 0.188rem 0.188rem var(--project-2-dark);
     transform: translate(-1px, -1px);
 }
 .card-3 {
-    border: 3px solid var(--micho-dark); 
+    border: 0.188rem solid var(--micho-dark); 
     background-color: var(--micho-light)
 }
 .card-3:hover {
-    box-shadow: 3px 3px var(--micho-dark);
+    box-shadow: 0.188rem 0.188rem var(--micho-dark);
     transform: translate(-1px, -1px);
 }
 .card-4 {
-    border: 3px solid var(--project-4-dark); 
+    border: 0.188remsolid var(--project-4-dark); 
     background-color: var(--project-4-light)
 }
 .card-4:hover {
-    box-shadow: 3px 3px var(--project-4-dark);
+    box-shadow: 0.188rem 0.188rem var(--project-4-dark);
     transform: translate(-1px, -1px);
 }
 
-.card-text {
-    margin: .5vh;
-    padding: 0 1.5vh 0 1.5vh;
-    max-width: 30ch;
-}
+
 
 .card-icons-final {
     position: absolute;
     display: flex;
     flex-flow: row nowrap;
     gap: 0.75rem;
-    top: 28px; 
-    right: 24px; 
-    height: 39px;
+    top: 1.75rem; 
+    right: 1.5rem; 
+    height: 2.438rem;
     transition: transform 0.3s ease; 
 
     z-index: 2; 
@@ -1192,21 +1164,21 @@ footer {
 .card-icons-projects {
     display: flex;
     flex-flow: row nowrap;
-    gap: 8px;
-    inset-inline-end: -6px;
+    gap: 0.5rem;
+    inset-inline-end: -0.375rem;
     position: absolute;
-    top: 16px;
+    top: 1rem;
 }
 @media screen and (min-width: 767px) {
     .card-icons-projects {
-        height: 34px;
+        height: 2.125rem;
     display: flex;
     flex-flow: row nowrap;
     gap: .75rem;
     justify-content: center;
-    inset-inline-end: 10px;
+    inset-inline-end: 0.625rem;
     position: absolute;
-    top: 22px;
+    top: 1.375rem;
     }
 }
 
@@ -1233,8 +1205,8 @@ footer {
     padding: 0.4rem;
     border-radius: 0.25rem;
     white-space: nowrap;
-    font-size: 0.8rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: var(--atk-base);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 999;
@@ -1243,10 +1215,10 @@ footer {
 .tooltip::after {
     content: '';
     position: absolute;
-    top: -10px;
+    top: -0.625rem;
     left: 50%;
     transform: translateX(-50%);
-    border-width: 5px;
+    border-width: 0.313rem;
     border-style: solid;
     border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
 }
@@ -1285,18 +1257,21 @@ footer {
     bottom: 0;  /* At the bottom of the card */
     left: 50%;
     transform: translateX(-50%) translateY(20px);  /* Initially hidden below */
-    background-color: var(--amz-dark);
+    background-color: var(--secondary-mid);
     color: white;
     padding: 0.5rem;
     font-family: var(--font-primary);
-    color: var(--zeroeyes-gray);
-    font-size: 1rem;
+    color: var(--neutral-white);
+    font-size: var(--atk-base);
     border-radius: 0.25rem;
     white-space: nowrap;
     z-index: 2;  
     width: 100%;
     text-align: center;
     transition: opacity 0.3s ease, transform 0.5s ease; 
+}
+.hover-bar:hover {
+    background-color: var(--secondary-dark);
 }
 /* show hover bar when card is hovered */
 .cardcontainer-final:hover .hover-bar {
@@ -1305,23 +1280,15 @@ footer {
 }
 /* text inside the hover bar */
 .hover-text {
-    font-size: 1rem; 
+    font-size: var(--atk-base); 
     transition: font-weight 0.3s ease; 
+    color: var(--neutral-white);
 }
-@media (min-width: 730px) and (max-width: 900px) {
-    .hover-text {
-        font-size: 0.8rem; /* Slightly smaller font size on smaller screens */
-    }
-}
-@media (min-width: 370px) and (max-width: 440px) {
-    .hover-text {
-        font-size: 0.85rem; /* Slightly smaller font size on smaller screens */
-    }
-}
+
 /* hover-bar amz */
 .hb-amz {
     background-color: var(--amz-navyblue);
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -0.25rem 0.375rem rgba(0, 0, 0, 0.2);
     transition: all .3s ease .1s;
 }
 .hb-amz:hover {
@@ -1343,7 +1310,7 @@ footer {
 } */
 .hb-ze {
     background-color: var(--zeroeyes-gray);
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -0.25rem 0.375rem rgba(0, 0, 0, 0.2);
     transition: all .3s ease .1s;
 }
 .hb-ze:hover {
@@ -1354,7 +1321,7 @@ footer {
 }
 .hb-cbk {
     background-color: var(--project-2-dark);
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -0.25rem 0.375rem rgba(0, 0, 0, 0.2);
     transition: all .3s ease .1s;
 }
 .hb-cbk:hover {
@@ -1365,7 +1332,7 @@ footer {
 }
 .hb-mich {
     background-color: var(--micho-dark);
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px -0.25rem 0.375rem rgba(0, 0, 0, 0.2);
     transition: all .3s ease .1s;
 }
 .hb-mich:hover {
@@ -1380,21 +1347,28 @@ footer {
 .button-card-final {
     color: var(--neutral-white);
     font-family: var(--font-primary);
-    font-size: 1rem;
+    font-size: var(--atk-base);
     text-decoration: none;
     cursor: pointer; 
     transition: all .3s ease .1s;
-    margin-top: 8px;
-    padding: 16px 20px; 
+    margin-top: 0.5rem;
+    padding: 1rem 1.25rem; 
     border-radius: var(--border-radius);
     text-align: center; 
     width: fit-content;
     margin-bottom: 1.7rem;
+    background-color: var(--secondary-dark);
 }
 .button-card-final.clicked {
     transform: scale(0.9);
     opacity: 0.9;
     transition: transform 0.3s ease, opacity 0.15s ease; 
+}
+.button-card-final:hover {
+    font-style: normal;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    transform: translateY(-5px);
 }
 .button-card-amz1-final {
     background-color: var(--amz-blue);
@@ -1464,7 +1438,7 @@ footer {
 }
 
 .index-header-projects {
-    margin: 1.5vh auto 2rem auto;
+    margin: 10vh auto 2rem auto;
     text-align: center;
 }
 
@@ -1544,10 +1518,10 @@ img+figcaption {
 
 .figcaption {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     text-align: center;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 .fig-after, .fig-before {
     width: 100%;
@@ -1606,28 +1580,28 @@ img+figcaption {
 }
 .amz-title {
     color: var(--amz-dark);
-    line-height: 28px;
+    /* line-height: 28px; */
 }
 .disclaimer {
     background-color: #fff;
-    border-left: 5px solid #6bacb8;
-    padding: 14px 14px 8px 16px;
-    font-size: 1rem;
+    border-left: 0.313rem solid #6bacb8;
+    padding: 0.875rem 0.875rem 0.5rem 1rem;
+    font-size: var(--atk-base);
     margin-top: 1.5rem;
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
 }
 
   /* Responsive Styling */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     h1 {
-      font-size: 1.5em; /* Smaller font for mobile */
+      font-size: 1.5em; 
     }
 
     .disclaimer {
-      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      font-size: 0.9rem; 
         padding: 0.8rem;
     }
-}
+} */
 .ze-title {
     color: var(--zeroeyes-dark);
 }
@@ -2073,7 +2047,7 @@ h3 + .line-break-light {
     font-family: var(--font-primary);
     font-size: 1rem;
     text-decoration: none;
-    border-radius: 44px;
+    border-radius: 2.75rem;
     cursor: pointer;
     background-color: var(--primary-dark);
 
@@ -2117,7 +2091,7 @@ h3 + .line-break-light {
 }
 
 .video-card {
-    max-width: 600px; /* allow larger max size */
+    max-width: 37.5rem; /* allow larger max size */
     text-align: center;
 }
 
@@ -2127,7 +2101,7 @@ h3 + .line-break-light {
 }
 
 .video-title {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     font-size: 1.5rem; /* bigger text */
 }
 
@@ -2339,6 +2313,7 @@ h3 + .line-break-light {
     .tooltip {
         background-color: var(--neutral-black);
         border: 1px solid var(--teal-100);
+        font-size: var(--atk-xs);
     }
     .ae_icon {
         border: 1px solid var(--teal-100);
@@ -2363,8 +2338,8 @@ h3 + .line-break-light {
         content: '';
         position: absolute;
         width: 100%;
-        height: 4px;
-        border-radius: 4px;
+        height: 0.25rem;
+        border-radius: 0.25rem;
         background-color: var(--primary-mid);
         bottom: 0;
         left: 0;
@@ -2406,37 +2381,51 @@ h3 + .line-break-light {
 
 /* responsive typography with clamp */
 /* For browsers that support clamp  */
+/* For browsers that support clamp  */
 @supports (font-size: clamp(1rem, 1vi, 1rem)) {
     :root {
-          --atk-sm: clamp(0.8rem, 0.11vi + 0.78rem, 0.89rem);
+          --atk-xs: clamp(0.8rem, 0.11vi + 0.78rem, 0.89rem);
           --atk-base: clamp(1rem, 0.22vi + 0.95rem, 1.19rem);
-          --atk-md: clamp(1.25rem, 0.39vi + 1.17rem, 1.58rem);
-          --atk-lg: clamp(1.56rem, 0.64vi + 1.42rem, 2.11rem);
-          --atk-xl: clamp(1.95rem, 1vi + 1.73rem, 2.81rem);
-          --atk-xxl: clamp(2.44rem, 1.52vi + 2.11rem, 3.75rem);
-          --atk-xxxl: clamp(3.05rem, 2.26vi + 2.56rem, 5rem);
+          --atk-sm: clamp(1.25rem, 0.39vi + 1.17rem, 1.58rem);
+          --atk-md: clamp(1.56rem, 0.64vi + 1.42rem, 2.11rem);
+          --atk-lg: clamp(1.95rem, 1vi + 1.73rem, 2.81rem);
+          --atk-xl: clamp(2.44rem, 1.52vi + 2.11rem, 3.75rem);
+          --atk-xxl: clamp(3.05rem, 2.26vi + 2.56rem, 5rem);
+          --atk-xxxl: clamp(3.81rem, 3.31vi + 3.09rem, 6.66rem);
     }
   }
   /* For browsers that don't support clamp */
   @supports not (font-size: clamp(1rem, 1vi, 1rem)) {
     :root {
-          --atk-sm: 0.8rem;
+          --atk-xs: 0.8rem;
           --atk-base: 1rem;
-          --atk-md: 1.25rem;
-          --atk-lg: 1.56rem;
-          --atk-xl: 1.95rem;
-          --atk-xxl: 2.44rem;
-          --atk-xxxl: 3.05rem;
+          --atk-sm: 1.25rem;
+          --atk-md: 1.56rem;
+          --atk-lg: 1.95rem;
+          --atk-xl: 2.44rem;
+          --atk-xxl: 3.05rem;
+          --atk-xxxl: 3.81rem;
     }
     @media screen and (min-width: 1728px) {
       :root {
-              --atk-sm: 0.89rem;
+              --atk-xs: 0.89rem;
               --atk-base: 1.19rem;
-              --atk-md: 1.58rem;
-              --atk-lg: 2.11rem;
-              --atk-xl: 2.81rem;
-              --atk-xxl: 3.75rem;
-              --atk-xxxl: 5rem;
+              --atk-sm: 1.58rem;
+              --atk-md: 2.11rem;
+              --atk-lg: 2.81rem;
+              --atk-xl: 3.75rem;
+              --atk-xxl: 5rem;
+              --atk-xxxl: 6.66rem;
       }
     }
   }
+
+:focus-visible {
+    outline: 3px solid var(--teal-400); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
+
+.icon:focus-visible {
+    outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
