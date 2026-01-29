@@ -113,7 +113,10 @@ main {
     }
 
 .skip-link:focus { 
-    top: 0; 
+    top: 0;
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 5px;  
+
 }
 
 .one-rem {
@@ -872,6 +875,10 @@ header {
 
 :focus-visible {
     outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
+.nav-link:focus-visible {
+    outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
     outline-offset: 4px; /* Creates a gap between the element and the ring */
 }
 
