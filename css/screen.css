@@ -31,6 +31,29 @@
 }
 
 html {
+
+    --neutral-black: #08201E;
+    --neutral-dark: #2D3A39;
+    --neutral-mid: #5A5F5E;
+    --neutral-light: #D4DFDD;
+    --neutral-white: #ffffff;
+    --primary-dark: #004D48; 
+    --primary-mid: #00B3A8;
+    --primary-light: #DEFFFD;
+    --secondary-dark: #074F57; 
+    --secondary-mid: #0D96A5;
+    --secondary-light: #B8F3F9;
+    --tertiary-dark: #703F2E; 
+    --tertiary-mid: #BC755C; 
+    --tertiary-light: #DAB3A5; 
+
+    --teal-100: #9CC9C6;
+    --teal-200: #739E9C;
+    --teal-300: #4A7270;
+    --teal-400: #204341;
+
+    
+
     --primary-text: #08201E;
     --secondary-text: #ffffff;
     --primary-dark: #004D48; 
