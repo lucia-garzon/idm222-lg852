@@ -641,7 +641,7 @@ h1, h2, h3, h4 {
     transform: scale(1.2);
 }
 
-@media screen and (min-width: 0px) and (max-width: 768px) {
+@media screen and (min-width: 0px) and (max-width: 767px) {
     .burger {
         display: block;
         width: 50px;
