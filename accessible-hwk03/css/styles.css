@@ -706,10 +706,6 @@ footer {
         outline: 3px solid var(--primary-light); 
         outline-offset: 4px; 
     }
-    .button-card-final:focus-visible {
-        outline: 3px solid var(--primary-light); 
-        outline-offset: 4px; 
-    }
 
     p, a {
         color: var(--neutral-white);
