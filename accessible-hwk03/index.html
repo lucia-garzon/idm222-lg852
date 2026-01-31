@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucia Garzon • UI/UX Designer</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-wk03.css">
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
 </head>
 <body>
@@ -39,69 +39,63 @@
         <button class="btn_menu burger"><img src="images/Lilypad-burger.svg" class="burger" alt="Hamburger menu"></button>
     </header>
     
-    <main id="main">
-            <!-- wrapper -->
-        <div class="wrapper">
-
+    <main id="main" class="wrapper">
+            
             <!-- introduction section -->
                 <section class="intro">
-                    
-                    <div class="intro-text">
-                        <p class="intro-blurb">I'm Lucia,                         I craft human-centered solutions through data driven insights.
-                        </p>                    
-                    </div>
-<!-- a UI/UX Designer who enjoys crafting solutions from customer insights. -->
-                    <img 
-                    class="frog"
-                    srcset="
-                        images/frog-small.webp 320w,
-                        images/frog.webp 640w
-                    "
-                    sizes="(max-width: 600px) 90vw,
-                            (max-width: 1243px) 70vw,
-                            50vw"
-                    alt="Frog with Figma icon">
+                    <h1 class="intro-text intro-blurb">Hi! I'm Lucia,                         I craft human-centered solutions through data driven insights.</h1>                    
 
+                    <figure class="intro-figure">
+                        <img 
+                            class="frog"
+                            srcset="
+                                images/frog-small.webp 320w,
+                                images/frog.webp 640w
+                            "
+                            sizes="(max-width: 600px) 90vw,
+                                    (max-width: 1243px) 70vw,
+                                    50vw"
+                            alt="Frog with Figma icon">
+                    </figure>
                 </section>
 
             <section>
                 <h2 class="index-header-projects">Projects</h2> 
-                
                 <section class="projects-final">
-                    <div class="cardcontainer-final card-amz1-final">
-                        <div class="card-info">
-                            <div class="card-icons-final">
+                    <article class="cardcontainer-final card-amz1-final">
+                        <header class="card-info">
+                            <ul class="card-icons-final">
                                 
-                                <div class="logo-wrapper" data-type="section" data-link="https://www.lucia-garzon.com/amazon.html#final-solutions-amz">
-                                    <img class="tool-logo-final" alt="Figma icon" src="images/figma_icon.svg">
-                                    <div class="tooltip">See Figma</div>
-                                </div>
+                                <li class="logo-wrapper">
+                                    <a href="https://www.lucia-garzon.com/amazon.html#final-solutions-amz" class="tool-logo-final" aria-label="See Figma">
+                                        <img class="tool-logo-final" src="images/figma_icon.svg" alt="">
+                                    </a>
+                                    <div class="tooltip" role="tooltip">See Figma</div>
+                                </li>
                             
-                                <div class="logo-wrapper" data-type="section" data-link="https://www.lucia-garzon.com/amazon.html#usertesting-amz">
+                                <li class="logo-wrapper" data-type="section" data-link="https://www.lucia-garzon.com/amazon.html#usertesting-amz">
                                     <img class="tool-logo-final, ut_icon" alt="UserTesting icon" src="images/usertesting_icon.svg">
                                     <div class="tooltip">See UT</div>
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
 
                             
-                            <div class="card-left">
+                            <article class="card-left">
                                 <h2 class="card-title-final">Amazon</h2>
                             
                                 <p class="cardtext">Redesigned delivery instructions to improve clarity and efficiency</p>
             
                                 <a class="button-card-final" href="https://www.lucia-garzon.com/amazon.html" onclick="animateAndNavigate(event)"
                                 >View Case Study</a>
-                            </div>
-                            
-                            
-                        </div>
+                            </article>  
+                        </header>
                         <img class="card-image-1 snapshot-image" alt="Amazon snapshot" src="graphics/index-amazon.png">
                         <div class="hover-bar">
                             <span class="hover-text">Ideation • </span> 
                             <span class="hover-text">UX Research • </span>
                             <span class="hover-text">Usability Testing</span>
                         </div>
-                    </div>
+                    </article>
 
                     <div class="cardcontainer-final card-grad">
                         <div class="card-info">
@@ -188,13 +182,14 @@
                             <span class="hover-text">Visual Identity</span>
                         </div>
                     </div>
-        
-                    
                 </section>
-                
-                
             </section>
-        </div>
+                
+            
+                
+                
+        
+        
     </main>
     
     <footer>
