@@ -250,51 +250,6 @@ h4 {
     overflow: hidden
 }
 
-/* TURN ON LATER FOR PROJECTS PAGE */
-/* 
-.cardtitle, .cardtitle-projects {
-    top: 1rem;
-    position: relative;
-    max-width: 57vw;
-}
-@media screen and (max-width: 500px) {
-    .cardtitle {
-        font-size: 18px;
-        max-width: 45vw;
-    }
-}
-@media screen and (min-width: 1024px) {
-    .cardtitle {
-        font-size: 25px;
-        max-width: 21ch;
-    }
-
-    .cardtitle-projects {
-        font-size: 20px;
-        max-width: 18ch;
-    }
-}
-@media screen and (min-width: 767px) and (max-width: 849px) {
-    .cardtitle {
-        font-size: 20px;
-        max-width: 26vw;
-    }
-    .cardtitle-phillyreach {
-        max-width: 24vw;
-    }
-}
-@media screen and (min-width: 850px) and (max-width: 1023px) {
-    .cardtitle {
-        font-size: 24px;
-        line-height: 33px;
-        max-width: 14ch;
-    }
-    .cardtitle-phillyreach {
-        max-width: 12ch;
-
-    }
-} */
-
 
 .cardtext {
     margin: .5vh;
@@ -690,177 +645,6 @@ footer {
     background-color: var(--neutral-black);
     border-radius: 1.25rem;
 }
-
-/* accessibility considerations */
-
-/* changing colors of homepage in dark mode */
-@media (prefers-color-scheme: dark) {
-    main, body, .nav-wrapper, footer, .nav-link {
-        background: var(--neutral-black);
-        color: var(--neutral-white);
-        text-decoration-color: var(--neutral-white);
-        
-    }
-
-    .logo:focus-visible {
-        outline: 3px solid var(--primary-light); 
-        outline-offset: 4px; 
-    }
-    .button-card-final:focus-visible {
-        outline: 3px solid var(--primary-light); 
-        outline-offset: 4px; 
-    }
-
-    p, a {
-        color: var(--neutral-white);
-        text-decoration-color: var(--neutral-white);
-    }
-
-    .cardcontainer-final, .card-title-final {
-        color: var(--neutral-white);
-        background-color: var(--neutral-black);
-        text-decoration-color: var(--neutral-white);
-    }
-    .cardcontainer-final {
-        border: 1.5px solid var(--teal-100);
-    }
-
-    .tooltip {
-        background-color: var(--neutral-black);
-        border: 1px solid var(--teal-100);
-        font-size: var(--atk-xs);
-    }
-    .ae_icon {
-        border: 1px solid var(--teal-100);
-        border-radius: 6px;
-    }
-
-    img[src*="figma_icon.svg"] {
-        content: url('../images/figma_icon_light.svg');
-    }
-
-    .wordpress_icon, .ut_icon, .ae_icon {
-        filter: brightness(1.5);
-    }
-
-    .button-card-final {
-        background-color: var(--primary-mid);
-        color: var(--neutral-white);
-    }
-
-    .nav-link::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 0.25rem;
-        border-radius: 0.25rem;
-        background-color: var(--primary-mid);
-        bottom: 0;
-        left: 0;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform .3s ease-in-out;
-    }
-
-    .hover-bar, .hb-amz, .hb-amz:hover, .hb-cbk, .hb-cbk:hover, .hb-grad, .hb-ze, .hb-ze:hover, .ht-amz, .ht-grad, .ht-ze, .ht-cbk {
-        background-color: var(--tertiary-dark);
-        color: var(--neutral-white);
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-    .nav-link::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        border-radius: 4px;
-        background-color: var(--primary-mid);
-        bottom: 0;
-        left: 0;
-        transform-origin: right;
-        transform: scaleX(0);
-        transition: transform .01s ease-in-out;
-    }
-    .nav-link:hover::before {
-        transform-origin: left;
-        transform: scaleX(1);
-    }
-}
-
-/* responsive typography with clamp */
-
-/* For browsers that support clamp  */
-@supports (font-size: clamp(1rem, 1vi, 1rem)) {
-    :root {
-            --atk-xs: clamp(0.8rem, 0.11vi + 0.78rem, 0.89rem);
-            --atk-base: clamp(1rem, 0.22vi + 0.95rem, 1.19rem);
-            --atk-sm: clamp(1.25rem, 0.39vi + 1.17rem, 1.58rem);
-            --atk-md: clamp(1.56rem, 0.64vi + 1.42rem, 2.11rem);
-            --atk-lg: clamp(1.95rem, 1vi + 1.73rem, 2.81rem);
-            --atk-xl: clamp(2.44rem, 1.52vi + 2.11rem, 3.75rem);
-            --atk-xxl: clamp(3.05rem, 2.26vi + 2.56rem, 5rem);
-            --atk-xxxl: clamp(3.81rem, 3.31vi + 3.09rem, 6.66rem);
-    }
-}
-  /* For browsers that don't support clamp */
-@supports not (font-size: clamp(1rem, 1vi, 1rem)) {
-    :root {
-            --atk-xs: 0.8rem;
-            --atk-base: 1rem;
-            --atk-sm: 1.25rem;
-            --atk-md: 1.56rem;
-            --atk-lg: 1.95rem;
-            --atk-xl: 2.44rem;
-            --atk-xxl: 3.05rem;
-            --atk-xxxl: 3.81rem;
-    }
-    @media screen and (min-width: 1728px) {
-    :root {
-            --atk-xs: 0.89rem;
-            --atk-base: 1.19rem;
-            --atk-sm: 1.58rem;
-            --atk-md: 2.11rem;
-            --atk-lg: 2.81rem;
-            --atk-xl: 3.75rem;
-            --atk-xxl: 5rem;
-            --atk-xxxl: 6.66rem;
-    }
-    }
-}
-
-:focus-visible {
-    outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
-    outline-offset: 4px; /* Creates a gap between the element and the ring */
-}
-.nav-link:focus-visible {
-    outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
-    outline-offset: 4px; /* Creates a gap between the element and the ring */
-}
-
-.icon:focus-visible {
-    outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
-    outline-offset: 4px; /* Creates a gap between the element and the ring */
-}
-.button-card-final:focus-visible {
-    outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
-    outline-offset: 4px; /* Creates a gap between the element and the ring */
-}
-
-
-
-
-
-
-/* img:hover {
-    filter: saturate(120%);
-    filter: drop-shadow(2px 2px 5px #99D0EF);
-} */
 
 
 /* --__--__--_----__--__--_----__--__--_--    index     --__--__--_--__--__--__--_-- */
@@ -1278,4 +1062,184 @@ footer {
     margin: 10vh auto 2rem auto;
     text-align: center;
 }
+
+
+/* accessibility considerations */
+
+/* responsive typography with clamp */
+
+/* For browsers that support clamp  */
+@supports (font-size: clamp(1rem, 1vi, 1rem)) {
+    :root {
+            --atk-xs: clamp(0.8rem, 0.11vi + 0.78rem, 0.89rem);
+            --atk-base: clamp(1rem, 0.22vi + 0.95rem, 1.19rem);
+            --atk-sm: clamp(1.25rem, 0.39vi + 1.17rem, 1.58rem);
+            --atk-md: clamp(1.56rem, 0.64vi + 1.42rem, 2.11rem);
+            --atk-lg: clamp(1.95rem, 1vi + 1.73rem, 2.81rem);
+            --atk-xl: clamp(2.44rem, 1.52vi + 2.11rem, 3.75rem);
+            --atk-xxl: clamp(3.05rem, 2.26vi + 2.56rem, 5rem);
+            --atk-xxxl: clamp(3.81rem, 3.31vi + 3.09rem, 6.66rem);
+    }
+}
+  /* For browsers that don't support clamp */
+@supports not (font-size: clamp(1rem, 1vi, 1rem)) {
+    :root {
+            --atk-xs: 0.8rem;
+            --atk-base: 1rem;
+            --atk-sm: 1.25rem;
+            --atk-md: 1.56rem;
+            --atk-lg: 1.95rem;
+            --atk-xl: 2.44rem;
+            --atk-xxl: 3.05rem;
+            --atk-xxxl: 3.81rem;
+    }
+    @media screen and (min-width: 1728px) {
+    :root {
+            --atk-xs: 0.89rem;
+            --atk-base: 1.19rem;
+            --atk-sm: 1.58rem;
+            --atk-md: 2.11rem;
+            --atk-lg: 2.81rem;
+            --atk-xl: 3.75rem;
+            --atk-xxl: 5rem;
+            --atk-xxxl: 6.66rem;
+    }
+    }
+}
+
+:focus-visible {
+    outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
+.nav-link:focus-visible {
+    outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
+
+.icon:focus-visible {
+    outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
+.button-card-final:focus-visible {
+    outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
+
+
+/* changing colors of homepage in dark mode */
+@media (prefers-color-scheme: dark) {
+    main, body, .nav-wrapper, footer, .nav-link {
+        background: var(--neutral-black);
+        color: var(--neutral-white);
+        text-decoration-color: var(--neutral-white);
+        
+    }
+
+    
+    .logo:focus-visible {
+        outline: 3px solid var(--primary-light); 
+        outline-offset: 4px; 
+    }
+    .skip-link:focus-visible {
+        outline: 3px solid var(--primary-light); 
+        outline-offset: 4px;
+    }
+    .nav-link:focus-visible {
+        outline: 3px solid var(--primary-light); 
+        outline-offset: 4px; 
+    }
+    .button-card-final:focus-visible {
+        outline: 3px solid var(--primary-light); 
+        outline-offset: 4px; 
+    }
+
+    p, a {
+        color: var(--neutral-white);
+        text-decoration-color: var(--neutral-white);
+    }
+
+    .cardcontainer-final, .card-title-final {
+        color: var(--neutral-white);
+        background-color: var(--neutral-black);
+        text-decoration-color: var(--neutral-white);
+    }
+    .cardcontainer-final {
+        border: 1.5px solid var(--teal-100);
+    }
+
+    .tooltip {
+        background-color: var(--primary-dark);
+        border: 1px solid var(--teal-100);
+        font-size: var(--atk-xs);
+    }
+    .ae_icon {
+        border: 1px solid var(--teal-100);
+        border-radius: 6px;
+    }
+
+    img[src*="figma_icon.svg"] {
+        content: url('../images/figma_icon_light.svg');
+    }
+
+    .wordpress_icon, .ut_icon, .ae_icon {
+        filter: brightness(1.5);
+    }
+
+    .button-card-final {
+        background-color: var(--primary-mid);
+        color: var(--neutral-white);
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: var(--primary-mid);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    .hover-bar, .hb-amz, .hb-amz:hover, .hb-cbk, .hb-cbk:hover, .hb-grad, .hb-ze, .hb-ze:hover, .ht-amz, .ht-grad, .ht-ze, .ht-cbk {
+        background-color: var(--tertiary-dark);
+        color: var(--neutral-white);
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: var(--primary-mid);
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .01s ease-in-out;
+    }
+    .nav-link:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+}
+
+
+
+
+/* img:hover {
+    filter: saturate(120%);
+    filter: drop-shadow(2px 2px 5px #99D0EF);
+} */
 
