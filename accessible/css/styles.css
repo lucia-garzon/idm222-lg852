@@ -525,6 +525,7 @@ header nav {
     margin-right: 3vh;
     position: relative;
     font-size: var(--atk-base);
+    border-radius: var(--border-radius);
 }
 
 .nav-link::before {
@@ -840,6 +841,10 @@ footer {
 
 .icon:focus-visible {
     outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+}
+.button-card-final:focus-visible {
+    outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
     outline-offset: 4px; /* Creates a gap between the element and the ring */
 }
 
