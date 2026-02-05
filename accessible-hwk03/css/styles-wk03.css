@@ -1050,7 +1050,7 @@ figure img.frog {
 .hover-bar {
     opacity: 0;
     position: absolute;
-    bottom: 0;  /* At the bottom of the card */
+    bottom: -0.2%;  /* At the bottom of the card */
     left: 50%;
     transform: translateX(-50%) translateY(20px);  /* Initially hidden below */
     background-color: var(--secondary-mid);
