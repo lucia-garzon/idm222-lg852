@@ -1110,6 +1110,8 @@ figure img.frog {
     width: fit-content;
     margin-bottom: 1.7rem;
     background-color: var(--secondary-dark);
+
+    
 }
 .button-card-final.clicked {
     transform: scale(0.9);
