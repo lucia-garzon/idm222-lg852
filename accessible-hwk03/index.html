@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--  --__--__--_----__--__--_----__--__--_--   HWK 03   --__--__--_----__--__--_----__--__--_--   -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +17,7 @@
         <a class="logo" href="index.html">
             <img alt="logo" src="images/Lilypad-logo.svg" class="logo">
         </a>
-        <nav class="nav-wrapper">
+        <nav class="nav-wrapper" aria-label="Primary navigation">
             <ul class="nav-menu">
                 <li>
                     <a class="nav-link" href="index.html">Home</a>
@@ -34,15 +35,15 @@
                     <a class="nav-link" href="about.html">About</a>
                 </li>
             </ul>
-            <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
+            <button class="btn_menu burger-x-button" aria-label="Close menu"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
         </nav> 
-        <button class="btn_menu burger"><img src="images/Lilypad-burger.svg" class="burger" alt="Hamburger menu"></button>
+        <button class="btn_menu burger" aria-label="Open menu"><img src="images/Lilypad-burger.svg" class="burger" alt="Hamburger menu"></button>
     </header>
     
     <main id="main" class="wrapper">
             
-            <!-- introduction section -->
-                <section class="intro">
+            <!--  --__--__--_----__--__--_----__--__--_--   introduction   --__--__--_----__--__--_----__--__--_--   -->
+                <section class="intro" aria-label="Introduction">
                     <h1 class="intro-text intro-blurb">Hi! I'm Lucia,                         I craft human-centered solutions through data driven insights.</h1>                    
 
                     <figure class="intro-figure">
@@ -59,15 +60,17 @@
                     </figure>
                 </section>
 
-            <section>
+            <!--  --__--__--_----__--__--_----__--__--_--   projects   --__--__--_----__--__--_----__--__--_--   -->
+            <section aria-label="Projects">
                 <h2 class="index-header-projects">Projects</h2> 
-                <section class="projects-final">
-                    <article class="cardcontainer-final card-amz1-final">
+                <section class="projects-final" aria-label="Project cards">
+                    <article class="cardcontainer-final card-amz1-final" aria-label="Project card">
                         <header class="card-info">
                             <ul class="card-icons-final">
                                 <li class="logo-wrapper">
                                     <figure>
-                                        <a href="https://www.lucia-garzon.com/amazon.html#final-solutions-amz" aria-label="See Figma">
+                                        <!-- making the link not functional here -->
+                                        <a href="https://www.lucia-garzon.com/accessibility/.html#final-solutions-amz" aria-label="See Figma">
                                             <img class="tool-logo-final" alt="" src="images/figma_icon.svg">
                                         </a>
                                         <figcaption class="tooltip" role="tooltip">See Figma</figcaption>
@@ -76,7 +79,8 @@
 
                                 <li class="logo-wrapper">
                                     <figure>
-                                        <a href="https://www.lucia-garzon.com/amazon.html#usertesting-amz" aria-label="See UserTesting">
+                                        <!-- making the link not functional here -->
+                                        <a href="https://www.lucia-garzon.com/accessibility/amazon.html#usertesting-amz" aria-label="See UserTesting">
                                             <img class="tool-logo-final, ut_icon" alt="" src="images/usertesting_icon.svg">
                                         </a>
                                         <figcaption class="tooltip" role="tooltip">See UT</figcaption>
@@ -86,8 +90,15 @@
                             <article class="card-left">
                                 <h3 class="card-title-final">Amazon</h3>
                                 <p class="cardtext">Redesigned delivery instructions to improve clarity and efficiency</p>
-                                <a class="button-card-final" href="https://www.lucia-garzon.com/amazon.html" onclick="animateAndNavigate(event)"
-                                >View Case Study</a>
+                                <a
+                                class="button-card-final"
+                                href="https://www.lucia-garzon.com/amazon.html"
+                                >
+                                View Case Study
+                                </a>
+                                
+                                <!-- <a class="button-card-final" href="https://www.lucia-garzon.com/amazon.html" onclick="animateAndNavigate(event)"
+                                >View Case Study</a> -->
                             </article>  
                         </header>
 
@@ -105,117 +116,151 @@
                                 </ul>
                             </aside>
                         </figure>
-
-
                     </article>
 
-                    <article class="cardcontainer-final card-grad">
+                    <article class="cardcontainer-final card-grad" aria-label="Project card">
                         <header class="card-info">
-                            <div class="card-icons-final">
-                                <div class="logo-wrapper" data-type="section" data-link="https://www.figma.com/proto/t2rrdW00p8kBM5ZeuoJfUs/Admin-matching?page-id=1%3A4&node-id=3609-29970&p=f&viewport=227%2C305%2C0.04&t=BkPyuTycZZAnogr1-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3609%3A29970">
-                                    <img class="tool-logo-final" alt="Figma icon" src="images/figma_icon.svg">
-                                    <div class="tooltip">See Figma</div>
-                                </div>
-                                
-                            
-                                
-                            </div>
-                            <div class="card-left">
-                                <h2 class="card-title-final">Graditude</h2>
+                            <ul class="card-icons-final">
+                                <li class="logo-wrapper">
+                                    <figure>
+                                        <!-- making the link not functional here -->
+                                        <a href="https://www.lucia-garzon.com/accessibility/.html#final-solutions-amz" aria-label="See Figma">
+                                            <img class="tool-logo-final" alt="" src="images/figma_icon.svg">
+                                        </a>
+                                        <figcaption class="tooltip" role="tooltip">See Figma</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                            <article class="card-left">
+                                <h3 class="card-title-final">Graditude</h3>
                                 <p class="cardtext"> Launched admin matching flow for college orgs with 100+ users</p>
                                 <a class="button-card-final" href="https://drive.google.com/file/d/1DbkdXb7NGb5EWUBNNl8d7ig0cZFPto_X/view?usp=sharing" onclick="animateAndNavigate(event)">View Case Study</a>
-                            </div>
+                            </article>
                         </header>
-                        <img class="card-image-1 snapshot-image" alt="Women talking" src="images/women-talking.webp">
-                        <div class="hover-bar">
-                            <span class="hover-text">UX/UI Design • </span> 
-                            <span class="hover-text">UX Research</span> 
-                        </div>
+                        <figure class="card-figure">
+                            <img 
+                                class="card-image-1 snapshot-image" 
+                                alt="" 
+                                src="images/women-talking.webp"
+                            >
+                            <aside class="hover-bar" aria-label="Skills used in this project">
+                                <ul class="hover-list">
+                                    <li class="hover-text">UX/UI Design • </li>
+                                    <li class="hover-text">UX Research</li>
+                                </ul>
+                            </aside>
+                        </figure>
                     </article>
                 
-                    <div class="cardcontainer-final">
-                        <div class="card-info">
-                            <div class="card-icons-final">
-                                <div class="logo-wrapper" data-type="external" data-link="https://zeroeyes.com/partnerships/">
-                                    <img class="tool-logo-final, wordpress_icon" alt="Wordpress icon" src="images/wordpress-icon.svg">
-                                    <div class="tooltip">See WP</div>
-                                </div>
-                            
-                                <div class="logo-wrapper" data-type="external" data-link="https://drive.google.com/file/d/1B2_d26ToOnbuptCN_Uf0AxEPpOCkecdS/view">
-                                    <img class="tool-logo-final, ae_icon" alt="AE icon" src="images/aftereffects_icon.svg">
-                                    <div class="tooltip">See Vid</div>
-                                </div>
-                            </div>
-                            <div class="card-left">
-                                <h2 class="card-title-final">ZeroEyes</h2>
+                    <article class="cardcontainer-final" aria-label="Project card">
+                        <header class="card-info">
+                            <ul class="card-icons-final">
+
+                                <li class="logo-wrapper">
+                                    <figure>
+                                        <!-- making the link not functional here -->
+                                        <a href="https://www.lucia-garzon.com/accessibility/zeroeyes.html" aria-label="See WordPress Page">
+                                            <img class="tool-logo-final, wordpress_icon" alt="" src="images/wordpress-icon.svg">
+                                        </a>
+                                        <figcaption class="tooltip" role="tooltip">See Page</figcaption>
+                                    </figure>
+                                </li>
+
+                                <li class="logo-wrapper">
+                                    <figure>
+                                        <!-- making the link not functional here -->
+                                        <a href="https://www.lucia-garzon.com/accessibility/zeroeyes.html" aria-label="See AfterEffects Video">
+                                            <img class="tool-logo-final, ae_icon" alt="" src="images/aftereffects_icon.svg">
+                                        </a>
+                                        <figcaption class="tooltip" role="tooltip">See Vid</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                            <article class="card-left">
+                                <h3 class="card-title-final">ZeroEyes</h3>
                                 <!-- <p class="cardtext ze">Enhancing brand via UI/UX, graphic design, &amp; motion graphics.</p> -->
                                 <p class="cardtext">Elevated brand through UI/UX &amp; motion graphics</p>
                                 <!-- <p class="cardtext ze">Elevated brand with website design, graphic design &amp; motion graphics.</p> -->
                                 <a class="button-card-final" href="https://www.lucia-garzon.com/zeroeyes.html" onclick="animateAndNavigate(event)">View Case Study</a>
-                            </div>
+                            </article>
         
-                        </div>
-                        <img class="card-image-2 snapshot-image" alt="ZeroEyes snapshot" src="graphics/index-zeroeyes.png">
-                        <div class="hover-bar">
-                            <span class="hover-text">Website Design • </span>
-                            <span class="hover-text">Branding • </span>
-                            <span class="hover-text">Product Tutorial</span>
-                        </div>
-                    </div>
+                        </header>
+                        <figure class="card-figure">
+                            <img 
+                                class="card-image-2 snapshot-image" 
+                                alt="" 
+                                src="graphics/index-zeroeyes.png"
+                            >
+                            <aside class="hover-bar" aria-label="Skills used in this project">
+                                <ul class="hover-list">
+                                    <li class="hover-text">Web Design • </li>
+                                    <li class="hover-text">Branding • </li>
+                                    <li class="hover-text">Animation</li>
+                                </ul>
+                            </aside>
+                        </figure>
+                    </article>
         
-                    <div class="cardcontainer-final">
-                        <div class="card-info">
-                            <div class="card-icons-final">
-                                <div class="logo-wrapper" data-type="external" data-link="https://www.figma.com/proto/e9iZLgxX1l64bsVuw4lrok/Team-Nameless-Wireframes-%2B-Mock-up?page-id=181%3A2580&type=design&node-id=200-58230&viewport=341%2C54%2C0.02&t=cOALO9CL8rP6YvYY-1&scaling=scale-down&starting-point-node-id=200%3A58230&show-proto-sidebar=1">
-                                    <img class="tool-logo-final" alt="Figma icon" src="images/figma_icon.svg">
-                                    <div class="tooltip">See MVP</div>
-                                </div>
-                            
-                                <div class="logo-wrapper" data-type="section" data-link="https://www.lucia-garzon.com/phillyreach.html#miro-work">
-                                    <img class="tool-logo-final" alt="Miro icon" src="images/miro_icon.svg">
-                                    <div class="tooltip">See More</div>
-                                </div>
-                            </div>
-                            <div class="card-left">
-                                <h2 class="card-title-final">Coded By:</h2>
+                    <article class="cardcontainer-final" aria-label="Project card">
+                        <header class="card-info">
+                            <ul class="card-icons-final">
+                                <li class="logo-wrapper">
+                                    <figure>
+                                        <!-- making the link not functional here -->
+                                        <a href="https://www.lucia-garzon.com/accessibility/zeroeyes.html" aria-label="See Figma">
+                                            <img class="tool-logo-final, wordpress_icon" alt="" src="images/figma_icon.svg">
+                                        </a>
+                                        <figcaption class="tooltip" role="tooltip">See MVP</figcaption>
+                                    </figure>
+                                </li>
+                                <li class="logo-wrapper">
+                                    <figure>
+                                        <!-- making the link not functional here -->
+                                        <a href="https://www.lucia-garzon.com/accessibility/.html#miro-work" aria-label="See Miro">
+                                            <img class="tool-logo-final, wordpress_icon" alt="" src="images/miro_icon.svg">
+                                        </a>
+                                        <figcaption class="tooltip" role="tooltip">See More</figcaption>
+                                    </figure>
+                                </li>
+                            </ul>
+                            <article class="card-left">
+                                <h3 class="card-title-final">Coded By:</h3>
                             
                                 <p class="cardtext">
                                     Connected parents with affordable after-school programs</p>
             
                                 <a class="button-card-final" href="https://www.lucia-garzon.com/phillyreach.html" onclick="animateAndNavigate(event)">View Case Study</a>
-
-                                
-                            </div>
-                        </div>
-                        <img class="card-image-1 snapshot-image" alt="Phillyreach snapshot" src="graphics/index-phillyreach.png">
-                        <div class="hover-bar">
-                            <span class="hover-text">Prototyping • </span>
-                            <span class="hover-text">User Research • </span>
-                            <span class="hover-text">Visual Identity</span>
-                        </div>
-                    </div>
+                            </article>
+                        </header>
+                        <figure class="card-figure">
+                            <img
+                                class="card-image-1 snapshot-image"
+                                src="graphics/index-phillyreach.png"
+                                alt=""
+                            >
+                            <aside class="hover-bar" aria-label="Skills used in this project">
+                                <ul class="hover-list">
+                                    <li class="hover-text">Prototyping • </li>
+                                    <li class="hover-text">User Research • </li>
+                                    <li class="hover-text">Visual Identity</li>
+                                </ul>
+                            </aside>
+                        </figure>
+                    </article>
                 </section>
             </section>
-                
-            
-                
-                
-        
-        
     </main>
     
-    <footer>
-        <div class="footer-first">
+    <footer aria-label="Footer">
+        <section class="footer-first">
             <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
             
             <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
             <!-- <p class="footer-text">Designed &amp; Developed by Lucia Garzon</p>
             <p class="footer-text">Designer based in Philadelphia, PA • Website made by me!</p> -->
-
-
-        </div>
+        </section>
         
-        <div class="footer-icons">
+        <section class="footer-icons" aria-label="Social media links">
             <!-- LinkedIn icon -->
             <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
                 <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
@@ -230,7 +275,7 @@
             </a>
 
 
-        </div>
+        </section>
 
     </footer>
     <script src="js/index.js"></script>

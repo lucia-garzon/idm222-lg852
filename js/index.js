@@ -34,6 +34,18 @@ if (menuButtons) {
 }
 
 // new card 2/1 changes
+// ---------- CARD BUTTON ANIMATION + NAVIGATION ----------
+document.querySelectorAll('.button-card-final').forEach((link) => {
+    link.addEventListener('click', (event) => {
+    event.preventDefault();
+    link.classList.add('clicked');
+  
+    setTimeout(() => {
+        window.location.href = link.href;
+    }, 300);
+    });
+});
+
 
 function animateAndNavigate(event) {
     event.preventDefault();

@@ -1016,6 +1016,9 @@ figure img.frog {
 .card-figure {
     margin: 0;
     padding: 0;
+    /* drags image to the bottom of card */
+    margin-top: auto;
+    display: flex;
 }
 
 .card-image-1 {
@@ -1062,7 +1065,8 @@ figure img.frog {
     text-align: center;
     transition: opacity 0.3s ease, transform 0.5s ease; 
     /* padding to fix being an aside element */
-    padding: .3rem .1rem 0.7rem .1rem;    
+    padding: .3rem .1rem 0.7rem .1rem; 
+    height: 2.188rem;   
 }
 .hover-bar:hover {
     background-color: var(--secondary-dark);
@@ -1118,6 +1122,7 @@ figure img.frog {
     border-radius: var(--border-radius);
     transform: translateY(-5px);
 }
+
 
 
 .index-header-projects {
