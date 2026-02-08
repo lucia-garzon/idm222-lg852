@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/styles-wk03.css">
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
 </head>
-<body>
-    <a href="#main" class="skip-link">
+<body id="top">
+    <a href="#main" class="skip-link1">
         Skip to main content
         </a>
     <header>
@@ -46,7 +46,7 @@
                 <section class="intro" aria-label="Introduction">
                     <h1 class="intro-text intro-blurb">Hi! I'm Lucia,                         I craft human-centered solutions through data driven insights.</h1>                    
 
-                    <figure class="intro-figure">
+                    <figure class="intro-figure" aria-label="Frog with Figma icon">
                         <img 
                             class="frog"
                             srcset="
@@ -90,7 +90,7 @@
                             <article class="card-left">
                                 <h3 class="card-title-final">Amazon</h3>
                                 <p class="cardtext">Redesigned delivery instructions to improve clarity and efficiency</p>
-                                <a class="button-card-final" href="#" onclick="animateAndNavigate(event)"
+                                <a class="button-card-final" href="#" 
                                 >View Case Study</a>
                             </article>  
                         </header>
@@ -104,7 +104,7 @@
                             <aside class="hover-bar" aria-label="Skills used in this project">
                                 <ul class="hover-list">
                                     <li class="hover-text">Ideation • </li>
-                                    <li class="hover-text">UX Research • </li>
+                                    <li class="hover-text">UXR • </li>
                                     <li class="hover-text">Usability Testing</li>
                                 </ul>
                             </aside>
@@ -127,7 +127,7 @@
                             <article class="card-left">
                                 <h3 class="card-title-final">Graditude</h3>
                                 <p class="cardtext"> Launched admin matching flow for college orgs with 100+ users</p>
-                                <a class="button-card-final" href="#" onclick="animateAndNavigate(event)">View Case Study</a>
+                                <a class="button-card-final" href="#">View Case Study</a>
                             </article>
                         </header>
                         <figure class="card-figure">
@@ -139,7 +139,7 @@
                             <aside class="hover-bar" aria-label="Skills used in this project">
                                 <ul class="hover-list">
                                     <li class="hover-text">UX/UI Design • </li>
-                                    <li class="hover-text">UX Research</li>
+                                    <li class="hover-text">UXR</li>
                                 </ul>
                             </aside>
                         </figure>
@@ -174,7 +174,7 @@
                                 <!-- <p class="cardtext ze">Enhancing brand via UI/UX, graphic design, &amp; motion graphics.</p> -->
                                 <p class="cardtext">Elevated brand through UI/UX &amp; motion graphics</p>
                                 <!-- <p class="cardtext ze">Elevated brand with website design, graphic design &amp; motion graphics.</p> -->
-                                <a class="button-card-final" href="#" onclick="animateAndNavigate(event)">View Case Study</a>
+                                <a class="button-card-final" href="#">View Case Study</a>
                             </article>
         
                         </header>
@@ -222,7 +222,7 @@
                                 <p class="cardtext">
                                     Connected parents with affordable after-school programs</p>
             
-                                <a class="button-card-final" href="#" onclick="animateAndNavigate(event)">View Case Study</a>
+                                <a class="button-card-final" href="#" >View Case Study</a>
                             </article>
                         </header>
                         <figure class="card-figure">
@@ -234,7 +234,7 @@
                             <aside class="hover-bar" aria-label="Skills used in this project">
                                 <ul class="hover-list">
                                     <li class="hover-text">Prototyping • </li>
-                                    <li class="hover-text">User Research • </li>
+                                    <li class="hover-text">UXR • </li>
                                     <li class="hover-text">Visual Identity</li>
                                 </ul>
                             </aside>
@@ -254,19 +254,22 @@
         </section>
         
         <section class="footer-icons" aria-label="Social media links">
+            <a href="#top" class="skip-link2">
+                Skip to top
+                <!-- figure out positioning!!!! -->
+                </a>            
             <!-- LinkedIn icon -->
-            <a class="icon" href="#" target="_blank">
+            <a class="icon" href="#">
                 <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
             </a>
             <!-- Email icon -->
-            <a class="icon" href="#u" target="_blank">
+            <a class="icon" href="#">
                 <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
             </a>
-            <!-- Github icon -->
-            <a class="icon" href="#" target="_blank">
+            <!-- GitHub icon -->
+            <a class="icon" href="#">
                 <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
             </a>
-
 
         </section>
 
@@ -274,7 +277,6 @@
     <script src="js/index.js"></script>
     <script>
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/speed-insights/script.js"></script>      
+    </script> 
 </body>
 </html>
