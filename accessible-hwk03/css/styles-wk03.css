@@ -101,7 +101,7 @@ main {
     
 }
 
-.skip-link {
+.skip-link1 {
     position: absolute;
     top: -2.5rem;
     left: 0;
@@ -112,11 +112,32 @@ main {
     font-family: var(--font-primary);
     }
 
-.skip-link:focus { 
+.skip-link1:focus { 
     top: 0;
     outline: 3px solid var(--primary-dark);
     outline-offset: 5px;  
+}
 
+.skip-link2 {
+    opacity: 0;
+    background: var(--secondary-mid);
+    color: var(--neutral-white);
+    padding: 0.5rem;
+    z-index: 100;
+    font-family: var(--font-primary);
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    }
+
+.skip-link2:focus { 
+    opacity: 1;
+    bottom: 0;
+    outline: 2.5px solid var(--secondary-light);
+    outline-offset: 5px;  
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+    padding: 1rem;
 }
 
 .one-rem {
@@ -402,7 +423,11 @@ h4 {
     outline: 3px solid var(--teal-400);
     outline-offset: 5px; 
 }
-
+.logo-wrapper:focus-visible {
+    /* The Focus Ring */
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 5px; 
+}
 .logo img {
     transition: transform .3s;
     display: block; /* Removes tiny extra space at the bottom of images */
@@ -1206,12 +1231,14 @@ figure img.frog {
         
     }
 
-    
+    .intro-text {
+        color: var(--neutral-white);
+    }
     .logo:focus-visible {
         outline: 3px solid var(--primary-light); 
         outline-offset: 4px; 
     }
-    .skip-link:focus-visible {
+    .skip-link1:focus-visible {
         outline: 3px solid var(--primary-light); 
         outline-offset: 4px;
     }
