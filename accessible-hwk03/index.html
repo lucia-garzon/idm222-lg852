@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  --__--__--_----__--__--_----__--__--_--   HWK 03   --__--__--_----__--__--_----__--__--_--   -->
-<html lang="en">
+<html lang="en" aria-label="Lucia Garzon Portfolio Home Page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,10 +12,10 @@
     <a href="#main" class="skip-link1">
         Skip to main content
         </a>
-    <header>
+    <header aria-label="Primary navigation with logo">
         <!-- navigation -->
-        <a class="logo" href="index.html">
-            <img alt="Logo of Liypad with LG on top" src="images/Lilypad-logo.svg" class="logo">
+        <a class="logo" href="index.html" aria-label="Logo of Lilypad with LG on top">
+            <img alt="Logo of Lilypad with LG on top" src="images/Lilypad-logo.svg" class="logo">
         </a>
         <nav class="nav-wrapper" aria-label="Primary navigation">
             <ul class="nav-menu" aria-label="Primary navigation tabs">
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="about.html">About</a>
                 </li>
             </ul>
-            <button class="btn_menu burger-x-button" aria-label="Close menu"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
+            <button class="btn_menu burger-x-button" aria-label="Close menu"><img src="images/Burger-x.svg" alt="Close menu button with X on top" class="burger-x"></button>
         </nav> 
         <button class="btn_menu burger" aria-label="Open menu"><img src="images/Lilypad-burger.svg" class="burger" alt="Hamburger menu"></button>
     </header>
@@ -56,7 +56,7 @@
                             sizes="(max-width: 600px) 90vw,
                                     (max-width: 1243px) 70vw,
                                     50vw"
-                            alt="Frog with Figma icon">
+                            alt="Drawing of frog with Figma icon">
                     </figure>
                 </section>
 
@@ -65,10 +65,10 @@
                 <h2 class="index-header-projects">Projects</h2> 
                 <section class="projects-final" aria-label="Project cards">
                     <article class="cardcontainer-final card-amz1-final" aria-label="Amazon project card">
-                        <header class="card-info">
-                            <ul class="card-icons-final">
-                                <li class="logo-wrapper">
-                                    <figure>
+                        <header class="card-info" aria-label="Amazon project header">
+                            <ul class="card-icons-final" aria-label="Tools used in this project">
+                                <li class="logo-wrapper" aria-label="First tool">
+                                    <figure aria-label="Figma icon">
                                         <!-- making the link not functional here -->
                                         <a href="#" aria-label="See Figma">
                                             <img class="tool-logo-final" alt="Figma icon" src="images/figma_icon.svg">
@@ -77,17 +77,17 @@
                                     </figure>
                                 </li>
 
-                                <li class="logo-wrapper">
-                                    <figure>
+                                <li class="logo-wrapper" aria-label="Second tool">
+                                    <figure aria-label="UserTesting icon">
                                         <!-- making the link not functional here -->
                                         <a href="#" aria-label="See UserTesting">
-                                            <img class="tool-logo-final ut_icon" alt="UT icon" src="images/usertesting_icon.svg">
+                                            <img class="tool-logo-final ut_icon" alt="UserTesting icon" src="images/usertesting_icon.svg">
                                         </a>
                                         <figcaption class="tooltip" role="tooltip">See UT</figcaption>
                                     </figure>
                                 </li>
                             </ul>
-                            <article class="card-left">
+                            <article class="card-left" aria-label="Project card text">
                                 <h3 class="card-title-final">Amazon</h3>
                                 <p class="cardtext">Redesigned delivery instructions to improve clarity and efficiency</p>
                                 <a class="button-card-final" href="#" 
@@ -95,27 +95,27 @@
                             </article>  
                         </header>
 
-                        <figure class="card-figure">
+                        <figure class="card-figure" aria-label="Card image">
                             <img
                                 class="card-image-1 snapshot-image"
                                 src="graphics/index-amazon.png"
                                 alt="3 phone mockups of Amazon delivery instructions"
                             >
                             <aside class="hover-bar" aria-label="Skills used in this project">
-                                <ul class="hover-list">
-                                    <li class="hover-text">Ideation • </li>
-                                    <li class="hover-text">UXR • </li>
-                                    <li class="hover-text">Usability Testing</li>
+                                <ul class="hover-list" aria-label="Skills">
+                                    <li class="hover-text" aria-label="First skill">Ideation • </li>
+                                    <li class="hover-text" aria-label="Second skill">UXR • </li>
+                                    <li class="hover-text" aria-label="Third skill">Usability Testing</li>
                                 </ul>
                             </aside>
                         </figure>
                     </article>
 
-                    <article class="cardcontainer-final card-grad" aria-label=" Graditude project card">
-                        <header class="card-info">
-                            <ul class="card-icons-final">
-                                <li class="logo-wrapper">
-                                    <figure>
+                    <article class="cardcontainer-final card-grad" aria-label="Graditude project card">
+                        <header class="card-info" aria-label="Graditude project header">
+                            <ul class="card-icons-final" aria-label="One tool used in this project">
+                                <li class="logo-wrapper" aria-label="Only tool">
+                                    <figure aria-label="Figma icon">
                                         <!-- making the link not functional here -->
                                         <a href="#" aria-label="See Figma">
                                             <img class="tool-logo-final" alt="Figma icon" src="images/figma_icon.svg">
@@ -124,33 +124,33 @@
                                     </figure>
                                 </li>
                             </ul>
-                            <article class="card-left">
+                            <article class="card-left" aria-label="Project card text">
                                 <h3 class="card-title-final">Graditude</h3>
                                 <p class="cardtext"> Launched admin matching flow for college orgs with 100+ users</p>
                                 <a class="button-card-final" href="#">View Case Study</a>
                             </article>
                         </header>
-                        <figure class="card-figure">
+                        <figure class="card-figure" aria-label="Card image">
                             <img 
                                 class="card-image-1 snapshot-image" 
                                 alt="Photo of women talking" 
                                 src="images/women-talking.webp"
                             >
                             <aside class="hover-bar" aria-label="Skills used in this project">
-                                <ul class="hover-list">
-                                    <li class="hover-text">UX/UI Design • </li>
-                                    <li class="hover-text">UXR</li>
+                                <ul class="hover-list" aria-label="Skills">
+                                    <li class="hover-text" aria-label="First skill">UX/UI Design • </li>
+                                    <li class="hover-text" aria-label="Second skill">UXR</li>
                                 </ul>
                             </aside>
                         </figure>
                     </article>
                 
                     <article class="cardcontainer-final" aria-label="ZeroEyes project card">
-                        <header class="card-info">
-                            <ul class="card-icons-final">
+                        <header class="card-info" aria-label="ZeroEyes project header">
+                            <ul class="card-icons-final" aria-label="Tools used in this project">
 
-                                <li class="logo-wrapper">
-                                    <figure>
+                                <li class="logo-wrapper" aria-label="First tool">
+                                    <figure aria-label="WordPress icon">
                                         <!-- making the link not functional here -->
                                         <a href="#" aria-label="See WordPress Page">
                                             <img class="tool-logo-final wordpress_icon" alt="Wordpress icon" src="images/wordpress-icon.svg">
@@ -159,17 +159,17 @@
                                     </figure>
                                 </li>
 
-                                <li class="logo-wrapper">
-                                    <figure>
+                                <li class="logo-wrapper" aria-label="Second tool">
+                                    <figure aria-label="AfterEffects icon">
                                         <!-- making the link not functional here -->
                                         <a href="#" aria-label="See AfterEffects Video">
-                                            <img class="tool-logo-final ae_icon" alt="Aftereffects icon" src="images/aftereffects_icon.svg">
+                                            <img class="tool-logo-final ae_icon" alt="AfterEffects icon" src="images/aftereffects_icon.svg">
                                         </a>
                                         <figcaption class="tooltip" role="tooltip">See Vid</figcaption>
                                     </figure>
                                 </li>
                             </ul>
-                            <article class="card-left">
+                            <article class="card-left" aria-label="Project card text">
                                 <h3 class="card-title-final">ZeroEyes</h3>
                                 <!-- <p class="cardtext ze">Enhancing brand via UI/UX, graphic design, &amp; motion graphics.</p> -->
                                 <p class="cardtext">Elevated brand through UI/UX &amp; motion graphics</p>
@@ -178,27 +178,27 @@
                             </article>
         
                         </header>
-                        <figure class="card-figure">
+                        <figure class="card-figure" aria-label="Card image">
                             <img 
                                 class="card-image-2 snapshot-image" 
-                                alt="Mockup of website page" 
+                                alt="Mockup of partnership website page" 
                                 src="graphics/index-zeroeyes.png"
                             >
                             <aside class="hover-bar" aria-label="Skills used in this project">
-                                <ul class="hover-list">
-                                    <li class="hover-text">Web Design • </li>
-                                    <li class="hover-text">Branding • </li>
-                                    <li class="hover-text">Animation</li>
+                                <ul class="hover-list" aria-label="Skills">
+                                    <li class="hover-text" aria-label="First skill">Web Design • </li>
+                                    <li class="hover-text" aria-label="Second skill">Branding • </li>
+                                    <li class="hover-text" aria-label="Third skill">Animation</li>
                                 </ul>
                             </aside>
                         </figure>
                     </article>
         
                     <article class="cardcontainer-final" aria-label="Coded By: project card">
-                        <header class="card-info">
-                            <ul class="card-icons-final">
-                                <li class="logo-wrapper">
-                                    <figure>
+                        <header class="card-info" aria-label="Coded By: project header">
+                            <ul class="card-icons-final" aria-label="Tools used in this project">
+                                <li class="logo-wrapper" aria-label="First tool">
+                                    <figure aria-label="Figma icon">
                                         <!-- making the link not functional here -->
                                         <a href="#" aria-label="See Figma">
                                             <img class="tool-logo-final wordpress_icon" alt="Figma icon" src="images/figma_icon.svg">
@@ -206,8 +206,8 @@
                                         <figcaption class="tooltip" role="tooltip">See MVP</figcaption>
                                     </figure>
                                 </li>
-                                <li class="logo-wrapper">
-                                    <figure>
+                                <li class="logo-wrapper" aria-label="Second tool">
+                                    <figure aria-label="Miro icon">
                                         <!-- making the link not functional here -->
                                         <a href="#" aria-label="See Miro">
                                             <img class="tool-logo-final wordpress_icon" alt="Miro icon" src="images/miro_icon.svg">
@@ -216,7 +216,7 @@
                                     </figure>
                                 </li>
                             </ul>
-                            <article class="card-left">
+                            <article class="card-left" aria-label="Project card text">
                                 <h3 class="card-title-final">Coded By:</h3>
                             
                                 <p class="cardtext">
@@ -225,17 +225,17 @@
                                 <a class="button-card-final" href="#" >View Case Study</a>
                             </article>
                         </header>
-                        <figure class="card-figure">
+                        <figure class="card-figure" aria-label="Card image">
                             <img
                                 class="card-image-1 snapshot-image"
                                 src="graphics/index-phillyreach.png"
                                 alt="Mockup of program finder website page"
                             >
                             <aside class="hover-bar" aria-label="Skills used in this project">
-                                <ul class="hover-list">
-                                    <li class="hover-text">Prototyping • </li>
-                                    <li class="hover-text">UXR • </li>
-                                    <li class="hover-text">Visual Identity</li>
+                                <ul class="hover-list" aria-label="Skills">
+                                    <li class="hover-text" aria-label="First skill">Prototyping • </li>
+                                    <li class="hover-text" aria-label="Second skill">UXR • </li>
+                                    <li class="hover-text" aria-label="Third skill">Visual Identity</li>
                                 </ul>
                             </aside>
                         </figure>
@@ -246,7 +246,7 @@
     
     <footer aria-label="Footer">
         <section class="footer-first">
-            <img class="footer-philly" alt="Image of Philadelphia skyline" src="images/footer-philly.svg">
+            <img class="footer-philly" alt="Vector image of Philadelphia skyline" src="images/footer-philly.svg">
             
             <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
             <!-- <p class="footer-text">Designed &amp; Developed by Lucia Garzon</p>
