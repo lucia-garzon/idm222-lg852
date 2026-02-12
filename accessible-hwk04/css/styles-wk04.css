@@ -1158,6 +1158,111 @@ figure img.frog {
 }
 
 
+/*  resume */
+.resume-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+.resume {
+    margin-top: 2rem;
+}
+.resume-title-name {
+    margin-top: 5vh;
+    margin-bottom: .5vw;
+}
+/* .resume-title + ul {
+    margin-top: 1rem;
+} */
+.resume-title {
+    margin-bottom: 1rem;
+}
+.line-break {
+    border: none;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-top: 3px solid var(--primary-text);
+    margin: 10px 0;
+}
+h3 + .line-break-light {
+    margin-top: .5vw;
+}
+.line-break-light {
+    border: none;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-top: 2px solid var(--footer-background);
+    margin: 10px 0;
+}
+.resume-job-title {
+    margin: 0;
+}
+.resume-job-title {
+    border: 1.5px solid var(--primary-text);
+    border-radius: 7px;
+    padding-left: 1vw;
+    padding-right: 2vw;
+    width: fit-content;
+    margin: 1.5rem auto .6rem 0px;
+}
+.resume-job-title2 {
+    margin-top: .5rem;
+    padding-left: 1vw;
+    padding-right: 2vw;
+    margin: .5rem auto .6rem 0px;
+}
+.resume-list {
+    margin-top: 0;
+}
+
+.button-resume-header {
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    /* ^used to be 44px */
+    cursor: pointer;
+    background-color: var(--button-color);
+
+    padding: 1rem 2rem; 
+    width: fit-content;
+
+    margin-top: 10vh;
+}
+
+.resume-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    margin-left: 0;
+    display: flex;
+    flex-flow: column;
+    gap: .5rem;
+    margin-top: 1.5rem;
+
+}
+.resume-links .link {
+    line-height: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+    .resume-links {
+        display: flex; 
+        flex-flow: row;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+}
+@media screen and (min-width: 764px) and (max-width: 796px) {
+    .resume-links .link {
+        line-height: 1rem;
+    }
+}
 
 
 /* accessibility considerations */
@@ -1320,6 +1425,10 @@ figure img.frog {
 
     .resume-title {
         color: var(--secondary-light);
+    }
+
+    .resume-job-title, .resume-job-title2 {
+        color: var(--teal-100);
     }
 
 }
