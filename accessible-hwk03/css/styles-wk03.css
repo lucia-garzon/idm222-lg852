@@ -1158,6 +1158,91 @@ figure img.frog {
 }
 
 
+/*  resume */
+.resume-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.resume-title-name {
+    margin-top: 5vh;
+    margin-bottom: .5vw;
+}
+.resume-title + ul {
+    margin-top: .5vw;
+    margin-bottom: .5vw;
+}
+.line-break {
+    border: none;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-top: 3px solid var(--primary-text);
+    margin: 10px 0;
+}
+h3 + .line-break-light {
+    margin-top: .5vw;
+}
+.line-break-light {
+    border: none;
+    border-top-width: medium;
+    border-top-style: none;
+    border-top-color: currentcolor;
+    border-top: 2px solid var(--footer-background);
+    margin: 10px 0;
+}
+.resume-job-title {
+    margin: 0;
+}
+.resume-job-title {
+    border: 1.5px solid var(--primary-text);
+    border-radius: 7px;
+    padding-left: 1vw;
+    padding-right: 2vw;
+    width: fit-content;
+    margin: 1.5rem auto .5rem 0px;
+}
+
+.button-resume-header {
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 44px;
+    cursor: pointer;
+    background-color: var(--button-color);
+
+    padding: 1rem 2rem; 
+    width: fit-content;
+
+    margin-top: 10vh;
+}
+
+.resume-links {
+    margin-top: .5vh;
+    margin-left: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+
+}
+.resume-links .link {
+    line-height: 20px;
+}
+@media screen and (min-width: 768px) {
+    .resume-links {
+        display: flex; 
+        flex-flow: row;
+        gap: 2rem;
+    }
+}
+@media screen and (min-width: 764px) and (max-width: 796px) {
+    .resume-links .link {
+        line-height: 15px;
+    }
+}
 
 
 /* accessibility considerations */
@@ -1231,7 +1316,8 @@ figure img.frog {
         
     }
 
-    .intro-text, .index-header-projects {
+    
+    .intro-text, .index-header-projects, .resume-list li, p, h1, h2, h3, h4 {
         color: var(--neutral-white);
     }
     .logo:focus-visible {
@@ -1283,7 +1369,7 @@ figure img.frog {
         filter: brightness(1.5);
     }
 
-    .button-card-final {
+    .button-card-final, .button-resume-header {
         background-color: var(--primary-mid);
         color: var(--neutral-white);
     }
@@ -1306,6 +1392,17 @@ figure img.frog {
         background-color: var(--tertiary-dark);
         color: var(--neutral-white);
     }
+
+    .link {
+        color: var(--primary-mid);
+    }
+
+    /* does not work for some reason */
+
+    .line-break {
+        color: var(--teal-200);
+    }
+
 
 }
 
