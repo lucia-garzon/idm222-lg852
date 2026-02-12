@@ -1400,9 +1400,12 @@ h3 + .line-break-light {
     /* does not work for some reason */
 
     .line-break {
-        color: var(--teal-200);
+        border-top: 3px solid var(--teal-200);
     }
 
+    .resume-title {
+        color: var(--secondary-light);
+    }
 
 }
 
