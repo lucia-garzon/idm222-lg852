@@ -1265,6 +1265,234 @@ h3 + .line-break-light {
 }
 
 
+/* --__--__--_----__--__--_----__--__--_--  about   --__--__--_----__--__--_-_--_--  */
+
+.about-text {
+    margin-top: 3vh;
+    grid-area: about-text;
+}
+.about-wrapper {
+    display: flex;
+    flex-flow: column;
+    /* gap: 3vh; */
+}
+
+.about-lucia {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    grid-area: about-lucia;
+    
+}
+@media screen and (min-width:0px) and (max-width: 730px) {
+    .about-lucia {
+        width: 100%;
+        margin-top: 9vh;
+    }
+}
+
+@media screen and (min-width:730px) {
+    .about-wrapper {
+        display: grid;
+        /* padding-bottom: 1rem;
+        gap: 5vh; */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto; /* Let the rows grow based on content */
+        grid-template-areas: 
+        "about-text about-lucia"
+        "about-text about-lucia"; 
+        column-gap: 1rem;
+        margin-top: 10vh;
+
+    }
+    .about-text {
+        margin: 0;
+    }
+    .about-title p {
+        max-width: 70ch;
+    }
+}
+
+
+/* =========================
+    FORM 
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0px;
+    max-width: 40rem;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    font-family: "Geist", sans-serif;
+    font-size: var(--mack-sm-text);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.required-indicator {
+    color: var(--mack-warning);
+    font-family: "Geist", sans-serif;
+    font-weight: bold;
+    margin-left: 0.25rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+input,
+textarea {  
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--atk-xs);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0.5rem;
+    border: 2px solid var(--mack-primary-black);
+    border-radius: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s
+}
+
+
+input:invalid,
+textarea:invalid {
+    box-shadow: none;
+    border-color: inherit;
+}
+
+input.error,
+textarea.error {
+    border-color: var(--mack-warning);
+    background-color: #fadbd8;
+}
+
+
+.error-message {
+    font-family: "Geist", sans-serif;
+    font-size: var(--mack-xs-text);
+    color: var(--mack-warning);
+    margin-top: -0.5rem;
+    display: block;
+    min-height: 1.25rem;
+}
+
+.confirmation-joke p {
+    font-family: "Geist", sans-serif;
+    font-size: var(--mack-sm-text);
+    color: var(--mack-accent-gray);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.submit-button, .reset-button {
+    font-family: Gelica, serif;
+    font-size: var(--mack-base-text);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: inherit;
+    background-color: inherit;
+    border: 2px solid var(--mack-primary-black);
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+}
+
+.submit-button {
+    background-color: var(--mack-primary-black);
+    color: var(--mack-primary-white);
+}
+
+.reset-button {
+    background-color: transparent;
+    color: var(--mack-primary-black);
+}
+
+.button-group button {
+    margin-left: 0rem;
+}
+
+.submit-button:hover {
+    color: var(--mack-primary-white);
+    background-color: var(--mack-accent-gray);
+    border-color: var(--mack-accent-gray);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.reset-button:hover {
+    color: var(--mack-accent-gray);
+    border-color: var(--mack-accent-gray);
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* =========================
+    SUBMISSION PAGE
+========================= */
+
+.submission-container {
+    background-color: var(--neutral-white);
+    border: 2px solid var(--neutral-black);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.submission-container h2 {
+    margin-top: 0;
+    color: var(--neutral-black);
+    font-size: var(--atk-md);
+}
+
+.submitted-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.info-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--mack-base-text);
+    font-weight: 500;
+    color: var(--mack-primary-black);
+}
+
+.info-item p {
+    margin: 0;
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--mack-sm-text);
+    color: var(--mack-accent-gray);
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+
+
 /* accessibility considerations */
 
 /* responsive typography with clamp */

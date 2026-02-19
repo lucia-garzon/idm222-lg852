@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" aria-label="Lucia Garzon Portfolio About">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucia Garzon • You've Messaged Me!</title>
+    <link rel="stylesheet" href="css/styles-wk04.css">
+    <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
+</head>
+<body id="top">
+    <a href="#main" class="skip-link1">
+        Skip to main content
+    </a>
+    <header aria-label="Primary navigation with logo">
+        <!-- navigation -->
+        <a class="logo" href="index.html" aria-label="Logo of Lilypad with LG on top">
+            <img alt="Logo of Lilypad with LG on top" src="images/Lilypad-logo.svg" class="logo">
+        </a>
+        <nav class="nav-wrapper" aria-label="Primary navigation">
+            <ul class="nav-menu" aria-label="Primary navigation tabs">
+                <li aria-label="Home">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li aria-label="Projects">
+                    <a class="nav-link" href="#">Projects</a>
+                </li>
+                <li aria-label="Resume">
+                    <a class="nav-link" href="#">Resume</a>
+                </li>
+                <li aria-label="Creative">
+                    <a class="nav-link" href="#">Creative</a>
+                </li>
+                <li aria-label="About">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <button class="btn_menu burger-x-button" aria-label="Close menu"><img src="images/Burger-x.svg" alt="Close menu button with X on top" class="burger-x"></button>
+        </nav> 
+        <button class="btn_menu burger" aria-label="Open menu"><img src="images/Lilypad-burger.svg" class="burger" alt="Hamburger menu"></button>
+    </header>
+
+    <main class="wrapper">
+        <section class="about-wrapper">
+            <img alt="Picture of Lucia" src="graphics/about-lucia-spheres.jpg" class="about-lucia">
+            <div class="about-text"> 
+                <h2>Hi there, I'm Lucia!</h2>
+                <p>
+                    I am a <b>UI/UX designer</b> based in Philadelphia who enjoys the challenge of creating <b>engaging digital experiences</b>. What I love most about UI/UX is the variety of problems it can address, as well as the cross-functional teamwork required to tackle these challenges. I have experience in UI/UX Design and user testing at <b>Amazon</b>, <b>Graditude</b>, <b>Biasly</b>, <b>ZeroEyes</b>, and <b>Coded By:</b>. Currently, I'm designing and developing websites and apps as a student @ Drexel University. 
+                </p>
+                <p>
+                    In my free time, I enjoy <a class="link" href="creative.html"><b>making art in any form</b></a>, as well as reading, traveling, and paddle boarding. 
+                    </p>
+
+                <p>Want to talk about UI/UX together? Or really any specific passion you have? I'd love to hear about it!</p>
+                <p>
+                <b>Say hi</b> via 
+                <a class="link" href="mailto:lg852@drexel.edu" target="_blank"><b>email</b></a> or on <a class="link" href="https://www.linkedin.com/in/luciagarzon/" target="_blank"><b>LinkedIn</b></a>.</p>
+            </div>     
+        </section>
+            <!-- <a class="button button-resume" href="https://drive.google.com/file/d/1s2Nuh1cwBuZEdnJ4HAVSo2-2LBIX-hXi/view?usp=sharing" target="_blank">View My Resume</a> -->
+
+        <section aria-label="Contact Form">
+            <h2>Be part of my journey!</h2>
+            <!-- <p>Let's talk</p> -->
+        
+                <form action="" method="post" novalidate>
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label for="firstname">
+                            First name
+                            <span class="required-indicator" aria-hidden="true" >*</span>
+                            <span class="sr-only">required</span>
+                        </label>
+                        <input 
+                            type="text"
+                            id="firstname"
+                            name="firstname"
+                            autocomplete="given-name"
+                            required
+                            aria-required="true"
+                            aria-describedby="firstname-error">
+                        <span 
+                            id="firstname-error"
+                            class="error-message"
+                            role="alert"
+                            aria-live="polite"></span>
+        
+                        <label for="lastname">
+                            Last name
+                            <span class="required-indicator" aria-hidden="true">*</span>
+                            <span class="sr-only">required</span>
+                        </label>
+                        <input 
+                            type="text"
+                            id="lastname"
+                            name="lastname"
+                            autocomplete="family-name"
+                            required
+                            aria-required="true"
+                            aria-describedby="lastname-error">
+                        <span 
+                            id="lastname-error"
+                            class="error-message"
+                            role="alert"
+                            aria-live="polite"></span>
+
+                            <label for="email">
+                                Email address
+                                <span class="required-indicator" aria-hidden="true">*</span>
+                                <span class="sr-only">required</span>
+                            </label>
+                            <input 
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                aria-required="true"
+                                aria-describedby="email-error">
+                            <span 
+                                id="email-error"
+                                class="error-message"
+                                role="alert"
+                                aria-live="polite"></span>
+                
+                            <label for="message">
+                                Give a message, don't be shy!
+                                <span class="required-indicator" aria-hidden="true">*</span>
+                                <span class="sr-only">required</span>
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                required
+                                aria-required="true"
+                                aria-describedby="message-error"></textarea>
+                            <span 
+                                id="message-error"
+                                class="error-message"
+                                role="alert"
+                                aria-live="polite"></span>
+                
+                            <div class="confirmation-joke">
+                                <p>Are you sure you want to submit?</p>
+                            </div>
+                
+                            <div class="button-group">
+                                <button type="submit" class="button" id="submit-btn">
+                                    Submit Form
+                                </button>
+                                <button type="reset" class="reset-button" id="discard-btn">
+                                    Discard Form
+                                </button>
+                            </div>
+                            <div id="form-feedback" aria-live="polite"></div>
+                    </fieldset>
+        
+                
+        
+                </form>
+            </section>
+    </main>
+
+    <footer aria-label="Footer">
+        <section class="footer-first">
+            <img class="footer-philly" alt="Vector image of Philadelphia skyline" src="images/footer-philly.svg">
+            
+            <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
+            <!-- <p class="footer-text">Designed &amp; Developed by Lucia Garzon</p>
+            <p class="footer-text">Designer based in Philadelphia, PA • Website made by me!</p> -->
+        </section>
+        
+        <section class="footer-icons" aria-label="Social media links">
+            <a href="#top" class="skip-link2">
+                Skip to top
+                <!-- figure out positioning!!!! -->
+                </a>
+            <!-- LinkedIn icon -->
+            <a class="icon" href="#">
+                <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
+            </a>
+            <!-- Email icon -->
+            <a class="icon" href="#">
+                <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
+            </a>
+            <!-- GitHub icon -->
+            <a class="icon" href="#">
+                <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
+            </a>
+        </section>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
+
