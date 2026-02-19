@@ -1449,9 +1449,7 @@ textarea.error {
 }
 
 
-/* =========================
-    SUBMISSION PAGE
-========================= */
+/* --__--__--_----__--__--_----__--__--_--  submission page   --__--__--_----__--__--_-_--_--  */
 
 legend {
     font-family: var(--font-primary), sans-serif;
@@ -1667,6 +1665,16 @@ legend {
 
     .resume-job-title, .resume-job-title2 {
         color: var(--teal-100);
+    }
+    /* submission form styles */
+
+    #form-feedback {
+        color: var(--neutral-white);
+    }
+
+    .submission-container {
+        background-color: var(--teal-400);
+        border: 2px solid var(--teal-200);
     }
 
 }

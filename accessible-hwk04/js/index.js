@@ -176,7 +176,7 @@ if (form) {
     let firstErrorField = null;
 
     if (firstname === '') {
-        showFieldError(firstnameInput, firstnameError, 'First name is required (Who are you?)');
+        showFieldError(firstnameInput, firstnameError, 'First name is required');
         if (!firstErrorField) firstErrorField = firstnameInput;
         hasError = true;
         } else {
@@ -184,7 +184,7 @@ if (form) {
         }
 
     if (lastname === '') {
-        showFieldError(lastnameInput, lastnameError, 'Last name is required (Who are you?)');
+        showFieldError(lastnameInput, lastnameError, 'Last name is required');
         if (!firstErrorField) firstErrorField = lastnameInput;
         hasError = true;
         } else {
@@ -247,51 +247,6 @@ if (displayFirstname || displayLastname || displayEmail || displayMessage) {
     }
 }
 
-// --------------------
-// Confetti Effects
-// --------------------
-function prefersReducedMotion() {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-}
-
-function createConfetti() {
-    if (prefersReducedMotion()) return;
-
-    const count = 300;
-    const colors = ['#4695D7', '#FFB900', '#A2D1B1', '#96ACFF', '#B1CDFF', '#C74D4D'];
-
-    for (let i = 0; i < count; i++) {
-    const piece = document.createElement('div');
-    piece.setAttribute('aria-hidden', 'true');
-    piece.style.position = 'fixed';
-    piece.style.left = Math.random() * window.innerWidth + 'px';
-    piece.style.top = '-10px';
-    piece.style.width = '10px';
-    piece.style.height = '10px';
-    piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    piece.style.pointerEvents = 'none';
-    piece.style.zIndex = '99999';
-    piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
-    piece.style.animation = `fall-confetti ${0.8 + Math.random() * 0.7}s linear forwards`;
-    piece.style.transform = `rotate(${Math.random() * 360}deg)`;
-    document.body.appendChild(piece);
-
-    setTimeout(() => piece.remove(), 1800);
-    }
-}
-
-const style = document.createElement('style');
-style.textContent = `
-@keyframes fall-confetti {
-    0% { opacity: 1; }
-    70% { opacity: 1; }
-    to {
-        transform: translateY(${window.innerHeight + 100}px) rotateZ(720deg);
-        opacity: 0;
-    }
-    }
-`;
-document.head.appendChild(style);
 
 // --------------------
 // Discard / Reset
