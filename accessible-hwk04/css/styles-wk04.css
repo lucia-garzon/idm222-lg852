@@ -47,7 +47,13 @@ html {
     --teal-300: #4A7270;
     --teal-400: #204341;
 
+    --luc-error-dark: #A30C17;
+    --luc-error-mid: #F03A47;
+    --luc-error-light: #FAB8BD;
 
+    --luc-success-dark: #1A4D21;
+    --luc-success-mid: #349B42;
+    --luc-success-light: #55C664;
 
     
     /* 344D00 */
@@ -1314,9 +1320,8 @@ h3 + .line-break-light {
 }
 
 
-/* =========================
-    FORM 
-========================= */
+/* --__--__--_----__--__--_----__--__--_--  form   --__--__--_----__--__--_-_--_--  */
+
 form {
     display: flex;
     flex-direction: column;
@@ -1336,16 +1341,16 @@ fieldset {
 }
 
 label {
-    font-family: "Geist", sans-serif;
-    font-size: var(--mack-sm-text);
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--atk-base);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 
 .required-indicator {
-    color: var(--mack-warning);
-    font-family: "Geist", sans-serif;
+    color: var(--luc-error-mid);
+    font-family: var(--font-primary), sans-serif;
     font-weight: bold;
     margin-left: 0.25rem;
 }
@@ -1365,12 +1370,12 @@ label {
 input,
 textarea {  
     font-family: var(--font-primary), sans-serif;
-    font-size: var(--atk-xs);
+    font-size: var(--atk-base);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding: 0.5rem;
-    border: 2px solid var(--mack-primary-black);
+    border: 2px solid var(--neutral-black);
     border-radius: 5px;
     transition: border-color 0.3s ease, background-color 0.3s
 }
@@ -1390,44 +1395,40 @@ textarea.error {
 
 
 .error-message {
-    font-family: "Geist", sans-serif;
-    font-size: var(--mack-xs-text);
-    color: var(--mack-warning);
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--atk-xs);
+    color: var(--luc-error-mid);
     margin-top: -0.5rem;
     display: block;
     min-height: 1.25rem;
 }
 
-.confirmation-joke p {
-    font-family: "Geist", sans-serif;
-    font-size: var(--mack-sm-text);
-    color: var(--mack-accent-gray);
-    font-style: italic;
-    margin-bottom: 0;
-}
 
 .submit-button, .reset-button {
-    font-family: Gelica, serif;
-    font-size: var(--mack-base-text);
+    font-family: var(--font-primary), serif;
+    font-size: var(--atk-base);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     color: inherit;
     background-color: inherit;
-    border: 2px solid var(--mack-primary-black);
+    
     border-radius: 10px;
     padding: 0.6rem 1.2rem;
     cursor: pointer;
 }
 
 .submit-button {
-    background-color: var(--mack-primary-black);
-    color: var(--mack-primary-white);
+    background-color: var(--primary-dark);
+    color: var(--neutral-white);
+    border: 2px solid var(--primary-dark);
+    
 }
 
 .reset-button {
     background-color: transparent;
-    color: var(--mack-primary-black);
+    color: var(--neutral-black);
+    border: 2px solid var(--neutral-black);
 }
 
 .button-group button {
@@ -1435,15 +1436,15 @@ textarea.error {
 }
 
 .submit-button:hover {
-    color: var(--mack-primary-white);
-    background-color: var(--mack-accent-gray);
-    border-color: var(--mack-accent-gray);
+    color: var(--neutral-white);
+    background-color: var(--tertiary-dark);
+    border: 2px solid var(--tertiary-dark);
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .reset-button:hover {
-    color: var(--mack-accent-gray);
-    border-color: var(--mack-accent-gray);
+    color: var(--tertiary-dark);
+    border-color: var(--tertiary-dark);
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
@@ -1452,9 +1453,18 @@ textarea.error {
     SUBMISSION PAGE
 ========================= */
 
+legend {
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--atk-sm);
+    margin-bottom: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .submission-container {
-    background-color: var(--neutral-white);
-    border: 2px solid var(--neutral-black);
+    background-color: var(--secondary-light);
+    border: 2px solid var(--neutral-dark);
     border-radius: 10px;
     padding: 2rem;
     margin-top: 2rem;

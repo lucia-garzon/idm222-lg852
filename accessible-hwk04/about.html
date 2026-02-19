@@ -60,12 +60,12 @@
             <!-- <a class="button button-resume" href="https://drive.google.com/file/d/1s2Nuh1cwBuZEdnJ4HAVSo2-2LBIX-hXi/view?usp=sharing" target="_blank">View My Resume</a> -->
 
         <section aria-label="Contact Form">
-            <h2>Be part of my journey!</h2>
+            <h3>Drop a message, don't be shy!</h3>
             <!-- <p>Let's talk</p> -->
         
                 <form action="" method="post" novalidate>
                     <fieldset>
-                        <legend>Contact Information</legend>
+                        <legend>Contact information</legend>
                         <label for="firstname">
                             First name
                             <span class="required-indicator" aria-hidden="true" >*</span>
@@ -124,7 +124,7 @@
                                 aria-live="polite"></span>
                 
                             <label for="message">
-                                Give a message, don't be shy!
+                                What's your reason for reaching out?
                                 <span class="required-indicator" aria-hidden="true">*</span>
                                 <span class="sr-only">required</span>
                             </label>
@@ -140,19 +140,17 @@
                                 role="alert"
                                 aria-live="polite"></span>
                 
-                            <div class="confirmation-joke">
-                                <p>Are you sure you want to submit?</p>
-                            </div>
+                            
                 
-                            <div class="button-group">
-                                <button type="submit" class="button" id="submit-btn">
+                            <section class="button-group">
+                                <button type="submit" class="submit-button" id="submit-btn">
                                     Submit Form
                                 </button>
                                 <button type="reset" class="reset-button" id="discard-btn">
                                     Discard Form
                                 </button>
-                            </div>
-                            <div id="form-feedback" aria-live="polite"></div>
+                            </section>
+                            <span id="form-feedback" aria-live="polite"></span>
                     </fieldset>
         
                 
