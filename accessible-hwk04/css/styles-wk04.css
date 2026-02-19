@@ -1432,7 +1432,7 @@ textarea.error {
 }
 
 .button-group button {
-    margin-left: 0rem;
+    margin-right: 1rem;
 }
 
 .submit-button:hover {
@@ -1675,6 +1675,21 @@ legend {
     .submission-container {
         background-color: var(--teal-400);
         border: 2px solid var(--teal-200);
+    }
+
+    input, textarea {
+        background-color: var(--teal-100);
+    }
+
+    .reset-button {
+        color: var(--neutral-white);
+        border: 2px solid var(--neutral-white);
+    }
+
+    .reset-button:hover {
+        color: var(--primary-mid);
+        border-color: var(--primary-mid);
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
     }
 
 }
