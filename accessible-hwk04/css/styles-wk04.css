@@ -31,7 +31,7 @@ html {
     --neutral-dark: #2D3A39;
     --neutral-mid: #5A5F5E;
     --neutral-light: #D4DFDD;
-    --neutral-white: #ffffff;
+    --white: #ffffff;
     --primary-dark: #004D48; 
     --primary-mid: #00B3A8;
     --primary-light: #DEFFFD;
@@ -60,8 +60,8 @@ html {
     --case-study: #165954;
     --hover-icon: #FFD80B;
 
-    --font-header: atkinson-header, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
-    --font-primary: atkinson, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --header-font: atkinson-header, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    --primary-font: atkinson, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
     
 
     --project-1-light: #FFCA87;
@@ -112,10 +112,10 @@ main {
     top: -2.5rem;
     left: 0;
     background: var(--neutral-black);
-    color: var(--neutral-white);
+    color: var(--white);
     padding: 0.5rem;
     z-index: 100;
-    font-family: var(--font-primary);
+    font-family: var(--primary-font);
     }
 
 .skip-link1:focus { 
@@ -127,10 +127,10 @@ main {
 .skip-link2 {
     opacity: 0;
     background: var(--secondary-mid);
-    color: var(--neutral-white);
+    color: var(--white);
     padding: 0.5rem;
     z-index: 100;
-    font-family: var(--font-primary);
+    font-family: var(--primary-font);
     margin-top: 2rem;
     padding: 1rem;
     border-radius: var(--border-radius);
@@ -165,10 +165,10 @@ main {
 }
 p {
     color: var(--neutral-black);
-    font-family: var(--font-primary);
-    line-height: calc(var(--atk-base) * 1.6);
+    font-family: var(--primary-font);
+    line-height: calc(var(--luc-base-text) * 1.6);
     margin: 3vh 0;
-    font-size: var(--atk-base);
+    font-size: var(--luc-base-text);
 }
 .underline {
     text-transform: uppercase;
@@ -193,25 +193,25 @@ b {
 
 h1, h2, h3, h4 {
     color: var(--neutral-black);
-    font-family: var(--font-header);
+    font-family: var(--header-font);
     max-width: 100%;
     
     line-height: calc(3vh + 1vw);
 }
 
 h1 {
-    font-size: var(--atk-xl);
+    font-size: var(--luc-xl-text);
 }
 h2 {
-    font-size: var(--atk-lg);
+    font-size: var(--luc-lg-text);
     font-weight: 600;
 }
 h3 {
-    font-size: var(--atk-md);
+    font-size: var(--luc-med-text);
     font-weight: 600;
 }
 h4 {
-    font-size: var(--atk-sm);
+    font-size: var(--luc-sm-text);
 }
 
 .link {
@@ -235,7 +235,7 @@ h4 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden; 
     border: 2px solid var(--secondary-mid);
-    background-color: var(--neutral-white);
+    background-color: var(--white);
 }
 /* New hover effect class for enlarged shadow */
 .cardcontainer-final:hover {
@@ -465,7 +465,7 @@ h4 {
     .nav-menu {
         display: flex;
         margin-right: 3vh;
-        gap: var(--atk-xs);
+        gap: var(--luc-xs-text);
     }
     .nav-wrapper {
         display: flex;
@@ -490,7 +490,7 @@ header nav {
     padding: 0.5rem .3rem; 
     margin-right: 3vh;
     position: relative;
-    font-size: var(--atk-base);
+    font-size: var(--luc-base-text);
     border-radius: var(--border-radius);
 }
 
@@ -518,7 +518,7 @@ header nav {
     }
 
     .nav-link {
-        color: var(--neutral-white);
+        color: var(--white);
         font-size: 3.5vh;
         line-height: 9vh;
         position: relative;
@@ -531,7 +531,7 @@ header nav {
         width: 100%;
         height: 0.25rem;
         border-radius: 0.25rem;
-        background-color: var(--neutral-white);
+        background-color: var(--white);
         bottom: 0;
         left: 0;
         transform-origin: right;
@@ -550,7 +550,7 @@ header nav {
         align-items: center;
         justify-content: center;
         margin: 20vh auto;
-        gap: var(--atk-xs);
+        gap: var(--luc-xs-text);
     }
 
     .burger-x.visible {
@@ -621,7 +621,7 @@ footer {
     }
 }
 .footer-text {
-    color: var(--neutral-white);
+    color: var(--white);
     text-align: center;
 }
 .footer-first {
@@ -666,7 +666,7 @@ footer {
     flex-flow: column nowrap;
     width: 90%;
     margin: 0 auto;
-    padding: 0 calc(var(--atk-base) * 1.5);
+    padding: 0 calc(var(--luc-base-text) * 1.5);
 }
 
 .intro {
@@ -690,15 +690,15 @@ footer {
 .intro-blurb {
     margin-top: 10vh;
     margin-bottom: 5vh;
-    font-size: var(--atk-xl);
-    line-height: calc(var(--atk-base) * 3.5);
+    font-size: var(--luc-xl-text);
+    line-height: calc(var(--luc-base-text) * 3.5);
     max-width: 54vw;
 }
 
 @media screen and (max-width: 768px) { 
     .intro-blurb {
-        font-size: var(--atk-lg);
-        line-height: calc(var(--atk-base) * 2.5);
+        font-size: var(--luc-lg-text);
+        line-height: calc(var(--luc-base-text) * 2.5);
         max-width: 75ch;
     }
 }
@@ -777,7 +777,7 @@ figure img.frog {
 @media screen and (min-width: 768px) { 
     .intro {
         flex: 1;
-        padding: var(--atk-sm);
+        padding: var(--luc-sm-text);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -904,8 +904,8 @@ figure img.frog {
 .card-title-final {
     top: 1vh;
     position: relative;
-    margin-bottom: var(--atk-base);
-    font-size: var(--atk-md);
+    margin-bottom: var(--luc-base-text);
+    font-size: var(--luc-med-text);
 }
 
 .card-1 {
@@ -1020,13 +1020,13 @@ figure img.frog {
     bottom: calc(-100% + -.5vh);
     left: 50%;
     transform: translateX(-50%) scale(0);
-    font-family: var(--font-primary);
+    font-family: var(--primary-font);
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 0.4rem;
     border-radius: 0.25rem;
     white-space: nowrap;
-    font-size: var(--atk-base);
+    font-size: var(--luc-base-text);
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -1086,9 +1086,9 @@ figure img.frog {
     transform: translateX(-50%) translateY(20px);  /* Initially hidden below */
     background-color: var(--secondary-mid);
     color: white;
-    font-family: var(--font-primary);
-    color: var(--neutral-white);
-    font-size: var(--atk-base);
+    font-family: var(--primary-font);
+    color: var(--white);
+    font-size: var(--luc-base-text);
     border-radius: 0.25rem;
     white-space: nowrap;
     z-index: 2;  
@@ -1122,15 +1122,15 @@ figure img.frog {
 }
 /* text inside the hover bar */
 .hover-text {
-    font-size: var(--atk-base); 
+    font-size: var(--luc-base-text); 
     transition: font-weight 0.3s ease; 
-    color: var(--neutral-white);
+    color: var(--white);
 }
 
 .button-card-final {
-    color: var(--neutral-white);
-    font-family: var(--font-primary);
-    font-size: var(--atk-base);
+    color: var(--white);
+    font-family: var(--primary-font);
+    font-size: var(--luc-base-text);
     text-decoration: none;
     cursor: pointer; 
     transition: all .3s ease .1s;
@@ -1227,7 +1227,7 @@ h3 + .line-break-light {
 
 .button-resume-header {
     color: white;
-    font-family: var(--font-primary);
+    font-family: var(--primary-font);
     font-size: 1rem;
     text-decoration: none;
     border-radius: var(--border-radius);
@@ -1322,6 +1322,8 @@ h3 + .line-break-light {
 
 /* --__--__--_----__--__--_----__--__--_--  form   --__--__--_----__--__--_-_--_--  */
 
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -1341,8 +1343,8 @@ fieldset {
 }
 
 label {
-    font-family: var(--font-primary), sans-serif;
-    font-size: var(--atk-base);
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--luc-base-text);
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -1350,7 +1352,7 @@ label {
 
 .required-indicator {
     color: var(--luc-error-mid);
-    font-family: var(--font-primary), sans-serif;
+    font-family: var(--primary-font), sans-serif;
     font-weight: bold;
     margin-left: 0.25rem;
 }
@@ -1369,8 +1371,8 @@ label {
 
 input,
 textarea {  
-    font-family: var(--font-primary), sans-serif;
-    font-size: var(--atk-base);
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--luc-base-text);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1389,14 +1391,49 @@ textarea:invalid {
 
 input.error,
 textarea.error {
-    border-color: var(--mack-warning);
+    border-color: var(--luc-error-light);
     background-color: #fadbd8;
 }
 
+/* Make room for the icon */
+input,
+textarea {
+    padding-right: 2.5rem;
+    position: relative;
+}
+
+/* Base styling */
+input.valid,
+textarea.valid {
+    border-color: var(--luc-success-mid);
+}
+
+input.error,
+textarea.error {
+    border-color: #e74c3c;
+}
+
+/* Checkmark */
+input.valid,
+textarea.valid {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%231e8449' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20.285 6.709l-11.025 11.025-5.545-5.545 1.414-1.414 4.131 4.131 9.611-9.611z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 18px;
+}
+
+/* X icon */
+input.error,
+textarea.error {
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23e74c3c' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.3 5.71L12 12.01 5.7 5.71 4.29 7.12 10.59 13.41 4.29 19.7 5.7 21.11 12 14.82 18.3 21.11 19.71 19.7 13.41 13.41 19.71 7.12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 18px;
+}
 
 .error-message {
-    font-family: var(--font-primary), sans-serif;
-    font-size: var(--atk-xs);
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--luc-xs-text);
     color: var(--luc-error-mid);
     margin-top: -0.5rem;
     display: block;
@@ -1405,8 +1442,8 @@ textarea.error {
 
 
 .submit-button, .reset-button {
-    font-family: var(--font-primary), serif;
-    font-size: var(--atk-base);
+    font-family: var(--primary-font), serif;
+    font-size: var(--luc-base-text);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -1420,7 +1457,7 @@ textarea.error {
 
 .submit-button {
     background-color: var(--primary-dark);
-    color: var(--neutral-white);
+    color: var(--white);
     border: 2px solid var(--primary-dark);
     
 }
@@ -1436,7 +1473,7 @@ textarea.error {
 }
 
 .submit-button:hover {
-    color: var(--neutral-white);
+    color: var(--white);
     background-color: var(--tertiary-dark);
     border: 2px solid var(--tertiary-dark);
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
@@ -1452,8 +1489,8 @@ textarea.error {
 /* --__--__--_----__--__--_----__--__--_--  submission page   --__--__--_----__--__--_-_--_--  */
 
 legend {
-    font-family: var(--font-primary), sans-serif;
-    font-size: var(--atk-sm);
+    font-family: var(--primary-font), sans-serif;
+    font-size: var(--luc-sm-text);
     margin-bottom: 1rem;
     font-style: normal;
     font-weight: 500;
@@ -1471,7 +1508,7 @@ legend {
 .submission-container h2 {
     margin-top: 0;
     color: var(--neutral-black);
-    font-size: var(--atk-md);
+    font-size: var(--luc-med-text);
 }
 
 .submitted-info {
@@ -1484,7 +1521,7 @@ legend {
 .info-item h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    font-family: var(--font-primary), sans-serif;
+    font-family: var(--primary-font), sans-serif;
     font-size: var(--mack-base-text);
     font-weight: 500;
     color: var(--mack-primary-black);
@@ -1492,7 +1529,7 @@ legend {
 
 .info-item p {
     margin: 0;
-    font-family: var(--font-primary), sans-serif;
+    font-family: var(--primary-font), sans-serif;
     font-size: var(--mack-sm-text);
     color: var(--mack-accent-gray);
     line-height: 1.6;
@@ -1508,38 +1545,38 @@ legend {
 /* For browsers that support clamp  */
 @supports (font-size: clamp(1rem, 1vi, 1rem)) {
     :root {
-            --atk-xs: clamp(0.8rem, 0.11vi + 0.78rem, 0.89rem);
-            --atk-base: clamp(1rem, 0.22vi + 0.95rem, 1.19rem);
-            --atk-sm: clamp(1.25rem, 0.39vi + 1.17rem, 1.58rem);
-            --atk-md: clamp(1.56rem, 0.64vi + 1.42rem, 2.11rem);
-            --atk-lg: clamp(1.95rem, 1vi + 1.73rem, 2.81rem);
-            --atk-xl: clamp(2.44rem, 1.52vi + 2.11rem, 3.75rem);
-            --atk-xxl: clamp(3.05rem, 2.26vi + 2.56rem, 5rem);
-            --atk-xxxl: clamp(3.81rem, 3.31vi + 3.09rem, 6.66rem);
+            --luc-xs-text: clamp(0.8rem, 0.11vi + 0.78rem, 0.89rem);
+            --luc-base-text: clamp(1rem, 0.22vi + 0.95rem, 1.19rem);
+            --luc-sm-text: clamp(1.25rem, 0.39vi + 1.17rem, 1.58rem);
+            --luc-med-text: clamp(1.56rem, 0.64vi + 1.42rem, 2.11rem);
+            --luc-lg-text: clamp(1.95rem, 1vi + 1.73rem, 2.81rem);
+            --luc-xl-text: clamp(2.44rem, 1.52vi + 2.11rem, 3.75rem);
+            --luc-2xl-text: clamp(3.05rem, 2.26vi + 2.56rem, 5rem);
+            --luc-3xl-text: clamp(3.81rem, 3.31vi + 3.09rem, 6.66rem);
     }
 }
   /* For browsers that don't support clamp */
 @supports not (font-size: clamp(1rem, 1vi, 1rem)) {
     :root {
-            --atk-xs: 0.8rem;
-            --atk-base: 1rem;
-            --atk-sm: 1.25rem;
-            --atk-md: 1.56rem;
-            --atk-lg: 1.95rem;
-            --atk-xl: 2.44rem;
-            --atk-xxl: 3.05rem;
-            --atk-xxxl: 3.81rem;
+            --luc-xs-text: 0.8rem;
+            --luc-base-text: 1rem;
+            --luc-sm-text: 1.25rem;
+            --luc-med-text: 1.56rem;
+            --luc-lg-text: 1.95rem;
+            --luc-xl-text: 2.44rem;
+            --luc-2xl-text: 3.05rem;
+            --luc-3xl-text: 3.81rem;
     }
     @media screen and (min-width: 1728px) {
     :root {
-            --atk-xs: 0.89rem;
-            --atk-base: 1.19rem;
-            --atk-sm: 1.58rem;
-            --atk-md: 2.11rem;
-            --atk-lg: 2.81rem;
-            --atk-xl: 3.75rem;
-            --atk-xxl: 5rem;
-            --atk-xxxl: 6.66rem;
+            --luc-xs-text: 0.89rem;
+            --luc-base-text: 1.19rem;
+            --luc-sm-text: 1.58rem;
+            --luc-med-text: 2.11rem;
+            --luc-lg-text: 2.81rem;
+            --luc-xl-text: 3.75rem;
+            --luc-2xl-text: 5rem;
+            --luc-3xl-text: 6.66rem;
     }
     }
 }
@@ -1567,14 +1604,14 @@ legend {
 @media (prefers-color-scheme: dark) {
     main, body, .nav-wrapper, footer, .nav-link {
         background: var(--neutral-black);
-        color: var(--neutral-white);
-        text-decoration-color: var(--neutral-white);
+        color: var(--white);
+        text-decoration-color: var(--white);
         
     }
 
     
     .intro-text, .index-header-projects, .resume-list li, p, h1, h2, h3, h4 {
-        color: var(--neutral-white);
+        color: var(--white);
     }
     .logo:focus-visible {
         outline: 3px solid var(--primary-light); 
@@ -1594,14 +1631,14 @@ legend {
     }
 
     p, a {
-        color: var(--neutral-white);
-        text-decoration-color: var(--neutral-white);
+        color: var(--white);
+        text-decoration-color: var(--white);
     }
 
     .cardcontainer-final, .card-title-final {
-        color: var(--neutral-white);
+        color: var(--white);
         background-color: var(--neutral-black);
-        text-decoration-color: var(--neutral-white);
+        text-decoration-color: var(--white);
     }
     .cardcontainer-final {
         border: 1.5px solid var(--teal-100);
@@ -1610,7 +1647,7 @@ legend {
     .tooltip {
         background-color: var(--primary-dark);
         border: 1px solid var(--teal-100);
-        font-size: var(--atk-xs);
+        font-size: var(--luc-xs-text);
     }
     .ae_icon {
         border: 1px solid var(--teal-100);
@@ -1627,7 +1664,7 @@ legend {
 
     .button-card-final, .button-resume-header {
         background-color: var(--primary-mid);
-        color: var(--neutral-white);
+        color: var(--white);
     }
 
     .nav-link::before {
@@ -1646,7 +1683,7 @@ legend {
 
     .hover-bar, .hb-amz, .hb-amz:hover, .hb-cbk, .hb-cbk:hover, .hb-grad, .hb-ze, .hb-ze:hover, .ht-amz, .ht-grad, .ht-ze, .ht-cbk {
         background-color: var(--tertiary-dark);
-        color: var(--neutral-white);
+        color: var(--white);
     }
 
     .link {
@@ -1669,7 +1706,7 @@ legend {
     /* submission form styles */
 
     #form-feedback {
-        color: var(--neutral-white);
+        color: var(--white);
     }
 
     .submission-container {
@@ -1682,8 +1719,8 @@ legend {
     }
 
     .reset-button {
-        color: var(--neutral-white);
-        border: 2px solid var(--neutral-white);
+        color: var(--white);
+        border: 2px solid var(--white);
     }
 
     .reset-button:hover {
@@ -1719,7 +1756,7 @@ legend {
 }
 
 figcaption {
-    font-family: var(--font-primary);
+    font-family: var(--primary-font);
     font-size: 14px;
     text-align: center;
     align-self: center;
@@ -1736,13 +1773,13 @@ figcaption {
 /* ul */
 ul li {
     color: var(--neutral-black);
-    font-family: var(--font-primary);
-    line-height: calc(var(--atk-base) * 1.6);
+    font-family: var(--primary-font);
+    line-height: calc(var(--luc-base-text) * 1.6);
 }
 ul {
     list-style-type: disc;
     padding-left: 1.5rem;
-    line-height: calc(var(--atk-base) * 1.6);
+    line-height: calc(var(--luc-base-text) * 1.6);
 }
 
 ul li {
