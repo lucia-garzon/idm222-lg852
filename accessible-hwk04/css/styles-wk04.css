@@ -1468,6 +1468,11 @@ textarea.error {
     border: 2px solid var(--neutral-black);
 }
 
+#form-feedback {
+    font-family: var(--primary-font);
+    
+}
+
 .button-group button {
     margin-right: 1rem;
 }

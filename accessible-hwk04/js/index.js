@@ -253,23 +253,28 @@ if (displayFirstname || displayLastname || displayEmail || displayMessage) {
 // --------------------
 if (discardBtn && form) {
     discardBtn.addEventListener('click', () => {
-    createConfetti();
 
-    form.reset();
+        form.reset();
 
-    [firstnameInput, lastnameInput, emailInput, messageInput].forEach(input => {
-        if (input) {
-        input.classList.remove('error', 'valid');
-        input.removeAttribute('aria-invalid');
+        [firstnameInput, lastnameInput, emailInput, messageInput].forEach(input => {
+            if (input) {
+                input.classList.remove('error', 'valid');
+                input.removeAttribute('aria-invalid');
+            }
+        });
+
+        [firstnameError, lastnameError, emailError, messageError].forEach(error => {
+            if (error) error.textContent = '';
+        });
+
+        if (formFeedback) {
+            formFeedback.textContent = 'Form discarded!';
+
+            // ⏳ Clear message after 3 seconds
+            setTimeout(() => {
+                formFeedback.textContent = '';
+            }, 3000);
         }
-    });
 
-    [firstnameError, lastnameError, emailError, messageError].forEach(error => {
-        if (error) error.textContent = '';
     });
-
-    if (formFeedback) {
-    formFeedback.textContent = 'Form discarded!';
-    }
-});
-}  
+}
