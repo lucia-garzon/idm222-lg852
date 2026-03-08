@@ -2,13 +2,18 @@
     opacity: 0;
 }
 
-
 @font-face {
     font-family: "atkinson-header";
     src: url('../fonts/AtkinsonHyperlegibleNextVF-Variable.ttf') format('truetype');
-    font-weight: 100 700;
+    font-weight: 100 900;
     font-style: normal;
 }
+/* @font-face {
+    font-family: "roboto-slab";
+    src: url('../fonts/RobotoSlab-Variable.ttf') format('truetype');
+    font-weight: 100 700;
+    font-style: normal;
+} */
 /* @font-face {
     font-family: "montserrat";
     src: url('../fonts/InclusiveSans-VariableFont_wght.ttf') format('truetype');
@@ -111,6 +116,7 @@ main {
     position: absolute;
     top: -2.5rem;
     left: 0;
+    text-decoration: none;
     background: var(--neutral-black);
     color: var(--white);
     padding: 0.5rem;
@@ -204,7 +210,8 @@ h1 {
 }
 h2 {
     font-size: var(--luc-lg-text);
-    font-weight: 600;
+    font-weight: 700;
+    line-height: calc(4vh + 3vw);
 }
 h3 {
     font-size: var(--luc-med-text);
@@ -218,6 +225,11 @@ h4 {
 	text-decoration: underline;
     position: relative;
     color: var(--primary-dark);
+}
+.link:focus-visible {
+    outline: 3px solid var(--primary-dark); 
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
 }
 
 
@@ -319,26 +331,7 @@ h4 {
         inset-inline-end: 0.188rem;
     }
 }
-.tool-logo {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 0.063rem rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-.tool-logo:hover {
-    transform: scale(1.1) rotate(4deg); 
-    cursor: pointer;
-}
-.tool-logo.clicked-logo {
-    transform: scale(0.85) rotate(8deg); /* Define distinct clicked transformation */
-    opacity: 0.5; /* Ensure opacity is included */
-    transition: transform 0.4s ease, opacity 0.4s ease; /* Transition for click animation */
-}
+
 
 /* new cards 2/1 */
 .tool-logo-final {
@@ -370,6 +363,11 @@ h4 {
         height: 2.125rem;
 
     }
+}
+.tool-logo-final:focus-visible {
+    /* The Focus Ring */
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 5px; 
 }
 
 
@@ -427,11 +425,6 @@ h4 {
 .logo:focus-visible {
     /* The Focus Ring */
     outline: 3px solid var(--teal-400);
-    outline-offset: 5px; 
-}
-.logo-wrapper:focus-visible {
-    /* The Focus Ring */
-    outline: 3px solid var(--primary-dark);
     outline-offset: 5px; 
 }
 .logo img {
@@ -688,7 +681,7 @@ footer {
     
 }
 .intro-blurb {
-    margin-top: 10vh;
+    margin-top: 15vh;
     margin-bottom: 5vh;
     font-size: var(--luc-xl-text);
     line-height: calc(var(--luc-base-text) * 3.5);
@@ -1015,6 +1008,12 @@ figure img.frog {
     margin: 0;
     padding: 0;
 }
+.card-link:focus-visible {
+    /* The Focus Ring */
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 5px; 
+    border-radius: var(--border-radius);
+}
 .tooltip {
     position: absolute;
     bottom: calc(-100% + -.5vh);
@@ -1254,6 +1253,11 @@ h3 + .line-break-light {
     border-radius: var(--border-radius);
     transform: translateY(-5px);
 }
+.button-resume-header:focus-visible {
+    outline: 3px solid var(--primary-dark); 
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
+}
 
 
 .resume-links {
@@ -1397,6 +1401,12 @@ textarea {
     transition: border-color 0.3s ease, background-color 0.3s
 }
 
+input:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--primary-dark); 
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
+}
+
 
 input:invalid,
 textarea:invalid {
@@ -1482,10 +1492,14 @@ textarea.error {
     color: var(--neutral-black);
     border: 2px solid var(--neutral-black);
 }
+.submit-button:focus-visible, .reset-button:focus-visible {
+    outline: 3px solid var(--primary-dark); 
+    outline-offset: 4px;
+    border-radius: var(--border-radius);
+}
 
 #form-feedback {
     font-family: var(--primary-font);
-
 }
 
 .button-group button {
@@ -1637,10 +1651,14 @@ legend {
         outline: 3px solid var(--primary-light); 
         outline-offset: 4px; 
     }
+    .skip-link1 {
+        background-color: var(--secondary-mid);
+    }
     .skip-link1:focus-visible {
         outline: 3px solid var(--primary-light); 
         outline-offset: 4px;
     }
+
     .nav-link:focus-visible {
         outline: 3px solid var(--primary-light); 
         outline-offset: 4px; 
@@ -1648,6 +1666,16 @@ legend {
     .button-card-final:focus-visible {
         outline: 3px solid var(--primary-light); 
         outline-offset: 4px; 
+    }
+    .card-link:focus-visible {
+        outline: 3px solid var(--primary-light); 
+        outline-offset: 5px; 
+        border-radius: var(--border-radius);
+    }
+    .link:focus-visible {
+        outline: 3px solid var(--primary-light); 
+        outline-offset: 4px; 
+        border-radius: var(--border-radius);
     }
 
     p, a {
@@ -1710,6 +1738,11 @@ legend {
         color: var(--primary-mid);
     }
 
+    .button-resume-header:focus-visible, input:focus-visible, textarea:focus-visible, .submit-button:focus-visible, .reset-button:focus-visible {
+        outline: 3px solid var(--primary-light); 
+        outline-offset: 4px;
+        border-radius: var(--border-radius);
+    }
 
     .line-break {
         border-top: 3px solid var(--teal-200);
