@@ -1570,7 +1570,57 @@ legend {
     word-wrap: break-word;
 }
 
+/* case study page */
+.project-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.proj1-cover {
+    border-radius: var(--border-radius);
+    margin-top: 4vh;
+    height: auto;
+    width: 100%;
+    border: 1.5px solid var(--teal-300);
+    
+}
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .cover {
+        margin-top: 10vh;
+        border-radius: 0px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .proj3-cover {
+        border-left: none;
+        border-right: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    .cover {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+}
+.rounded-image-100 {
+    display: block;
+    border-radius: var(--border-radius);
+    width: 100%;
+    margin: 2vh auto;
+    height: auto;
+}
 
+.rounded-image {
+    display: block;
+    border-radius: var(--border-radius);
+    width: 64vw;
+    margin: 1rem auto;
+    height: auto;
+}
 
 /* accessibility considerations */
 
