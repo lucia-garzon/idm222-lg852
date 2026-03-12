@@ -207,6 +207,7 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: var(--luc-xl-text);
+    line-height: calc(5vh + 3vw);
 }
 h2 {
     font-size: var(--luc-lg-text);
@@ -1620,6 +1621,20 @@ legend {
     width: 64vw;
     margin: 1rem auto;
     height: auto;
+}
+.overview-title {
+    font-weight: 650;
+}
+.overview-blurb-amz {
+    border: 1px solid var(--teal-200);
+    /* border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221); */
+    padding: 20px 30px 20px 30px;
+    background: var(--secondary-dark);
+    border-radius: var(--border-radius);
+    color: var(--primary-light);
+
 }
 
 /* accessibility considerations */

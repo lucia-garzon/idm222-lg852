@@ -52,26 +52,24 @@
             <h1 class="project-title amz-title">Accessible Portfolio Case Study</h1>
     
             <section class="overview-details" aria-labelledby="overview-heading">
-                <div class="overview-proj">
-                    <h2 id="overview-heading" class="overview-title">The Overview</h2>
+                
+                    <h2 id="overview-heading" class="overview-title" tabindex="0">The Overview</h2>
                     <p class="overview-blurb-amz">
-                        This was a solo project involving the development of my professional portfolio, built specifically for my Scripting for Accessibility class. The site includes a home page with project cards, a resume page, and an "About" page with a fully functional contact form. My main focus was ensuring a "Robust" experience—making sure the design works seamlessly across different browsers and assistive technologies.
+                        This was a solo project involving the development of my professional portfolio, built specifically for my Scripting for Accessibility class. The site includes a home page with project cards, a resume page, and an "About" page with a fully functional contact form. My main focus was ensuring a "Robust" experience—making sure the design works seamlessly across different browsers and assistive technologies.                         This project allowed me to apply Inclusive design principles. I focused on manual testing with VoiceOver to ensure my "Skip to main content" links and ARIA landmarks improved the user experience.
+
                     </p>
-                    <p class="overview-blurb-amz">
-                        This project allowed me to apply Inclusive and Ethical design principles. I focused heavily on manual testing with VoiceOver to ensure my "Skip to main content" links and ARIA landmarks actually improved the user experience rather than just "checking boxes."
-                    </p>
-                </div>
+                
             </section>
     
             <section class="project-content" aria-label="Case Study Details">
                 
                 <section aria-labelledby="context-heading">
-                    <h2 id="context-heading" class="project-header">The Context and Challenge</h2>
+                    <h2 id="context-heading" class="project-header" tabindex="0">The Context and Challenge</h2>
                     <p>The project began as the final requirement for IDM380. My goal was to take three core pages and ensure they were functionally sound for everyone. I handled everything from the initial HTML structure to the final CSS styling.</p>
                     
                     <p>The core problem I tackled was "exclusionary design." Many portfolios use non-semantic tags and fixed pixel sizes that break when a user zooms in. I wanted to prove that a modern aesthetic could coexist with strict accessibility standards.</p>
                     
-                    <p>One example was moving away from "div-soup" and focusing on semantic structure. By using the right tags, I ensured the site is readable for everyone, regardless of how they access the web.</p>
+                    <p>One example was moving away from divs and focusing on semantic structure. By using the right tags, I ensured the site is readable for everyone, regardless of how they access the web.</p>
                     
                     <figure>
                         <img class="rounded-image" src="graphics/code1.png" alt="Code snippet showing the use of semantic main, nav, and section tags instead of generic divs">
@@ -82,22 +80,42 @@
                 </section>
                 
                 <section aria-labelledby="process-heading">
-                    <h2 id="process-heading" class="project-header">The Process and Insight</h2>
+                    <h2 id="process-heading" class="project-header" tabindex="0">The Process and Insight</h2>
                     <p>I started with a foundation of high legibility by choosing the <b>Atkinson Hyperlegible</b> font. I implemented this as a variable font to maintain performance while ensuring characters are easily distinguishable for users with low vision.</p>
                     
+                    <p>
+                        For the visual design of this project, I prioritized readability by creating a Robust Color Palette specifically tested for high accessibility standards. I moved away from purely aesthetic choices and instead focused on a color system that includes defined "Accents," "Status," and "Neutral" sections that remain legible for all users regardless of their color vision. 
+                    </p>
+                    <!-- <p>
+                        Using the principles we practiced in class, I verified every combination to ensure a minimum 4.5:1 contrast ratio, ensuring that all text elements are distinct against their backgrounds. This intentional use of color ensures that the brand identity centered around the "Lilypad" theme never compromises the user's ability to perceive and interact with the content.
+                    </p> -->
                     <figure>
-                        <img class="rounded-image" src="graphics/Color-Contrast-Palette.png" alt="Color palette showing high contrast ratios that meet WCAG AA standards">
                         <img class="rounded-image" src="graphics/Robust-Color-Palette.png" alt="The full robust color palette used across the site">
+                        
+                        
+                        <figcaption>Robust color palette that follows Ethical Design.</figcaption>
+                    </figure>
+
+                    
+                    <p>
+                        In addition, I utilized the APCA (Advanced Perceptual Contrast Algorithm) to refine my color palette, focusing on how the human eye actually perceives light and dark rather than just looking at simple ratios.                         I developed a specific "Accessible Color Contrast Options Palette" that accounts for font weight and size, ensuring that text remains readable across different backgrounds for all users. 
+
+                    </p>
+                    
+                    <figure>
+                        
+                        <img class="rounded-image" src="graphics/Color-Contrast-Palette.png" alt="Color palette showing high contrast ratios that meet APCA standards">
+                        
                         <figcaption>Visualizing the accessible color palette and contrast checks.</figcaption>
                     </figure>
     
-                    <p>I used <b>rem units</b> for all spacing so the layout scales gracefully with browser font settings. I also coded a "Skip Navigation" link at the top of every page so keyboard users can bypass the menu and get straight to the content.</p>
+                    <p>After color, I used <b>rem units</b> for all spacing so the layout scales gracefully with browser font settings. I also coded a "Skip Navigation" link at the top of every page so keyboard users can bypass the menu and get straight to the content.</p>
                     
                     <p>Testing with <b>VoiceOver</b> was the most insightful step. It helped me realize where I needed <b>aria-labels</b>—like on my social media icons—so the screen reader announces "LinkedIn icon" instead of just a generic link.</p>
                 </section>
     
                 <section aria-labelledby="solution-heading">
-                    <h2 id="solution-heading" class="project-header">The Solution</h2>
+                    <h2 id="solution-heading" class="project-header" tabindex="0">The Solution</h2>
                     <p>The final three-page portfolio prioritizes the user. The home page uses a clear heading hierarchy so screen reader users can quickly scan project cards. The "Lilypad" logo is also clearly labeled for brand accessibility.</p>
                     
                     <p>On the "About" page, I used `aria-invalid` and custom JavaScript error messages to make the contact form intuitive. I also added a "Discard" button that resets the form and provides clear audio/visual feedback.</p>
@@ -107,16 +125,23 @@
                         <figcaption>Using ARIA attributes to communicate form errors in real-time.</figcaption>
                     </figure>
     
-                    <p>The resume page was designed to be much more than a static document. I used a clear heading structure so that someone using a screen reader can quickly jump between sections like "Experience" and "Education" without having to listen to the entire page. I also included a "Skip to top" link in the footer to help users with motor impairments return to the navigation without excessive scrolling.</p>
+                    <p>Meanwhile, the resume page was designed to be much more than a static document. I used a clear heading structure so that someone using a screen reader can quickly jump between sections like "Work Experience" and "Education" without having to listen to the entire page.</p>
+
+                    <figure>
+                        <img class="rounded-image" src="graphics/resume.png" alt="Snapsot of the Resume page with focus on Work Experience title">
+                        <figcaption>Users can tab between titles</figcaption>
+                    </figure>
+
+                    <p>In each page I also included a "Skip to top" link in the footer to help users with motor impairments return to the navigation without excessive scrolling.</p>
                 </section>
     
                 <section aria-labelledby="results-heading" class="reflection-amz">
-                    <h2 id="results-heading" class="project-header reflection-header">The Results</h2>
-                    <p>This project passed a full walkthrough using only VoiceOver and a keyboard. All focus states are highly visible, ensuring keyboard users never lose their place.</p>
+                    <h2 id="results-heading" class="project-header reflection-header" tabindex="0">The Results</h2>
+                    <p>This project passed a full walkthrough using only VoiceOver and a keyboard. All focus states are highly visible, ensuring keyboard users never lose their place. This proved that accessibility doesn't mean sacrificing style.</p>
                     
-                    <p>This proved that accessibility doesn't mean sacrificing style. Everything was announced correctly by the screen reader, and the experience felt intentional rather than accidental.</p>
+                    <p>In fact, it means more users are able to interact with the website.</p>
                 
-                    <p>The biggest lesson was how much small details matter, like ARIA roles for dynamic content. Moving forward, I’ve learned that accessibility is a mindset you start with, not a feature you add at the end.</p>
+                    <p>The biggest lesson was how much small details matter, like ARIA roles for dynamic content. Moving forward, I've learned that accessibility is a mindset you start with, not a feature you add at the end.</p>
                 </section>    
             </section>
         </main>  
