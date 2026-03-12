@@ -122,12 +122,15 @@ main {
     padding: 0.5rem;
     z-index: 100;
     font-family: var(--primary-font);
-    }
+}
 
 .skip-link1:focus { 
-    top: 0;
+    top: 1.5rem;
+    left: 1rem;
     outline: 3px solid var(--primary-dark);
     outline-offset: 5px;  
+    border-radius: var(--border-radius);
+    padding: 1rem;
 }
 
 .skip-link2 {
