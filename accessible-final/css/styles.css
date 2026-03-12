@@ -131,25 +131,30 @@ main {
 }
 
 .skip-link2 {
-    opacity: 0;
+    /* Change from opacity: 0 to this */
+    position: absolute;
+    left: -10000px; 
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    
     background: var(--secondary-mid);
     color: var(--white);
-    padding: 0.5rem;
     z-index: 100;
     font-family: var(--primary-font);
-    margin-top: 2rem;
     padding: 1rem;
     border-radius: var(--border-radius);
-    }
+}
 
 .skip-link2:focus { 
-    opacity: 1;
-    bottom: 0;
+    /* Bring it back into view only when tabbed to */
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto;
     outline: 2.5px solid var(--secondary-light);
     outline-offset: 5px;  
-    border-radius: var(--border-radius);
-    margin-top: 2rem;
-    padding: 1rem;
 }
 
 .one-rem {
