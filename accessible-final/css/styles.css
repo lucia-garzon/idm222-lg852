@@ -588,6 +588,10 @@ header nav {
     text-decoration: none;
 } 
 
+a {
+    font-size: var(--luc-base-text);
+}
+
 header {
     margin-top: 4vh;
 }
@@ -1246,7 +1250,7 @@ h3 + .line-break-light {
     padding: 1rem 1.50rem; 
     width: fit-content;
 
-    margin-top: 10vh;
+    margin-top: 20vh;
 }
 .button-resume-header.clicked {
     transform: scale(0.9);
