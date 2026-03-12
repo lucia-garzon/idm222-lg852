@@ -687,7 +687,7 @@ footer {
     
 }
 .intro-blurb {
-    margin-top: 15vh;
+    margin-top: 18vh;
     margin-bottom: 5vh;
     font-size: var(--luc-xl-text);
     line-height: calc(var(--luc-base-text) * 3.5);
@@ -1318,7 +1318,7 @@ h3 + .line-break-light {
 @media screen and (min-width:0px) and (max-width: 730px) {
     .about-lucia {
         width: 100%;
-        margin-top: 9vh;
+        margin-top: 25vh;
     }
 }
 
