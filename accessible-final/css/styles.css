@@ -1830,6 +1830,18 @@ legend {
         border-radius: var(--border-radius);
     }
 
+    .submit-button {
+        background-color: var(--secondary-mid);
+        color: var(--white);
+        border: 2px solid var(--secondary-mid);
+        
+    }
+    .submit-button:hover {
+        background-color: var(--secondary-light);
+        color: var(--neutral-black);
+        border: 2px solid var(--secondary-light);
+        
+    }
     .line-break {
         border-top: 3px solid var(--teal-200);
     }
