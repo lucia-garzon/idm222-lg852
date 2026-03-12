@@ -210,6 +210,13 @@ h1, h2, h3, h4 {
     line-height: calc(3vh + 1vw);
 }
 
+h1:focus-visible, h2:focus-visible, h3:focus-visible, h4:focus-visible {
+
+    outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
+    outline-offset: 4px; /* Creates a gap between the element and the ring */
+
+}
+
 h1 {
     font-size: var(--luc-xl-text);
     line-height: calc(5vh + 3vw);
@@ -1717,7 +1724,12 @@ legend {
         
     }
 
+    h1:focus-visible, h2:focus-visible, h3:focus-visible, h4:focus-visible {
+
+        outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
+        outline-offset: 4px; /* Creates a gap between the element and the ring */
     
+    }
     .intro-text, .index-header-projects, .resume-list li, p, h1, h2, h3, h4 {
         color: var(--white);
     }
