@@ -1257,7 +1257,7 @@ h3 + .line-break-light {
     padding: 1rem 1.50rem; 
     width: fit-content;
 
-    margin-top: 20vh;
+    margin-top: 8vh;
 }
 .button-resume-header.clicked {
     transform: scale(0.9);
@@ -1699,6 +1699,7 @@ legend {
 :focus-visible {
     outline: 3px solid var(--primary-light); /* Use a bright accessibility color */
     outline-offset: 4px; /* Creates a gap between the element and the ring */
+    border: var(--border-radius);
 }
 .nav-link:focus-visible {
     outline: 3px solid var(--primary-dark); /* Use a bright accessibility color */
