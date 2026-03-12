@@ -1,19 +1,4 @@
-// const menu = document.querySelector('nav');
 
-
-
-
-
-// const menu_buttons = document.querySelectorAll('.btn_menu');
-
-// if (menu_buttons) {
-//     menu_buttons.forEach((button) => {
-//     button.addEventListener('click', () => {
-//         console.log('toggle menu');
-//         if (menu) menu.classList.toggle('open');
-//     });
-//     });
-// }
 
 
 const menu = document.querySelector('nav');
@@ -84,9 +69,9 @@ function handleIconClick(event) {
     }, 600);
 }
 
-// --------------------
+
 // Form Validation
-// --------------------
+
 const form = document.querySelector('form');
 const formFeedback = document.getElementById('form-feedback');
 
@@ -160,9 +145,9 @@ setupFieldValidation(lastnameInput, lastnameError, 'Last name');
 setupFieldValidation(emailInput, emailError, 'Email address', validateEmail);
 setupFieldValidation(messageInput, messageError, 'Message');
 
-// --------------------
+
 // Form Submission
-// --------------------
+
 if (form) {
     form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -224,9 +209,9 @@ if (form) {
     });
 }
 
-// --------------------
+
 // Submission Display
-// --------------------
+
 const displayFirstname = document.getElementById('display-firstname');
 const displayLastname = document.getElementById('display-lastname');
 const displayEmail = document.getElementById('display-email');
@@ -248,9 +233,9 @@ if (displayFirstname || displayLastname || displayEmail || displayMessage) {
 }
 
 
-// --------------------
+
 // Discard / Reset
-// --------------------
+
 if (discardBtn && form) {
     discardBtn.addEventListener('click', () => {
 
