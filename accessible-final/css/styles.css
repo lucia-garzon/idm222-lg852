@@ -452,7 +452,6 @@ h4 {
 
 
 
-
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .burger {
         display: block;
@@ -469,6 +468,8 @@ h4 {
     .nav-wrapper {
         display: flex;
         flex-flow: column;
+        background-color: var(--primary-light);
+        
     }
 }
 
@@ -525,7 +526,6 @@ nav.open {
     }
 
     .nav-link {
-        color: var(--white);
         font-size: 3.5vh;
         line-height: 9vh;
         position: relative;
