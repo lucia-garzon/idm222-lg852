@@ -419,12 +419,11 @@ h4 {
 
 .logo {
     border-radius: var(--border-radius);
-    position: fixed;
-    top: calc(2.5rem - 10px); 
-    left: calc(2.919rem - 10px);
-    
+    position: absolute;
+    top: calc(2.5rem - 25px);
+    left: calc(2.919rem - 20px);
     cursor: pointer;
-    z-index: 99;
+    
     transition: none;
     text-decoration: none; 
     display: inline-flex;
@@ -1312,6 +1311,9 @@ h3 + .line-break-light {
 
 /* --__--__--_----__--__--_----__--__--_--  about   --__--__--_----__--__--_-_--_--  */
 
+.intro-about {
+    
+}
 .about-text {
     margin-top: 3vh;
     grid-area: about-text;
