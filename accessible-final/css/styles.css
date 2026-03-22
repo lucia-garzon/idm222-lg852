@@ -89,7 +89,6 @@ html {
 }
 
 
-
 body {
     background-color: var(--primary-light);
     margin: 0;
@@ -408,6 +407,16 @@ h4 {
     display: none;
 
 }
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+}
+
 .logo {
     border-radius: var(--border-radius);
     position: fixed;
@@ -441,6 +450,9 @@ h4 {
     transform: scale(1.2);
 }
 
+
+
+
 @media screen and (min-width: 0px) and (max-width: 767px) {
     .burger {
         display: block;
@@ -459,6 +471,7 @@ h4 {
         flex-flow: column;
     }
 }
+
 @media screen and (min-width: 768px) {
     .nav-menu {
         display: flex;
@@ -477,10 +490,6 @@ nav.open {
     transform: none;
 }
 
-
-header nav {
-    background-color: var(--secondary-dark);
-}
 
 .nav-link {
     text-decoration: none;
@@ -590,11 +599,9 @@ header nav {
 a {
     font-size: var(--luc-base-text);
 }
-
 header {
     margin-top: 4vh;
 }
-
 
 footer {
     display: flex;
@@ -672,6 +679,7 @@ footer {
     padding: 0 calc(var(--luc-base-text) * 1.5);
 }
 
+
 .intro {
     margin-top: 3vh;
     display: flex;
@@ -695,7 +703,7 @@ footer {
     margin-bottom: 5vh;
     font-size: var(--luc-xl-text);
     line-height: calc(var(--luc-base-text) * 3.5);
-    max-width: 54vw;
+    max-width: 65ch;
 }
 
 @media screen and (max-width: 768px) { 
@@ -1877,6 +1885,9 @@ legend {
     }
     .line-break {
         border-top: 3px solid var(--teal-200);
+    }
+    .line-break-light {
+        border-top: 2px solid var(--teal-100);
     }
 
     .resume-title {
