@@ -1,0 +1,13 @@
+# macOS junk files
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE folders
+.vscode/
+.idea/
+
+# Log and temp files
+*.log
+
+# Unused local GSAP library (not referenced by the site)
+gsap-public/
