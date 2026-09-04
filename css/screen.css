@@ -3643,11 +3643,26 @@ body.is-loading {
     38%  { transform: translateY(0) scaleY(0.88); }     /* squash on landing */
 }
 
-/* Respect reduced motion: no hopping, just a brief calm hold */
+/* Respect reduced motion: slow calm version instead of no animation */
 @media (prefers-reduced-motion: reduce) {
-    .pad, .loader-frog, .loader-text { animation: none; opacity: 1; }
-    .pad { transform: none; }
-    .loader-frog { transform: translate(335px, 88px); }
+    .pad {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        opacity: 1;
+        transform: none;
+    }
+    .loader-frog {
+        animation: none;
+        opacity: 1;
+        transform: translate(335px, 88px);
+    }
+    .loader-text {
+        animation-duration: 0.01ms !important;
+        opacity: 0.85;
+    }
+    .loader-text .hop-letter {
+        animation: none;
+    }
 }
 
 
