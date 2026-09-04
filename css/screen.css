@@ -3585,7 +3585,7 @@ body.is-loading {
     opacity: 0;
     transform-origin: 50% 100%; /* pivot at the feet so squash/stretch stays grounded */
     will-change: transform, opacity;
-    animation: frog-leap 1.9s forwards;
+    animation: frog-leap 1.9s both;
 }
 
 /* Fluid hop: crouch (anticipation) -> stretch launch -> floaty apex ->

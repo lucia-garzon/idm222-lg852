@@ -458,7 +458,7 @@ function handleIconClick(event) {
     }
     // Frog lands on the last pad ~1.7s in; start the fade right after so it
     // doesn't linger. Skip the wait for visitors who prefer reduced motion.
-    const MIN_DISPLAY = reducedMotion ? 500 : 1800;
+    const MIN_DISPLAY = reducedMotion ? 500 : 2200;
     const startedAt = Date.now();
 
     function hideLoader() {
