@@ -257,10 +257,13 @@ body:has(.project-wrapper) main img {
 .cs-hero {
     width: 100vw;
     max-width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 0;
+    /* Full-bleed via negative side margins (the original responsive technique):
+       pulls the box's left edge to the viewport edge so 100vw fills exactly.
+       The transform version (left:50%; translateX(-50%)) left the in-flow box
+       inside the padded wrapper, so its right edge overhung and got clipped by
+       body's overflow-x:hidden — that was the mobile right-side cutoff. */
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 }
 .cs-hero-img {
     display: block;
@@ -4973,15 +4976,14 @@ body.pt-alt { --pt-color: #00B3A8; }
     border: none;
     box-shadow: none;
     border-radius: 0;
-    /* Full-bleed using transform — avoids margin-based layout inflation
-       that inflates the flex parent's height on mobile */
-    position: relative;
+    /* Full-bleed via negative side margins (the original responsive technique).
+       The transform version (left:50%; translateX(-50%)) left the in-flow box
+       starting inside the padded .project-wrapper, so its right edge overhung
+       the viewport and got clipped on mobile by body's overflow-x:hidden. */
     width: 100vw;
     max-width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     margin-top: 6vh;
     margin-bottom: 6vh;
     padding: 5vh 20px;
