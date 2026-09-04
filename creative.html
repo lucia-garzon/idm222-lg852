@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/screen.css">
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
 </head>
-<body>
+<body class="pt-alt">
     <header>
         <!-- navigation -->
         <a class="logo" href="index.html">
@@ -19,16 +19,13 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li>
                     <a class="nav-link" href="creative.html">Creative</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Archive</a>
                 </li>
             </ul>
             <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
@@ -39,10 +36,58 @@
         <div class="creative-wrapper">       
             <section class="creative-intro">
                 <h2 class="creative-title">Creative Work</h2>
-                <p class="creative-title-desc">Hey there! Explore the creative work I have produced through a variety of mediums. Check out the bottom to see my animation projects!</p>    
+                <p class="creative-title-desc">Hey there! Explore the creative work I have produced through a variety of mediums.</p>    
             </section>
             
+            <div class="creative-filters" role="tablist" aria-label="Filter creative work">
+                <button class="creative-filter is-active" data-filter="all" type="button">All</button>
+                <button class="creative-filter" data-filter="digital" type="button">Digital</button>
+                <button class="creative-filter" data-filter="web" type="button">Web</button>
+                <button class="creative-filter" data-filter="motion" type="button">Motion</button>
+                <button class="creative-filter" data-filter="sound" type="button">Sound</button>
+                <button class="creative-filter" data-filter="animation" type="button">Animation</button>
+            </div>
+
+            <!-- Mobile-only: gooey switch (like the lily-pad toggle) between
+                 images alone and images with captions -->
+            <div class="caption-toggle">
+                <span class="caption-toggle-label caption-label-off">Images</span>
+                <div class="switchContainer" id="captionSwitch" role="switch" tabindex="0" aria-label="Show captions" aria-checked="false">
+                    <div class="switchBg"></div>
+                    <div class="switchBtn"></div>
+                </div>
+                <span class="caption-toggle-label caption-label-on">With captions</span>
+            </div>
+            <!-- gooey filter used by the switch -->
+            <svg class="gooey-defs" width="0" height="0" aria-hidden="true" style="position:absolute">
+                <defs>
+                    <filter id="gooey">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+
             <ul class="creative-gallery" role="list">
+                <li data-category="web" data-tool="figma" data-pin-top>
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted loop playsinline class="creative-vid">
+                            <source src="graphics/ipad-michoacana.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>La Michoacana Website Redesign | 2025</figcaption>
+                    </figure>
+                </li>
+                <li data-category="web" data-tool="figma" data-pin-top>
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted loop playsinline class="creative-vid">
+                            <source src="graphics/phone-michoacana.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>La Michoacana Website Redesign | 2025</figcaption>
+                    </figure>
+                </li>
                 <li>
                     <figure tabindex="0">
                         <img alt="Orange goldfish with oily black surroundings in an ocean" src="images/go_fish.webp" class="creative-img">    
@@ -197,13 +242,6 @@
                 
                 <li>
                     <figure tabindex="0">
-                        <img src="images/1Like2.webp" alt="1 like 2" class="creative-img">   
-                        <figcaption>1 Like 2 | 2023</figcaption>
-                        
-                    </figure>
-                </li>
-                <li>
-                    <figure tabindex="0">
                         <img alt="Plush Monsters" src="images/Creative-Plush-Monsters.webp" class="creative-img">    
                         <figcaption>Plush Monsters | 2021</figcaption>
                     </figure>
@@ -247,100 +285,139 @@
                     </figure>
                 </li>
                 
+                
                 <li>
                     <figure tabindex="0">
-                        <img alt="Patterns photoshopped onto Lawn sign" src="images/Creative-Lawn.webp" class="creative-img">    
+                        <img src="images/1Like2.webp" alt="1 like 2" class="creative-img">
+                        <figcaption>1 Like 2 | 2023</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure tabindex="0">
+                        <img alt="Patterns photoshopped onto Lawn sign" src="images/Creative-Lawn.webp" class="creative-img">
                         <figcaption>Using Photoshop to Apply Patterns | 2023</figcaption>
                     </figure>
                 </li>
-                
-                
+                <li data-category="motion" data-tool="after effects, premiere pro">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted playsinline class="creative-vid">
+                            <source src="images/Le_Cat_Cafe_VidFinal.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Ad for Local Nonprofit Le Cat Cafe | 2023</figcaption>
+                    </figure>
+                </li>
+                <li data-category="motion" data-tool="figma, after effects, premiere pro">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted playsinline class="creative-vid">
+                            <source src="images/anim115_SEPTA_midterm.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>SEPTA Spanish Advertisement | 2023</figcaption>
+                    </figure>
+                </li>
+                <li data-category="sound" data-tool="audition">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted playsinline class="creative-vid">
+                            <source src="images/Garzon_Big_Hero_6_Final.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Big Hero 6 Trailer | 2023</figcaption>
+                    </figure>
+                </li>
+                <li data-category="sound" data-tool="audition">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted playsinline class="creative-vid">
+                            <source src="images/fmtv-soundeffects.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>SFX Work | 2023</figcaption>
+                    </figure>
+                </li>
+                <li data-category="animation" data-tool="procreate" data-desc="City Life is a black and white rotoscope animation exploring weighted, curvilinear and rectilinear lines. For my Design I for Media final, I wanted to reflect on the past year living in the city for college. Animating on Procreate for the first time was challenging but exciting in its own right!">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted playsinline class="creative-vid">
+                            <source src="images/2022_Garzon_L_108_P5_Final_City_Life.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>City Life | 2022</figcaption>
+                    </figure>
+                </li>
+                <li data-category="animation" data-tool="procreate" data-desc="Scaredy Cat! is a full color Procreate animation exploring complementary colors, saturation and vibrancy. I knew more coming in about animating on Procreate but this time I was challenged to make my own characters!">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted playsinline class="creative-vid">
+                            <source src="images/Garzon_109_P6_ScaredyCat!.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Scaredy Cat! | 2023</figcaption>
+                    </figure>
+                </li>
+                <li data-category="web" data-tool="figma">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted loop playsinline class="creative-vid">
+                            <source src="graphics/dropout-maximalism.mov">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Redesigning Dropout's Website - Maximalism</figcaption>
+                    </figure>
+                </li>
+                <li data-category="web" data-tool="figma">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted loop playsinline class="creative-vid">
+                            <source src="graphics/dropout-skeuomorphism.mov">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Redesigning Dropout's Website - Skeumorphism</figcaption>
+                    </figure>
+                </li>
+                <li data-category="web" data-tool="figma">
+                    <figure tabindex="0">
+                        <video width="320" height="240" controls autoplay muted loop playsinline class="creative-vid">
+                            <source src="graphics/biasly-stances.mov">
+                            Your browser does not support the video tag.
+                        </video>
+                        <figcaption>Educational Webpage for Biasly</figcaption>
+                    </figure>
+                </li>
             </ul>
-            <h3 class="animation-title">Motion Design</h3>
-            <div class="video-section">
-                <div class="video-card">
-                    <video width="320" height="240" controls autoplay muted>
-                    <source src="images/Le_Cat_Cafe_VidFinal.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video> 
-                    <h4 class="video-title">Ad for Local Nonprofit Le Cat Cafe (2023)</h4>
-                </div>
-                <div class="video-card">
-                    <video width="320" height="240" controls autoplay muted>
-                    <source src="images/anim115_SEPTA_midterm.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video> 
-                    <h4 class="video-title">SEPTA Spanish Advertisement (2023)</h4>
-                </div>
-            </div>
-
-            <h3 class="animation-title">Sound Design</h3>
-            <div class="video-section">
-                
-                <div class="video-card">
-                    <video width="320" height="240" controls autoplay muted>
-                    <source src="images/Garzon_Big_Hero_6_Final.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video> 
-                    <h4 class="video-title">Big Hero 6 Trailer (2023)</h4>
-                </div>
-                <div class="video-card">
-                    <video width="320" height="240" controls autoplay muted>
-                    <source src="images/fmtv-soundeffects.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video> 
-                    <h4 class="video-title">SFX Work (2023)</h4>
-                </div>
-            </div>
-            
-            
-
-            <h3 class="animation-title">View my Animations!</h3>
-            <p class="animation-subtitle">Below are the animation finals I have made in college.</p>
-            <div class="animation-wrapper">
-                <video width="320" height="240" controls autoplay muted>
-                    <source src="images/2022_Garzon_L_108_P5_Final_City_Life.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video> 
-                <h4 class="animation-h4">City Life (2022)</h4>
-                
-                <p class="animation-desc">City Life is a <b>black and white rotoscope</b> animation exploring weighted, curvilinear and rectilinear lines. For my Design I for Media final, I wanted to reflect on the past year living in the city for college. <b>Animating on Procreate for the first time</b> was challenging but exciting in its own right! </p>
-            </div>
-            
-
-            <div class="animation-wrapper">
-                <video width="320" height="240" controls autoplay muted>
-                    <source src="images/Garzon_109_P6_ScaredyCat!.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video> 
-                <h4 class="animation-h4">Scaredy Cat! (2023) </h4>
-                <p class="animation-desc">Scaredy Cat! is a full color <b>Procreate animation</b> exploring complementary colors, <b>saturation</b> and vibrancy. I knew more coming in about animating on Procreate but this time I was <b>challenged to make my own characters</b>!</p>
-            </div>
         </div>
         </main>
         
-        <footer>
-            <div class="footer-first">
-                <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
-                
-                <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
-            </div>
-            
+    <footer>
+        <!-- Left column: skyline + name/tagline + nav -->
+        <div class="footer-brand">
+            <img class="footer-philly" alt="Philadelphia skyline" src="images/footer-philly.svg">
+            <p class="footer-name">Lucia Garzon</p>
+            <p class="footer-tagline">UI/UX Designer &amp; Researcher</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a class="footer-nav-link" href="index.html">Home</a>
+                <a class="footer-nav-link" href="about.html">About</a>
+                <a class="footer-nav-link" href="creative.html">Creative</a>
+                <a class="footer-nav-link" href="projects.html">Archive</a>
+            </nav>
+        </div>
+
+        <!-- Right column: social icons + credit -->
+        <div class="footer-right">
             <div class="footer-icons">
-                <!-- LinkedIn icon -->
-                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
-                    <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
+                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank" aria-label="LinkedIn">
+                    <img alt="LinkedIn" src="images/footer-linkedin.svg" class="footer-linkedin">
                 </a>
-                <!-- Email icon -->
-                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
-                    <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
+                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank" aria-label="Email">
+                    <img alt="Email" src="images/footer-email.svg" class="footer-email">
                 </a>
-                <!-- Github icon -->
-                <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
-                    <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
+                <a class="icon" href="https://github.com/lucia-garzon" target="_blank" aria-label="GitHub">
+                    <img alt="GitHub" src="images/footer-github.svg" class="footer-github">
                 </a>
             </div>
-        </footer>
+            <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
+        </div>
+    </footer>
         <script src="js/index.js"></script>
+        <!-- GSAP + ScrollTrigger (scroll animations) -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="js/page-animations.js"></script>
+        <script src="js/creative-lightbox.js"></script>
 </body>
 </html>

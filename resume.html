@@ -20,16 +20,13 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li>
                     <a class="nav-link" href="creative.html">Creative</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Archive</a>
                 </li>
             </ul>
             <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
@@ -198,27 +195,39 @@
     </main>
     
     <footer>
-        <div class="footer-first">
-            <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
-            
-            <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
+        <!-- Left column: skyline + name/tagline + nav -->
+        <div class="footer-brand">
+            <img class="footer-philly" alt="Philadelphia skyline" src="images/footer-philly.svg">
+            <p class="footer-name">Lucia Garzon</p>
+            <p class="footer-tagline">UI/UX Designer &amp; Researcher</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a class="footer-nav-link" href="index.html">Home</a>
+                <a class="footer-nav-link" href="about.html">About</a>
+                <a class="footer-nav-link" href="creative.html">Creative</a>
+                <a class="footer-nav-link" href="projects.html">Archive</a>
+            </nav>
         </div>
-        
-        <div class="footer-icons">
-            <!-- LinkedIn icon -->
-            <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
-                <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
-            </a>
-            <!-- Email icon -->
-            <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
-                <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
-            </a>
-            <!-- Github icon -->
-            <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
-                <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
-            </a>
+
+        <!-- Right column: social icons + credit -->
+        <div class="footer-right">
+            <div class="footer-icons">
+                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank" aria-label="LinkedIn">
+                    <img alt="LinkedIn" src="images/footer-linkedin.svg" class="footer-linkedin">
+                </a>
+                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank" aria-label="Email">
+                    <img alt="Email" src="images/footer-email.svg" class="footer-email">
+                </a>
+                <a class="icon" href="https://github.com/lucia-garzon" target="_blank" aria-label="GitHub">
+                    <img alt="GitHub" src="images/footer-github.svg" class="footer-github">
+                </a>
+            </div>
+            <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
         </div>
     </footer>
     <script src="js/index.js"></script>
+    <!-- GSAP + ScrollTrigger (scroll animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/page-animations.js"></script>
 </body>
 </html>

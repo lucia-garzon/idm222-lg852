@@ -6,6 +6,15 @@
     <title>Lucia Garzon • La Michoacana</title>
     <link rel="stylesheet" href="css/screen.css" />
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
+    <!-- Refresh always starts a case study at the top. Must run in <head> so
+         the browser doesn't restore the previous scroll position before we
+         disable it. Preserves anchor-jumps if the URL has a #fragment. -->
+    <script>
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        window.addEventListener("load", function () {
+            if (!window.location.hash) window.scrollTo(0, 0);
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -19,16 +28,13 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li>
                     <a class="nav-link" href="creative.html">Creative</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Archive</a>
                 </li>
             </ul>
             <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
@@ -42,28 +48,30 @@
         class="cover proj2-cover rounded-image-100">
 
         <div class="project-wrapper">
+            <span class="cs-year">2024</span>
             <h1 class="project-title michoacana-title">La Michoacana Website Redesign</h1>
         
-            <section class="overview-details">
-                <div class="overview-proj">
-                    <h3>Overview</h3>
-                    <p class="overview-blurb-proj2">
+            <section class="cs-overview">
+                <div class="cs-overview-lead">
+                    <h3 class="cs-overview-heading">Overview</h3>
+                    <p class="cs-overview-text">
                         I <b>redesigned La Michoacana</b> company's cluttered and outdated interface through a revamped Home page, Product page, and various Product description pages, ultimately <b>enhancing brand identity</b> and fueling interest in the company's products to drive increased sales.
                     </p>
                 </div>
-                
-                <div class="details-proj">
-                    <h4 class="details details-title">Details</h4>
-                    <h4 class="details details-job">Student Project</h4>
-                    <p class="details">22 weeks</p>
 
-                    <div class="details bubbles">
-                        <p class="bubble bubble-2">UI Design</p>
-                        <p class="bubble bubble-2">UX Research</p>
-                        <p class="bubble bubble-2">Information Architecture</p>
+                <dl class="cs-meta">
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Role</dt><dd class="cs-meta-value">Student Project</dd></div>
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Timeline</dt><dd class="cs-meta-value">22 weeks</dd></div>
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Skills</dt><dd class="cs-meta-value"><span>UI Design</span><span>UX Research</span><span>Information Architecture</span></dd></div>
+                </dl>
+
+                <div class="cs-impact">
+                    <span class="cs-impact-title">Impact</span>
+                    <div class="cs-impact-grid">
+                        <div class="cs-impact-item"><span class="cs-impact-num">3</span><span class="cs-impact-label">Responsive breakpoints</span><span class="cs-impact-sub">Desktop, tablet &amp; mobile</span></div>
+                        <div class="cs-impact-item"><span class="cs-impact-num">3</span><span class="cs-impact-label">Core pages redesigned</span><span class="cs-impact-sub">Home, Product &amp; description</span></div>
+                        <div class="cs-impact-item"><span class="cs-impact-num">1</span><span class="cs-impact-label">Refreshed brand identity</span><span class="cs-impact-sub">To drive product interest</span></div>
                     </div>
-
-                    <p class="details">Figma, Photoshop</p>
                 </div>
             </section>
 
@@ -79,6 +87,7 @@
 
 
             <div class="project-content"> 
+                <span class="project-eyebrow">Project</span>
                 <h2 class="project-header">Intro</h2>
                     <p>As the final project for my UI Design class, I <b>redesigned the website of La Michoacana</b>, a Mexican-inspired ice cream retailer <b>across desktop</b>, <b>tablet</b>, and <b>mobile interfaces</b>. The original website can be found here: <a class="link" href="https://www.michoacana.com/" target="_blank">Michoacana.com</a>.</p>
                     
@@ -91,6 +100,7 @@
                     </picture>
                     
 
+                <span class="project-eyebrow">Critique</span>
                 <h2 class="project-header">
                     Critique
                 </h2>
@@ -105,6 +115,7 @@
                     
                     <p>After organizing a <b>card sort</b>, I changed the information architecture of the website to focus more on the company's products.</p>
                 
+                <span class="project-eyebrow">Wireframes</span>
                 <h2 class="project-header">
                     My first wireframes
                 </h2>
@@ -119,6 +130,7 @@
                     
                     
                 
+                <span class="project-eyebrow">Iteration</span>
                 <h2 class="project-header">
                     Reevaluating the design
                 </h2>
@@ -135,6 +147,7 @@
                     </picture>
                     
                 
+                <span class="project-eyebrow">User Flow</span>
                 <h2 class="project-header">
                     Improving the customer journey
                 </h2>
@@ -175,6 +188,7 @@
                     <p class="figcaption">Before and after of the Product Description page</p>
                     
 
+                    <span class="project-eyebrow">The Solution</span>
                     <h2 class="project-header" id="final-mockups">
                         Final Mockups
                     </h2>
@@ -205,7 +219,10 @@
                     
                         
                 
+                    <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
+
                     <section class="proj2-reflection">
+                        <span class="project-eyebrow">Reflection</span>
                         <h2 class="project-header reflection-header">Building a responsive design proved exciting</h2>
                     
                         <p>
@@ -224,56 +241,59 @@
                             To further understand the interface I have redesigned and the user journey I have illustrated, <b>I urge you to explore my prototypes</b> on Figma.
                         </p>
                     </section>
-                    
-
-                    <aside class="more-projects">
-                        <h3 class="more-title">
-                            More Projects
-                        </h3> 
-                        <a class="more-link-image" href="amazon.html">
-                            <img src="images/more-amazon-optimized.jpg" alt="Amazon case study snapshot" class="more-img more1">
-                        </a>
-                        <a class="word1 more-link" href="amazon.html"><h4>Redesigned Delivery Instructions</h4></a>
-                        
-                        <a class="more-link-image" href="zeroeyes.html">
-                            <img src="images/more-ze-optimized.jpg" alt="ZeroEyes case study snapshot" class="more-img more2">
-                        </a>
-                        <a class="word2 more-link" href="zeroeyes.html"><h4>Enhanced Brand Presence</h4></a>
-        
-                        <!-- PhillyReach -->
-                            <a class="more-link-image" href="phillyreach.html">
-                                <img src="images/more-phillyreach-optimized.jpg" alt="CBK case study snapshot" class="more-img more3">
-                            </a>
-                            <a class="word3 more-link" href="phillyreach.html"><h4>Created PhillyReach MVP</h4></a>
-                        </aside>
-            </div>  <!-- project-content excluding overview section -->
-        </div>   <!-- project-wrapper -->
+</div>  <!-- project-content excluding overview section -->
+        </div>
+   <!-- project-wrapper -->
         
 
+
+    <nav class="case-next" aria-label="Next case study">
+        <p class="case-next-thanks">Thanks for reading!</p>
+        <span class="case-next-eyebrow">Next project</span>
+        <a class="case-next-link" href="amazon.html">
+            <img class="case-next-logo" src="graphics/amazon-logo.jpg" alt="Amazon">
+            <span class="case-next-title">Feature Redesign</span>
+            <span class="case-next-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18 L18 6 M9 6 L18 6 L18 15"/>
+                </svg>
+            </span>
+        </a>
+    </nav>
     </main>
 
     <footer>
-        <div class="footer-first">
-            <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
-            
-            <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
+        <!-- Left column: skyline + name/tagline + nav -->
+        <div class="footer-brand">
+            <img class="footer-philly" alt="Philadelphia skyline" src="images/footer-philly.svg">
+            <p class="footer-name">Lucia Garzon</p>
+            <p class="footer-tagline">UI/UX Designer &amp; Researcher</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a class="footer-nav-link" href="index.html">Home</a>
+                <a class="footer-nav-link" href="about.html">About</a>
+                <a class="footer-nav-link" href="creative.html">Creative</a>
+                <a class="footer-nav-link" href="projects.html">Archive</a>
+            </nav>
         </div>
-        
-        <div class="footer-icons">
-            <!-- LinkedIn icon -->
-            <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
-                <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
-            </a>
-            <!-- Email icon -->
-            <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
-                <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
-            </a>
-            <!-- Github icon -->
-            <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
-                <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
-            </a>
+
+        <!-- Right column: social icons + credit -->
+        <div class="footer-right">
+            <div class="footer-icons">
+                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank" aria-label="LinkedIn">
+                    <img alt="LinkedIn" src="images/footer-linkedin.svg" class="footer-linkedin">
+                </a>
+                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank" aria-label="Email">
+                    <img alt="Email" src="images/footer-email.svg" class="footer-email">
+                </a>
+                <a class="icon" href="https://github.com/lucia-garzon" target="_blank" aria-label="GitHub">
+                    <img alt="GitHub" src="images/footer-github.svg" class="footer-github">
+                </a>
+            </div>
+            <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
         </div>
     </footer>
     <script src="js/index.js"></script>
+    <!-- GSAP (powers the nav letter proximity warp) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </body>
 </html>

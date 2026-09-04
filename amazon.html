@@ -6,6 +6,15 @@
     <title>Lucia Garzon • Amazon</title>
     <link rel="stylesheet" href="css/screen.css" />
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
+    <!-- Refresh always starts a case study at the top. Must run in <head> so
+         the browser doesn't restore the previous scroll position before we
+         disable it. Preserves anchor-jumps if the URL has a #fragment. -->
+    <script>
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        window.addEventListener("load", function () {
+            if (!window.location.hash) window.scrollTo(0, 0);
+        });
+    </script>
 </head>
 
 
@@ -21,16 +30,13 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li>
                     <a class="nav-link" href="creative.html">Creative</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Archive</a>
                 </li>
             </ul>
             <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
@@ -48,42 +54,43 @@
             
         <div class="project-wrapper">
             <!-- amz title before content -->
-            <h1 class="project-title amz-title">Amazon UX Internship Project</h1>
+            <span class="cs-year">2024</span>
+            <h1 class="project-title amz-title">Shopping App Feature Redesign</h1>
 
-            <div class="disclaimer">
-                <!-- <p>Due to confidentiality agreements, I am unable to disclose specific project details. However, I can share an overview of the steps I took during the design process, and some of the proposed final designs.</p> -->
-                <p>To comply with a non-disclosure agreement, I am unable to disclose specific project details. However, I can share an overview of my process and some of the proposed final designs. The information in this case study is my own and does not necessarily reflect the views of Amazon.</p>
-            </div>
-            <section class="overview-details">
-                <div class="overview-proj">
-                    <h3 class="overview-title">Overview</h3>
-                    <p class="overview-blurb-amz">
+            <section class="cs-overview">
+                <div class="cs-overview-lead">
+                    <h3 class="cs-overview-heading">Overview</h3>
+                    <p class="cs-overview-text">
                         <!-- Over the course of 13 weeks, I redesigned delivery instructions as part of the Delivery Experience team at Amazon. I engaged in ethnographic and market research, and analyzed previous user research studies, to propose five mobile concepts. As a result, I contributed valuable insights for my team to improve the experience between customers and drivers.  -->
                         Over 13 weeks with Amazon's Delivery Experience team, I <b>redesigned</b> delivery instructions. I gathered insights from collaboration with <b>PMs and UXR partners</b>, usability studies, &amp; a ride-along. A competitor analysis <b>(Walmart, Shipt, UberEats)</b> guided my ideas. I proposed <b>5 mobile concepts</b> to make instructions easier to find and understand to <b>reduce delivery issues</b>.
                     </p>
                 </div>
-                
-                <div class="details-proj">
-                    <h4 class="details details-title">Details</h4>
-                    <h4 class="details details-job">UX Designer Intern
-                    </h4>
-                    <p class="details">13 weeks</p>
-                    
-                    <div class="details bubbles">
-                        <p class="bubble-amz bubble-1">UI/UX Design</p>
-                        <p class="bubble-amz bubble-1">UX Research</p>
-                        <p class="bubble-amz bubble-1">User Testing</p>
-                    </div>
 
-                    <p class="details details-spacing">Figma, UserTesting, Asana, Keynote, Quip</p>
+                <dl class="cs-meta">
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Role</dt><dd class="cs-meta-value">UX Designer Intern</dd></div>
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Timeline</dt><dd class="cs-meta-value">13 weeks</dd></div>
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Skills</dt><dd class="cs-meta-value"><span>UI/UX Design</span><span>UX Research</span><span>User Testing</span></dd></div>
+                </dl>
+
+                <div class="cs-impact">
+                    <span class="cs-impact-title">Impact</span>
+                    <div class="cs-impact-grid">
+                        <div class="cs-impact-item"><span class="cs-impact-num">5</span><span class="cs-impact-label">Mobile concepts</span><span class="cs-impact-sub">Proposed to the team</span></div>
+                        <div class="cs-impact-item"><span class="cs-impact-num">5</span><span class="cs-impact-label">Competitors analyzed</span><span class="cs-impact-sub">Walmart, Shipt, UberEats &amp; more</span></div>
+                        <div class="cs-impact-item"><span class="cs-impact-num">8+</span><span class="cs-impact-label">Users tested</span><span class="cs-impact-sub">Via UserTesting sessions</span></div>
+                    </div>
                 </div>
             </section>
 
-            
+            <div class="disclaimer">
+                <!-- <p>Due to confidentiality agreements, I am unable to disclose specific project details. However, I can share an overview of the steps I took during the design process, and some of the proposed final designs.</p> -->
+                <p>To comply with a non-disclosure agreement, I am unable to disclose specific project details. However, I can share an overview of my process and some of the proposed final designs. The information in this case study is my own and does not necessarily reflect Amazon's views.</p>
+            </div>
 
             <!-- amz content -->
             <div class="project-content">
                 <section>
+                    <span class="project-eyebrow">The Problem</span>
                     <h2 class="project-header">
                         What's the problem?
                     </h2>
@@ -92,8 +99,10 @@
                         </p>
                         
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                 
                 <section>
+                    <span class="project-eyebrow">Context</span>
                     <h2 class="project-header">
                         What are instructions anyway?
                     </h2>
@@ -125,8 +134,10 @@
                             <p>This is demonstrated with Laura, our user persona who is a single working mother <b>struggling</b> from a lack of free time and <b>scattered resources</b> for support.</p>
                         </div> -->
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
                 <section>
+                    <span class="project-eyebrow">Current Flow</span>
                     <h2 class="project-header">
                         How customers access instructions
                     </h2>
@@ -147,6 +158,7 @@
                             <img class="rounded-image" src="graphics/PhillyReach-ideation-mobile-optimized.jpg" alt="Phillyreach ideation">
                         </picture> -->
     
+                    <span class="project-eyebrow">The Opportunity</span>
                     <h2 class="project-header">
                         The current CX could use some updating 
                     </h2>
@@ -171,6 +183,7 @@
                     
 
                 <section> 
+                    <span class="project-eyebrow">Research</span>
                     <h2 class="project-header">
                         Analyzing research 
                     </h2>
@@ -181,8 +194,10 @@
                         <!-- DONE phillyreach 2 screens  -->
                         <!-- <img alt="Phillyreach two screens" class="rounded-image" src="images/PhillyReach-2-screens.webp"> -->
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
                 <section>
+                    <span class="project-eyebrow">Competitive Analysis</span>
                     <h2 class="project-header">
                         Learning from competitors
                     </h2>
@@ -232,8 +247,10 @@
                         
                         
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                 
                 <section>
+                    <span class="project-eyebrow">User Interview</span>
                     <h2 class="project-header">
                         Interviewing a delivery driver
                     </h2>
@@ -270,10 +287,12 @@
                             <img class="rounded-image" src="graphics/PhillyReach-filtering-mobile-optimized.jpg" alt="Phillyreach filtering system">
                         </picture> -->
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
             
                 
                 
                 <section>
+                    <span class="project-eyebrow">Ideation</span>
                     <h2 class="project-header">
                         Wireframing my designs
                     </h2>
@@ -283,17 +302,21 @@
                         <p>In the middle of the internship, I proposed the different ideas I developed to my team. I received a lot of interest in my work, as well as feedback. What I quickly learned about sharing my designs was <b>deciding what advice I wanted to act on</b>, and what thoughts were less feasible to act on given the timeline.  
                         </p>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
             
 
                 <section id="final-solutions-amz">
+                    <span class="project-eyebrow">The Solution</span>
                     <h2 class="project-header">
                         Proposed CX
                     </h2>
                         <p><b>Seeking to simplify</b> the experience between the customer and the delivery driver, I proposed <b>5 mobile concepts</b> to my team. Three of these concepts involved <b>rethinking</b> where customers can access instructions. 
                         </p>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                 <section>
+                    <span class="project-eyebrow">Concept 1</span>
                     <h2 class="project-header">
                         Concept 1: Button redesign in Checkout 
                     </h2>
@@ -333,8 +356,10 @@
                         </p>
                         <!-- add addressbook! -->
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
                 <section>
+                    <span class="project-eyebrow">Concept 2</span>
                     <h2 class="project-header">
                         Concept 2: Progress Tracker Nudges
                     </h2>
@@ -379,8 +404,10 @@ or a specific order. This is crucial for customers who would like to apply deliv
                         </li>
                     </ul> -->
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
                 <section>
+                    <span class="project-eyebrow">Concept 3</span>
                     <h2 class="project-header">
                         Concept 3: Pin on Map experience 
                     </h2>
@@ -401,7 +428,9 @@ or a specific order. This is crucial for customers who would like to apply deliv
                             <!-- The second location is optional, and presented as a “backup” to empower diverse customer needs. For example, customers can add their neighbor as an alternative place to deliver.  -->
                         </p>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                 <section id="usertesting-amz">
+                    <span class="project-eyebrow">Usability Testing</span>
                     <h2 class="project-header">Closing out with UserTesting</h2>
                     <p>After I finished my final presentation successfully, I conducted usability testing to determine whether customers are likely to update delivery instructions with 2 of my proposed designs in Checkout.</p>
                     <p>I met with one of my partners, a senior user researcher to create a research plan, organize questions on UserTesting, and publish the test.</p>
@@ -423,8 +452,10 @@ or a specific order. This is crucial for customers who would like to apply deliv
                     
                     
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
                 <section class="reflection-amz">
+                    <span class="project-eyebrow">Reflection</span>
                     <h2 class="project-header reflection-header">
                         What I learned from this project</h2>
                     <p>This internship provided me with valuable opportunities to explore my strengths and areas for growth. I discovered my passion for <b>diving deep into customer needs</b> and working backward from problems. While I held back initially from proposing radically new ideas, I learned that <b>all ideas are welcomed</b>.</p>
@@ -448,65 +479,57 @@ or a specific order. This is crucial for customers who would like to apply deliv
                     
                 
                     </section>    
-            </div>
+            </div>        </div>
 
-            
 
-            <aside class="more-projects">
-                <h3 class="more-title">
-                    More Projects
-                </h3> 
-                <a class="more-link-image" href="zeroeyes.html">
-                    <img src="images/more-ze-optimized.jpg" alt="ZeroEyes case study snapshot" class="more-img more1">
-                </a>
-                <a class="word1 more-link" href="zeroeyes.html"><h4>Enhanced Brand Presence</h4></a>
-
-                <a class="more-link-image" href="phillyreach.html">
-                    <img src="images/more-phillyreach-optimized.jpg" alt="CBK case study snapshot" class="more-img more2">
-                </a>
-                <a class="word2 more-link" href="phillyreach.html"><h4>Created PhillyReach MVP</h4></a>
-
-                    <a class="more-link-image" href="michoacana.html">
-                        <img src="images/more-michoacana-optimized.jpg" alt="Michoacana case study snapshot" class="more-img more3">
-                    </a>
-                    <a class="word3 more-link" href="michoacana.html"><h4>Revamped Michoacana Site</h4></a>
-
-                    
-    
-                    <!-- <a class="more-link-image" href="proj-3.html">
-                        <img src="images/more-inkling-optimized.jpg" alt="Inkling case study snapshot" class="more-img more2">
-                    </a>
-                    <a class="word2 more-link" href="proj-3.html"><h4>Inkling</h4></a> -->
-                    
-                    
-                    <!-- <a class="more-link-image" href="proj-4.html"><img src="images/more-best-fronds-optimized.jpg" alt="Best fronds case study snapshot" class="more-img more3"></a>
-                    <a href="proj-4.html" class="word3 more-link"><h4>Best Fronds</h4></a> -->
-            </aside>
-
-        </div>
+    <nav class="case-next" aria-label="Next case study">
+        <p class="case-next-thanks">Thanks for reading!</p>
+        <span class="case-next-eyebrow">Next project</span>
+        <a class="case-next-link" href="https://drive.google.com/file/d/1DbkdXb7NGb5EWUBNNl8d7ig0cZFPto_X/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <img class="case-next-logo" src="graphics/graditude-logo.jpg" alt="Graditude">
+            <span class="case-next-title">Admin Matching</span>
+            <span class="case-next-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18 L18 6 M9 6 L18 6 L18 15"/>
+                </svg>
+            </span>
+        </a>
+    </nav>
     </main>
     <footer>
-        <div class="footer-first">
-            <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
-            
-            <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
+        <!-- Left column: skyline + name/tagline + nav -->
+        <div class="footer-brand">
+            <img class="footer-philly" alt="Philadelphia skyline" src="images/footer-philly.svg">
+            <p class="footer-name">Lucia Garzon</p>
+            <p class="footer-tagline">UI/UX Designer &amp; Researcher</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a class="footer-nav-link" href="index.html">Home</a>
+                <a class="footer-nav-link" href="about.html">About</a>
+                <a class="footer-nav-link" href="creative.html">Creative</a>
+                <a class="footer-nav-link" href="projects.html">Archive</a>
+            </nav>
         </div>
-        
-        <div class="footer-icons">
-            <!-- LinkedIn icon -->
-            <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
-                <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
-            </a>
-            <!-- Email icon -->
-            <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
-                <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
-            </a>
-            <!-- Github icon -->
-            <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
-                <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
-            </a>
+
+        <!-- Right column: social icons + credit -->
+        <div class="footer-right">
+            <div class="footer-icons">
+                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank" aria-label="LinkedIn">
+                    <img alt="LinkedIn" src="images/footer-linkedin.svg" class="footer-linkedin">
+                </a>
+                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank" aria-label="Email">
+                    <img alt="Email" src="images/footer-email.svg" class="footer-email">
+                </a>
+                <a class="icon" href="https://github.com/lucia-garzon" target="_blank" aria-label="GitHub">
+                    <img alt="GitHub" src="images/footer-github.svg" class="footer-github">
+                </a>
+            </div>
+            <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
         </div>
     </footer>
     <script src="js/index.js"></script>
+    <!-- GSAP + ScrollTrigger (scroll animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/case-study.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/screen.css">
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
 </head>
-<body>
+<body class="pt-alt">
     <header>
         <!-- navigation -->
         <a class="logo" href="index.html">
@@ -19,16 +19,13 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li>
                     <a class="nav-link" href="creative.html">Creative</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Archive</a>
                 </li>
             </ul>
             <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
@@ -38,9 +35,77 @@
 
     <main class="wrapper">
         <section class="about-wrapper">
-            <img alt="Picture of Lucia" src="graphics/about-lucia-spheres.jpg" class="about-lucia">
+            <div class="about-frame">
+                <!-- Flowers + lily pads tucked directly behind the frame,
+                     peeking out from the corners. Purely decorative. -->
+                <div class="about-frame-decor" aria-hidden="true">
+                    <img class="frame-lilypad frame-lilypad--tl" src="images/hero-lilypad-1.svg" alt="">
+                    <img class="frame-lilypad frame-lilypad--br" src="images/hero-lilypad-2.svg" alt="">
+                    <img class="frame-lilypad frame-lilypad--tr" src="images/hero-lilypad-2.svg" alt="">
+                    <!-- Lotus flowers (same illustration as the homepage CD player) -->
+                    <svg class="frame-flower frame-flower--tr" viewBox="0 0 160 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- Two leaves lying flat sideways under the bloom. -->
+                        <g fill="#4f8f3e">
+                            <path d="M80,108 C70,118 62,145 80,163 C98,145 90,118 80,108 Z" transform="rotate(-90 80 108)"/>
+                            <path d="M80,108 C70,118 62,145 80,163 C98,145 90,118 80,108 Z" transform="rotate(90 80 108)"/>
+                        </g>
+                        <g fill="#E8A0BC">
+                            <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(-66 80 114)"/>
+                            <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(-33 80 114)"/>
+                            <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z"/>
+                            <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(33 80 114)"/>
+                            <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(66 80 114)"/>
+                        </g>
+                        <g fill="#F4BBCF">
+                            <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(-48 80 114)"/>
+                            <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(-16 80 114)"/>
+                            <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(16 80 114)"/>
+                            <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(48 80 114)"/>
+                        </g>
+                        <g fill="#FDEAF1">
+                            <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z" transform="rotate(-24 80 114)"/>
+                            <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z"/>
+                            <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z" transform="rotate(24 80 114)"/>
+                        </g>
+                        <ellipse cx="80" cy="92" rx="6" ry="8" fill="#F5D26B"/>
+                    </svg>
+                </div>
+                <div class="about-frame-window">
+                    <div class="about-frame-mat">
+                        <img alt="Picture of Lucia" src="graphics/about-lucia-spheres.jpg" class="about-lucia">
+                    </div>
+                </div>
+                <!-- Bottom-left lotus sits AFTER the window so it layers on
+                     top of the image (peeking over the bottom-left corner). -->
+                <svg class="frame-flower frame-flower--bl" viewBox="0 0 160 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Two leaves lying flat sideways under the bloom. -->
+                    <g fill="#4f8f3e">
+                        <path d="M80,108 C70,118 62,145 80,163 C98,145 90,118 80,108 Z" transform="rotate(-90 80 108)"/>
+                        <path d="M80,108 C70,118 62,145 80,163 C98,145 90,118 80,108 Z" transform="rotate(90 80 108)"/>
+                    </g>
+                    <g fill="#E8A0BC">
+                        <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(-66 80 114)"/>
+                        <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(-33 80 114)"/>
+                        <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z"/>
+                        <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(33 80 114)"/>
+                        <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(66 80 114)"/>
+                    </g>
+                    <g fill="#F4BBCF">
+                        <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(-48 80 114)"/>
+                        <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(-16 80 114)"/>
+                        <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(16 80 114)"/>
+                        <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(48 80 114)"/>
+                    </g>
+                    <g fill="#FDEAF1">
+                        <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z" transform="rotate(-24 80 114)"/>
+                        <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z"/>
+                        <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z" transform="rotate(24 80 114)"/>
+                    </g>
+                    <ellipse cx="80" cy="92" rx="6" ry="8" fill="#F5D26B"/>
+                </svg>
+            </div>
             <div class="about-text"> 
-                <h2>Hi there, I'm Lucia!</h2>
+                <h2>About me</h2>
                 <p>
                     I am a <b>UI/UX designer</b> based in Philadelphia who enjoys the challenge of creating <b>engaging digital experiences</b>. What I love most about UI/UX is the variety of problems it can address, as well as the cross-functional teamwork required to tackle these challenges. I have experience in UI/UX Design and user testing at <b>Amazon</b>, <b>Graditude</b>, <b>Biasly</b>, <b>ZeroEyes</b>, and <b>Coded By:</b>. Currently, I'm designing and developing websites and apps as a student @ Drexel University. 
                 </p>
@@ -48,39 +113,247 @@
                     In my free time, I enjoy <a class="link" href="creative.html"><b>making art in any form</b></a>, as well as reading, traveling, and paddle boarding. 
                     </p>
                     
-                <p>Want to talk about UI/UX together? Or really any specific passion you have? I'd love to hear about it!</p>
                 <p>
                 <b>Say hi</b> via 
                 <a class="link" href="mailto:lg852@drexel.edu" target="_blank"><b>email</b></a> or on <a class="link" href="https://www.linkedin.com/in/luciagarzon/" target="_blank"><b>LinkedIn</b></a>.</p>
             </div>     
         </section>
-            <!-- <a class="button button-resume" href="https://drive.google.com/file/d/1s2Nuh1cwBuZEdnJ4HAVSo2-2LBIX-hXi/view?usp=sharing" target="_blank">View My Resume</a> -->
+
+        <!-- ---------- Resume section (logo-based, inspired by adasilv2.framer.website/resume) ---------- -->
+        <section class="resume-section" aria-label="Resume">
+            <div class="rz-head">
+                <div class="rz-head-text">
+                    <h2 class="rz-heading">Resume</h2>
+                </div>
+                <a class="rz-pdf" href="https://drive.google.com/file/d/1BVrHo85kEZFd1Cxcyx741RHhXSDRVfuB/view?usp=sharing" target="_blank">View PDF
+                    <svg class="rz-pdf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M14 3h7v7"></path>
+                        <path d="M21 3l-9 9"></path>
+                        <path d="M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Summarized / Full-details toggle (gooey switch, reused from home) -->
+            <div class="rz-toggle">
+                <span class="rz-toggle-label rz-label-summary">Summary</span>
+                <div class="switchContainer" id="resumeSwitch" role="switch" tabindex="0" aria-label="Toggle full resume details" aria-checked="false">
+                    <div class="switchBg"></div>
+                    <div class="switchBtn"></div>
+                </div>
+                <span class="rz-toggle-label rz-label-full">Full details</span>
+            </div>
+            <!-- gooey filter used by the switch -->
+            <svg class="gooey-defs" width="0" height="0" aria-hidden="true" style="position:absolute">
+                <defs>
+                    <filter id="gooey">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
+                        <feColorMatrix in="blur" mode="matrix"
+                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+                    </filter>
+                </defs>
+            </svg>
+
+            <!-- Education -->
+            <h3 class="rz-subhead">Education</h3>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/drexel-university/" target="_blank" rel="noopener" aria-label="Drexel University on LinkedIn"><img src="graphics/drexel-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">B.S. in User Experience &amp; Interaction Design <span class="rz-org">@ Drexel University</span></p>
+                    <p class="rz-meta">Expected Jun 2027 <span class="rz-sep">|</span> Philadelphia, PA <span class="rz-sep">|</span> GPA 3.96</p>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <h3 class="rz-subhead">Work Experience</h3>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/acuity-insurance/" target="_blank" rel="noopener" aria-label="Acuity Insurance on LinkedIn"><img src="graphics/acuity-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">Digital Customer Experience Intern <span class="rz-org">@ Acuity Insurance</span></p>
+                    <p class="rz-meta">Mar 2026 – Jun 2026 <span class="rz-sep">|</span> Remote</p>
+                    <p class="rz-summary">Improved customer journeys in Figma from customer feedback, ran stakeholder and competitive research, and enhanced accessibility across Acuity's digital experiences.</p>
+                    <ul class="rz-details">
+                        <li>Utilized customer feedback to create improved customer journeys via Figma.</li>
+                        <li>Conducted and synthesized user research including stakeholder interviews and competitive analysis.</li>
+                        <li>Enhanced accessibility in Acuity's digital experiences.</li>
+                        <li>Contributed to journey mapping and CX metric collection.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/amazon/" target="_blank" rel="noopener" aria-label="Amazon on LinkedIn"><img src="graphics/amazon-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">UX Designer Intern <span class="rz-org">@ Amazon</span></p>
+                    <p class="rz-meta">Jun 2025 – Sep 2025 <span class="rz-sep">|</span> Seattle, WA</p>
+                    <p class="rz-summary">Redesigned an internal incident-reporting tool with a scalable Figma design system and led mixed-methods research with 15+ participants to validate pain points and guide product direction.</p>
+                    <ul class="rz-details">
+                        <li>Redesigned core interfaces on the Worldwide Operations Security team for an internal incident reporting tool by implementing a scalable design system in Figma, improving usability and consistency across workflows for agents.</li>
+                        <li>Led mixed-methods user research (5+ interviews, 5+ contextual inquiries, usability testing) with 15+ participants, validating seven usability pain points and translating insights into actionable design recommendations.</li>
+                        <li>Balanced industry and business needs by conducting competitor analyses, including stakeholder interviews and a visual audit of 5+ competitors, resulting in informed designs.</li>
+                        <li>Delivered data-backed strategy recommendations through research synthesis in Dovetail and internal AI tools, creating user personas, validating findings via surveys and writing final reports to guide product direction.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/graditude/" target="_blank" rel="noopener" aria-label="Graditude on LinkedIn"><img src="graphics/graditude-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">UX/UI Design Intern <span class="rz-org">@ Graditude</span></p>
+                    <p class="rz-meta">Mar 2025 – Jun 2025 <span class="rz-sep">|</span> Remote</p>
+                    <p class="rz-summary">Designed a scalable admin-matching flow for a mentorship social network and built new design-system components in Figma, validated through research and cross-functional feedback.</p>
+                    <ul class="rz-details">
+                        <li>Created a core admin matching user flow for a mentorship-focused social network that is scalable for 100+ members, allowing campus org leaders to match potential mentors and mentees.</li>
+                        <li>Designed low and high-fidelity website prototypes on Figma and contributed new components with multiple states for the company design system (cards, chips, &amp; buttons).</li>
+                        <li>Validated design work by synthesizing past research and engaging in empathy mapping, competitor analysis, affinity mapping, and conducting 5+ user interviews.</li>
+                        <li>Informed design decisions by integrating feedback from 1 designer, 1 engineer, and the company founder and reporting tasks to the design lead using ClickUp &amp; Slack.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/biasly" target="_blank" rel="noopener" aria-label="Biasly on LinkedIn"><img src="graphics/biasly-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">UX Design Intern <span class="rz-org">@ Biasly</span></p>
+                    <p class="rz-meta">Mar 2025 – Jun 2025 <span class="rz-sep">|</span> Remote</p>
+                    <p class="rz-summary">Redesigned 10+ educational pages and built 20+ reusable, accessible UI components in Figma, backed by research with 50+ users.</p>
+                    <ul class="rz-details">
+                        <li>Redesigned 10+ educational website pages &amp; graphics in Figma for a news website providing bias ratings &amp; analytics.</li>
+                        <li>Enhanced the website's visual language by designing 20+ reusable UI components such as icons, cards, images, &amp; data visualizations, creating engaging layouts that ensured accessibility and supported a cohesive design system.</li>
+                        <li>Validated design decisions by conducting and synthesizing research with 50+ users through surveys, user interviews, and open card sorting via Google Forms and Zoom.</li>
+                        <li>Incorporated stakeholder feedback through Nifty to iterate rapidly and communicate project progress to the supervisor.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/amazon/" target="_blank" rel="noopener" aria-label="Amazon on LinkedIn"><img src="graphics/amazon-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">UX Designer Intern <span class="rz-org">@ Amazon</span></p>
+                    <p class="rz-meta">Jun 2024 – Sep 2024 <span class="rz-sep">|</span> New York, NY</p>
+                    <p class="rz-summary">Designed data-driven flows, wireframes, and mobile concepts to improve Amazon's delivery instructions, grounded in driver interviews and competitive and customer research.</p>
+                    <ul class="rz-details">
+                        <li>Designed data-driven user flows, wireframes, and mobile concepts that improved delivery experiences and informed future iterations, managing cross-functional deliverables in Asana for the Delivery Experience team.</li>
+                        <li>Used Figma to create ideations and mockups redesigning delivery instructions in the Amazon shopping app.</li>
+                        <li>Synthesized key customer problems by summarizing past reports, interviewing delivery drivers, and conducting market research through analyzing 5 competitors &amp; 50+ customer insights.</li>
+                        <li>Employed AI tools within UserTesting to collect user feedback from 8+ customers, initiating project handoff in a comprehensive final project brief to the team.</li>
+                        <li>Contributed to design critiques during weekly meetings to improve the Amazon delivery experience for customers.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/zeroeyes-ai/" target="_blank" rel="noopener" aria-label="ZeroEyes on LinkedIn"><img src="graphics/zeroeyes-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">Marketing Design Intern <span class="rz-org">@ ZeroEyes</span></p>
+                    <p class="rz-meta">Apr 2024 – Jun 2024 <span class="rz-sep">|</span> Philadelphia, PA</p>
+                    <p class="rz-summary">Launched a partnership webpage and produced brand-focused marketing designs across Figma, WordPress, and Adobe tools, driving user acquisition for an AI security company.</p>
+                    <ul class="rz-details">
+                        <li>Launched a high-visibility Partnership webpage for an AI security company by collaborating cross-functionally, defining the content strategy, information architecture, and UI layout to promote new business partnerships.</li>
+                        <li>Utilized Figma, WordPress, After Effects, Canva, Photoshop, &amp; Audition to create brand-focused designs, including 10+ marketing templates, 50+ social media posts, and an animated video driving user acquisition across all channels.</li>
+                        <li>Created a brand guideline presentation to maintain a consistent visual design across all digital assets.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/coded-by/" target="_blank" rel="noopener" aria-label="Coded By: on LinkedIn"><img src="graphics/coded-by-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">UI/UX Intern <span class="rz-org">@ Coded By:</span></p>
+                    <p class="rz-meta">May 2023 – Aug 2023 <span class="rz-sep">|</span> Philadelphia, PA</p>
+                    <p class="rz-summary">Wireframed and prototyped a program-finding website for Philadelphia parents in Figma and Miro, building a cohesive design system validated through usability testing.</p>
+                    <ul class="rz-details">
+                        <li>Collaborated cross-functionally in Miro and Figma to wireframe and prototype for a program-finding website helping working parents find after-school programs in Philadelphia.</li>
+                        <li>Worked in Figma to build a comprehensive website design, including a visually compelling design system with microinteractions and vector assets.</li>
+                        <li>Validated 5+ desktop webpage designs via market research and competitive usability testing.</li>
+                        <li>Presented design iterations in daily collaborative meetings to drive project objectives and team discussions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Project Experience -->
+            <h3 class="rz-subhead">Project Experience</h3>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/drexel-university/" target="_blank" rel="noopener" aria-label="Drexel University on LinkedIn"><img src="graphics/drexel-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">Project Manager &amp; Designer <span class="rz-org">@ Drexel University</span></p>
+                    <p class="rz-meta">Sep 2025 – Mar 2026 <span class="rz-sep">|</span> Philadelphia, PA</p>
+                    <p class="rz-summary">Led a 6-person team to design a mobile app for discovering affordable local activities, managing Agile timelines in Jira and shipping a tested user flow in TestFlight.</p>
+                    <ul class="rz-details">
+                        <li>Directed a 6-person cross-functional team to design a mobile app helping young adults discover affordable local activities in Philadelphia.</li>
+                        <li>Delivered a fully functional critical user flow in TestFlight, achieving 100% positive feedback from 5+ usability testers.</li>
+                        <li>Managed Agile project timelines in Jira, organizing work into Epics to align the team's UX, research, data architecture, and development efforts.</li>
+                        <li>Facilitated weekly team meetings, leveraging UX research insights from 60 users to validate and refine features.</li>
+                        <li>Designed low- to high-fidelity prototypes in Figma and built a component-based design system with microinteractions to improve usability.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rz-entry">
+                <a class="rz-logo rz-logo--img" href="https://www.linkedin.com/company/drexel-university/" target="_blank" rel="noopener" aria-label="Drexel University on LinkedIn"><img src="graphics/drexel-logo.jpg" alt=""></a>
+                <div class="rz-entry-body">
+                    <p class="rz-role">UX Researcher &amp; Designer <span class="rz-org">@ Drexel University</span></p>
+                    <p class="rz-meta">Sep 2024 – Dec 2024 <span class="rz-sep">|</span> Philadelphia, PA</p>
+                    <p class="rz-summary">Researched the Dropout streaming platform through interviews and 200+ survey responses, then translated insights into a journey map and an animated user story.</p>
+                    <ul class="rz-details">
+                        <li>Analyzed target users of the Dropout streaming platform and provided key UX recommendations by interviewing 5+ customers and synthesizing findings from 200+ online survey responses.</li>
+                        <li>Created a journey map and storyboards in Figma and used After Effects to animate a compelling user story.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Toolbox -->
+            <h3 class="rz-subhead">Toolbox</h3>
+            <ul class="rz-tools" aria-label="Tools and skills">
+                <li class="rz-chip">Figma</li>
+                <li class="rz-chip">UserTesting</li>
+                <li class="rz-chip">Dovetail</li>
+                <li class="rz-chip">Photoshop</li>
+                <li class="rz-chip">Illustrator</li>
+                <li class="rz-chip">After Effects</li>
+                <li class="rz-chip">Premiere Pro</li>
+                <li class="rz-chip">Audition</li>
+                <li class="rz-chip">WordPress</li>
+                <li class="rz-chip">Miro</li>
+                <li class="rz-chip">Balsamiq</li>
+                <li class="rz-chip">Asana</li>
+                <li class="rz-chip">Jira</li>
+                <li class="rz-chip">ClickUp</li>
+                <li class="rz-chip">Monday</li>
+                <li class="rz-chip">Nifty</li>
+            </ul>
+        </section>
 
     </main>
 
     <footer>
-        <div class="footer-first">
-            <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
-            
-            <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
+        <!-- Left column: skyline + name/tagline + nav -->
+        <div class="footer-brand">
+            <img class="footer-philly" alt="Philadelphia skyline" src="images/footer-philly.svg">
+            <p class="footer-name">Lucia Garzon</p>
+            <p class="footer-tagline">UI/UX Designer &amp; Researcher</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a class="footer-nav-link" href="index.html">Home</a>
+                <a class="footer-nav-link" href="about.html">About</a>
+                <a class="footer-nav-link" href="creative.html">Creative</a>
+                <a class="footer-nav-link" href="projects.html">Archive</a>
+            </nav>
         </div>
-        
-        <div class="footer-icons">
-            <!-- LinkedIn icon -->
-            <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
-                <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
-            </a>
-            <!-- Email icon -->
-            <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
-                <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
-            </a>
-            <!-- Github icon -->
-            <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
-                <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
-            </a>
+
+        <!-- Right column: social icons + credit -->
+        <div class="footer-right">
+            <div class="footer-icons">
+                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank" aria-label="LinkedIn">
+                    <img alt="LinkedIn" src="images/footer-linkedin.svg" class="footer-linkedin">
+                </a>
+                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank" aria-label="Email">
+                    <img alt="Email" src="images/footer-email.svg" class="footer-email">
+                </a>
+                <a class="icon" href="https://github.com/lucia-garzon" target="_blank" aria-label="GitHub">
+                    <img alt="GitHub" src="images/footer-github.svg" class="footer-github">
+                </a>
+            </div>
+            <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
         </div>
     </footer>
     <script src="js/index.js"></script>
+    <!-- GSAP + ScrollTrigger (scroll animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/page-animations.js"></script>
 </body>
 
 </html>

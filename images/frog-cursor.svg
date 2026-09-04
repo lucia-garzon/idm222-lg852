@@ -1,0 +1,29 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- folded back-leg haunches -->
+  <ellipse cx="9" cy="33" rx="7" ry="8.5" fill="#427a42"/>
+  <ellipse cx="39" cy="33" rx="7" ry="8.5" fill="#427a42"/>
+  <!-- little front feet -->
+  <ellipse cx="15" cy="43" rx="5" ry="2.8" fill="#427a42"/>
+  <ellipse cx="33" cy="43" rx="5" ry="2.8" fill="#427a42"/>
+  <!-- body (lighter teal-green version of your frog) -->
+  <ellipse cx="24" cy="28" rx="17" ry="14.5" fill="#61a560"/>
+  <!-- pale belly -->
+  <ellipse cx="24" cy="33" rx="10.5" ry="8" fill="#cfe9c4"/>
+  <!-- eye bumps on top of the head -->
+  <circle cx="15" cy="13" r="8.5" fill="#61a560"/>
+  <circle cx="33" cy="13" r="8.5" fill="#61a560"/>
+  <!-- eye whites matched to the page background -->
+  <circle cx="15" cy="12" r="5.4" fill="#DDFFFD"/>
+  <circle cx="33" cy="12" r="5.4" fill="#DDFFFD"/>
+  <!-- dark navy pupils (matching your frog) -->
+  <circle cx="15.5" cy="12.5" r="2.9" fill="#244a1f"/>
+  <circle cx="33.5" cy="12.5" r="2.9" fill="#244a1f"/>
+  <!-- sparkle highlights -->
+  <circle cx="14" cy="11" r="1.2" fill="#DDFFFD"/>
+  <circle cx="32" cy="11" r="1.2" fill="#DDFFFD"/>
+  <!-- short gentle smile -->
+  <path d="M20 27 Q24 30.5 28 27" stroke="#244a1f" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+  <!-- little nostrils -->
+  <circle cx="22" cy="19" r="1" fill="#427a42"/>
+  <circle cx="26" cy="19" r="1" fill="#427a42"/>
+</svg>

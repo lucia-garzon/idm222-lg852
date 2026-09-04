@@ -5,9 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucia Garzon • UI/UX Designer</title>
     <link rel="stylesheet" href="css/screen.css">
+    <!-- Cute handwritten font for the lily-pad "frog cursor" label -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
 </head>
-<body>
+<body class="is-home">
+
+    <!-- Loading screen: a frog hops across three lily pads, then the pond
+         ripples away to reveal the page (home page only). Driven by the
+         LOADING SCREEN block in js/index.js; styles in css/screen.css. -->
+    <div id="loading-screen" class="loading-screen" aria-hidden="true">
+        <div class="loader-scene">
+            <img class="pad pad-1" src="images/hero-lilypad-1.svg" alt="">
+            <img class="pad pad-2" src="images/hero-lilypad-1.svg" alt="">
+            <img class="pad pad-3" src="images/hero-lilypad-1.svg" alt="">
+            <img class="loader-frog" src="images/frog-loader.png" alt="">
+            <p class="loader-text">Hopping in…</p>
+        </div>
+    </div>
+
     <header>
         <!-- navigation -->
         <a class="logo" href="index.html">
@@ -19,16 +37,13 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li>
                     <a class="nav-link" href="creative.html">Creative</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Archive</a>
                 </li>
             </ul>
             <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
@@ -42,24 +57,187 @@
         <div class="wrapper">
 
             <!-- introduction section -->
-                <section class="intro">
-                    
-                    <div class="intro-text">
-                        <!-- <p class="intro-blurb">I'm Lucia, a UI/UX Designer at Drexel, who enjoys crafting solutions from customer insights.</p> -->
-                        <p class="intro-blurb">Hi! I'm Lucia, I craft human-centered solutions through data-driven insights.</p>
+                <section class="hero">
+                    <!-- Left column: intro copy -->
+                    <div class="hero-content">
+                        <p class="hero-statement">
+                            <span class="hero-name">Hi there! I&rsquo;m Lucia.</span>
+                            <span class="hero-desc">A deeply curious UX designer and researcher.</span>
+                        </p>
+                        <div class="hero-prev">
+                            <span class="hero-prev-label">Previously at</span>
+                            <ul class="hero-prev-logos" aria-label="Recent companies">
+                                <li><a href="https://www.linkedin.com/company/acuity-insurance/" target="_blank" rel="noopener" aria-label="Acuity Insurance on LinkedIn"><img src="graphics/acuity-logo.jpg" alt="Acuity Insurance"></a></li>
+                                <li><a href="https://www.linkedin.com/company/amazon/" target="_blank" rel="noopener" aria-label="Amazon on LinkedIn"><img src="graphics/amazon-logo.jpg" alt="Amazon"></a></li>
+                                <li><a href="https://www.linkedin.com/company/graditude/" target="_blank" rel="noopener" aria-label="Graditude on LinkedIn"><img src="graphics/graditude-logo.jpg" alt="Graditude"></a></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <img 
-                    class="frog"
-                    srcset="
-                        images/frog-small.webp 320w,
-                        images/frog.webp 640w
-                    "
-                    sizes="(max-width: 600px) 90vw,
-                            (max-width: 1243px) 70vw,
-                            50vw"
-                    alt="Frog with Figma icon">
+                    <!-- Right column: floating lily pad cluster (kitbitz nature-kit, CC0).
+                         Moves below the content on mobile. The upper pad (data-host)
+                         carries the desktop "frog cursor" toggle so the switch sits
+                         right on the lily pad. -->
+                    <div class="hero-pads">
+                        <div class="hero-pad pad-a" data-host>
+                            <!-- Desktop-only gooey toggle: frog cursor on/off -->
+                            <div class="frog-toggle">
+                                <span class="frog-toggle-label">frog cursor</span>
+                                <div class="switchContainer" id="switchContainer" role="switch"
+                                     tabindex="0" aria-label="Frog cursor" aria-checked="true">
+                                    <div class="switchBg"></div>
+                                    <div class="switchBtn"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="hero-pad pad-b" aria-hidden="true">
+                            <span class="pad-hint">press<br>for ripples!</span>
+                        </span>
+                        <!-- CD player + controls resting on the bottom lily pad. -->
+                        <div class="hero-pad pad-c">
+                        <div class="hero-cd">
+                        <button class="hero-dvd" id="heroDvd" type="button" aria-label="Play or pause music">
+                            <span class="hero-dvd-window">
+                            <svg class="hero-dvd-disc" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true">
+                                <defs>
+                                    <radialGradient id="flowerHub" cx="50%" cy="45%" r="55%">
+                                        <stop offset="0%" stop-color="#fff3c0"/>
+                                        <stop offset="55%" stop-color="#F5D26B"/>
+                                        <stop offset="100%" stop-color="#d99a34"/>
+                                    </radialGradient>
+                                    <!-- one broad rounded petal, pointing up from the centre; reused per ring -->
+                                    <path id="petalO" d="M100,100 C78,86 82,20 100,18 C118,20 122,86 100,100 Z"/>
+                                    <path id="petalM" d="M100,100 C83,88 86,46 100,44 C114,46 117,88 100,100 Z"/>
+                                    <path id="petalI" d="M100,100 C88,90 90,66 100,64 C110,66 112,90 100,100 Z"/>
+                                </defs>
+                                <!-- flower base (petals radiate on top; viewed from above) -->
+                                <circle cx="100" cy="100" r="98" fill="#f3bfd1"/>
+                                <!-- outer petals -->
+                                <g fill="#E8A0BC">
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(0 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(30 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(60 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(90 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(120 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(150 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(180 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(210 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(240 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(270 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(300 100 100)"/>
+                                    <use href="#petalO" xlink:href="#petalO" transform="rotate(330 100 100)"/>
+                                </g>
+                                <!-- mid petals, offset so they sit between the outer ones -->
+                                <g fill="#F4BBCF">
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(15 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(45 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(75 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(105 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(135 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(165 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(195 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(225 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(255 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(285 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(315 100 100)"/>
+                                    <use href="#petalM" xlink:href="#petalM" transform="rotate(345 100 100)"/>
+                                </g>
+                                <!-- inner petals, lightest -->
+                                <g fill="#FDEAF1">
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(0 100 100)"/>
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(45 100 100)"/>
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(90 100 100)"/>
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(135 100 100)"/>
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(180 100 100)"/>
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(225 100 100)"/>
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(270 100 100)"/>
+                                    <use href="#petalI" xlink:href="#petalI" transform="rotate(315 100 100)"/>
+                                </g>
+                                <!-- centre -->
+                                <circle cx="100" cy="100" r="18" fill="url(#flowerHub)"/>
+                            </svg>
+                            </span>
+                        </button>
+                        <!-- Lotus flower tucked over the CD's cut-off edge -->
+                        <svg class="hero-lotus" viewBox="0 0 160 130" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="lotusShadow" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" x="-10%" y="-10%" width="120%" height="120%">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend in="SourceGraphic" in2="BackgroundImageFix" mode="normal" result="shape"/>
+                                    <feColorMatrix in="SourceAlpha" result="hardAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                                    <feOffset dx="-3" dy="2"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feComposite in2="hardAlpha" k2="-1" k3="1" operator="arithmetic"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0"/>
+                                    <feBlend in2="shape" mode="normal" result="effect1_innerShadow"/>
+                                </filter>
+                                <radialGradient id="sepalGrad" cx="50%" cy="80%" r="60%">
+                                    <stop offset="0%" stop-color="#65a30d"/>
+                                    <stop offset="100%" stop-color="#427a42"/>
+                                </radialGradient>
+                            </defs>
 
+                            <g filter="url(#lotusShadow)">
+                                <!-- two small leaves peeking at the base -->
+                                <g fill="#4f8f3e">
+                                    <path d="M80,116 C58,112 44,96 44,78 C60,86 74,101 80,116 Z"/>
+                                    <path d="M80,116 C102,112 116,96 116,78 C100,86 86,101 80,116 Z"/>
+                                </g>
+
+                                <!-- outer petals (back row, darkest) -->
+                                <g fill="#E8A0BC">
+                                    <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(-66 80 114)"/>
+                                    <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(-33 80 114)"/>
+                                    <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z"/>
+                                    <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(33 80 114)"/>
+                                    <path d="M80,114 C63,98 65,58 80,48 C95,58 97,98 80,114 Z" transform="rotate(66 80 114)"/>
+                                </g>
+
+                                <!-- mid petals -->
+                                <g fill="#F4BBCF">
+                                    <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(-48 80 114)"/>
+                                    <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(-16 80 114)"/>
+                                    <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(16 80 114)"/>
+                                    <path d="M80,114 C66,98 68,52 80,40 C92,52 94,98 80,114 Z" transform="rotate(48 80 114)"/>
+                                </g>
+
+                                <!-- inner petals (front row, lightest, upright) -->
+                                <g fill="#FDEAF1">
+                                    <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z" transform="rotate(-24 80 114)"/>
+                                    <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z"/>
+                                    <path d="M80,116 C70,98 72,50 80,34 C88,50 90,98 80,116 Z" transform="rotate(24 80 114)"/>
+                                </g>
+
+                                <!-- soft golden heart of the bloom -->
+                                <ellipse cx="80" cy="92" rx="6" ry="8" fill="#F5D26B"/>
+                            </g>
+                        </svg>
+                        <div class="cd-controls">
+                            <button class="cd-btn" id="cdPrev" type="button" aria-label="Previous song">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14H6V5h2zm10 0l-9 7 9 7V5z"/></svg>
+                            </button>
+                            <button class="cd-btn" id="cdNext" type="button" aria-label="Next song">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5v14h2V5h-2zM6 5l9 7-9 7V5z"/></svg>
+                            </button>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!-- gooey filter used by the toggle -->
+                    <svg class="gooey-defs" width="0" height="0" aria-hidden="true"
+                         style="position:absolute">
+                        <defs>
+                            <filter id="gooey">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"></feGaussianBlur>
+                                <feColorMatrix in="blur" mode="matrix"
+                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"></feColorMatrix>
+                            </filter>
+                            <!-- wavy/blobby diagonal cut for the CD -->
+                            <clipPath id="cdBlob" clipPathUnits="objectBoundingBox">
+                                <path d="M0,0.32 C0.2,0.22 0.35,0.22 0.5,0.28 C0.65,0.34 0.8,0.22 1,0.30 L1,1 L0,1 Z"></path>
+                            </clipPath>
+                        </defs>
+                    </svg>
                 </section>
 
             <section>
@@ -194,35 +372,40 @@
     </main>
     
     <footer>
-        <div class="footer-first">
-            <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
-            
-            <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
-            <!-- <p class="footer-text">Designed &amp; Developed by Lucia Garzon</p>
-            <p class="footer-text">Designer based in Philadelphia, PA • Website made by me!</p> -->
-
-
-        </div>
-        
-        <div class="footer-icons">
-            <!-- LinkedIn icon -->
-            <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
-                <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
-            </a>
-            <!-- Email icon -->
-            <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
-                <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
-            </a>
-            <!-- Github icon -->
-            <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
-                <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
-            </a>
-
-
+        <!-- Left column: skyline + name/tagline + nav -->
+        <div class="footer-brand">
+            <img class="footer-philly" alt="Philadelphia skyline" src="images/footer-philly.svg">
+            <p class="footer-name">Lucia Garzon</p>
+            <p class="footer-tagline">UI/UX Designer &amp; Researcher</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a class="footer-nav-link" href="index.html">Home</a>
+                <a class="footer-nav-link" href="about.html">About</a>
+                <a class="footer-nav-link" href="creative.html">Creative</a>
+                <a class="footer-nav-link" href="projects.html">Archive</a>
+            </nav>
         </div>
 
+        <!-- Right column: social icons + credit -->
+        <div class="footer-right">
+            <div class="footer-icons">
+                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank" aria-label="LinkedIn">
+                    <img alt="LinkedIn" src="images/footer-linkedin.svg" class="footer-linkedin">
+                </a>
+                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank" aria-label="Email">
+                    <img alt="Email" src="images/footer-email.svg" class="footer-email">
+                </a>
+                <a class="icon" href="https://github.com/lucia-garzon" target="_blank" aria-label="GitHub">
+                    <img alt="GitHub" src="images/footer-github.svg" class="footer-github">
+                </a>
+            </div>
+            <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
+        </div>
     </footer>
     <script src="js/index.js"></script>
+    <!-- GSAP + ScrollTrigger (scroll animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/animations.js"></script>
     <script>
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>

@@ -6,6 +6,15 @@
     <title>Lucia Garzon • PhillyReach</title>
     <link rel="stylesheet" href="css/screen.css" />
     <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
+    <!-- Refresh always starts a case study at the top. Must run in <head> so
+         the browser doesn't restore the previous scroll position before we
+         disable it. Preserves anchor-jumps if the URL has a #fragment. -->
+    <script>
+        if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+        window.addEventListener("load", function () {
+            if (!window.location.hash) window.scrollTo(0, 0);
+        });
+    </script>
 </head>
 
 
@@ -21,16 +30,13 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="resume.html">Resume</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li>
                     <a class="nav-link" href="creative.html">Creative</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="projects.html">Archive</a>
                 </li>
             </ul>
             <button class="btn_menu burger-x-button"><img src="images/Burger-x.svg" alt="Burger x out" class="burger-x"></button>
@@ -48,28 +54,30 @@
             
         <div class="project-wrapper">
             <!-- phillyreach title before content -->
-            <h1 class="project-title phillyreach-title">PhillyReach</h1>
+            <span class="cs-year">2023</span>
+            <h1 class="project-title phillyreach-title">MVP Website Design</h1>
 
-            <section class="overview-details">
-                <div class="overview-proj">
-                    <h3 class="overview-title">Overview</h3>
-                    <p class="overview-blurb-proj1">
+            <section class="cs-overview">
+                <div class="cs-overview-lead">
+                    <h3 class="cs-overview-heading">Overview</h3>
+                    <p class="cs-overview-text">
                         During my 10-week internship at Coded By Kids, I was the <b>sole designer</b> working within a <b>cross-functional team</b> made of a project manager and two developers, where I made significant contributions by <b>ideating</b> on and <b>validating</b> a <b>critical issue</b> within the Philadelphia community, ultimately leading to the creation of a highly-impactful <b>MVP</b> to address the problem.
                     </p>
                 </div>
-                
-                <div class="details-proj">
-                    <h4 class="details details-title">Details</h4>
-                    <h4 class="details details-job">UI/UX Intern</h4>
-                    <p class="details">10 weeks</p>
-                    
-                    <div class="details bubbles">
-                        <p class="bubble bubble-1">UI/UX Design &amp; Research</p>
-                        <p class="bubble bubble-1">Product Validation</p>
-                        <p class="bubble bubble-1">Branding</p>
-                    </div>
 
-                    <p class="details">Figma, Miro</p>
+                <dl class="cs-meta">
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Role</dt><dd class="cs-meta-value">UI/UX Intern</dd></div>
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Timeline</dt><dd class="cs-meta-value">10 weeks</dd></div>
+                    <div class="cs-meta-item"><dt class="cs-meta-label">Skills</dt><dd class="cs-meta-value"><span>UI/UX Design &amp; Research</span><span>Product Validation</span><span>Branding</span></dd></div>
+                </dl>
+
+                <div class="cs-impact">
+                    <span class="cs-impact-title">Impact</span>
+                    <div class="cs-impact-grid">
+                        <div class="cs-impact-item"><span class="cs-impact-num">1</span><span class="cs-impact-label">MVP shipped</span><span class="cs-impact-sub">To address a community need</span></div>
+                        <div class="cs-impact-item"><span class="cs-impact-num">5+</span><span class="cs-impact-label">Pages designed</span><span class="cs-impact-sub">Validated via usability testing</span></div>
+                        <div class="cs-impact-item"><span class="cs-impact-num">4</span><span class="cs-impact-label">Person team</span><span class="cs-impact-sub">1 PM, 2 devs &amp; me</span></div>
+                    </div>
                 </div>
             </section>
 
@@ -79,6 +87,7 @@
             <!-- phillyreach content -->
             <div class="project-content">
                 <section>
+                    <span class="project-eyebrow">The Problem</span>
                     <h2 class="project-header">
                         Philadelphia needs to keep its youth away from crime
                     </h2>
@@ -98,8 +107,10 @@
                             <li>As our product seeks to help low to middle-income parents <b>find affordable programs</b> efficiently, PhillyReach offers a wide variety of educational programs available <b>for middle-grade youth in Philadelphia</b>.</li>
                         </ul>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                 
                 <section>
+                    <span class="project-eyebrow">Current State</span>
                     <h2 class="project-header">
                         The existing solutions aren't accessible enough
                     </h2>
@@ -137,8 +148,10 @@
                             <p>This is demonstrated with Laura, our user persona who is a single working mother <b>struggling</b> from a lack of free time and <b>scattered resources</b> for support.</p>
                         </div>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
                 <section id="miro-work">
+                    <span class="project-eyebrow">Ideation</span>
                     <h2 class="project-header">
                         Ideating features for our product
                     </h2>
@@ -152,6 +165,7 @@
     
                         <p>When <b>brainstorming</b> core features of our website, we knew we wanted a search bar and filtering system to <b>provide opportunities</b> for youth in Philly. </p>
     
+                    <span class="project-eyebrow">Wireframes</span>
                     <h2 class="project-header">
                         Creating low-fidelity wireframes
                     </h2>
@@ -162,9 +176,11 @@
                             <img class="rounded-image" src="graphics/PhillyReach-wireframes-mobile-optimized.jpg" alt="Phillyreach wireframes">
                         </picture>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                     
 
                 <section> 
+                    <span class="project-eyebrow">The Solution</span>
                     <h2 class="project-header">
                         Proposed Solution: Final Solution
                     </h2>
@@ -183,8 +199,10 @@
                             Overall, they can also <b>expand on their searching</b> through the search bar on the Explore page, or the <b>two filter options provided</b> which customize programs based on the <b>interest</b> or focus area of a program, as well as how far a program is to a parent's <b>zip code</b>.
                         </p>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
 
                 <section>
+                    <span class="project-eyebrow">Rationale</span>
                     <h2 class="project-header">
                         Why did I choose to filter this way?
                     </h2>
@@ -198,8 +216,10 @@
                             <img class="rounded-image" src="graphics/PhillyReach-filtering-mobile-optimized.jpg" alt="Phillyreach filtering system">
                         </picture>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
             
                 <section>
+                    <span class="project-eyebrow">Visual Design</span>
                     <h2 class="project-header">
                         The users informed my final design
                     </h2>
@@ -215,8 +235,10 @@
                     </div>
                         <ul><li>I placed a <b>focus on ease of use and accessibility</b> on the website by taking into consideration the website's fonts and font sizes, color contrast, button sizes, as well as <b>following a grid system</b> in the explore page. This culminated in a consistent, sleek design.</li></ul>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                 
                 <section>
+                    <span class="project-eyebrow">Final Flow</span>
                     <h2 class="project-header">
                         PhillyReach provides a quick user flow
                     </h2>
@@ -238,8 +260,10 @@
                             </picture>
                         </div>
                 </section>
+            <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 220 44" fill="none" xmlns="http://www.w3.org/2000/svg"><!-- horizontal line --><line x1="62" y1="28" x2="158" y2="28" stroke="#005C46" stroke-width="1.3"/><!-- LEFT sprig base stem --><path d="M62 28 L32 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- left leaf 1: straight up from base, wide oval --><path d="M32 28 C28 28 22 20 26 12 C28 8 32 10 34 14 C36 18 36 26 32 28Z" fill="#427a42"/><!-- left leaf 2: angled left --><path d="M32 28 C28 28 14 24 10 14 C8 10 12 8 16 10 C20 12 28 22 32 28Z" fill="#005C46"/><!-- left leaf 3: angled further left --><path d="M32 28 C30 26 10 28 4 20 C2 16 6 12 10 14 C14 16 28 24 32 28Z" fill="#427a42"/><!-- RIGHT sprig base stem --><path d="M158 28 L188 28" stroke="#005C46" stroke-width="1.3" stroke-linecap="round"/><!-- right leaf 1: straight up --><path d="M188 28 C192 28 198 20 194 12 C192 8 188 10 186 14 C184 18 184 26 188 28Z" fill="#427a42"/><!-- right leaf 2: angled right --><path d="M188 28 C192 28 206 24 210 14 C212 10 208 8 204 10 C200 12 192 22 188 28Z" fill="#005C46"/><!-- right leaf 3: angled further right --><path d="M188 28 C190 26 210 28 216 20 C218 16 214 12 210 14 C206 16 192 24 188 28Z" fill="#427a42"/></svg></div>
                 
                 <section class="proj1-reflection">
+                    <span class="project-eyebrow">Reflection</span>
                     <h2 class="project-header reflection-header">
                         What I learned from this project
                     </h2>
@@ -254,52 +278,57 @@
             </div>
 
             <!-- prototype button -->
-            <a class="button button-prototype phillyreach-button" href="https://www.figma.com/proto/e9iZLgxX1l64bsVuw4lrok/Team-Nameless-Wireframes-%2B-Mock-up?page-id=181%3A2580&type=design&node-id=200-58230&viewport=341%2C54%2C0.02&t=cOALO9CL8rP6YvYY-1&scaling=scale-down&starting-point-node-id=200%3A58230&show-proto-sidebar=1&mode=design" target="_blank">View Figma Prototype</a>
-                
+            <a class="button button-prototype phillyreach-button" href="https://www.figma.com/proto/e9iZLgxX1l64bsVuw4lrok/Team-Nameless-Wireframes-%2B-Mock-up?page-id=181%3A2580&type=design&node-id=200-58230&viewport=341%2C54%2C0.02&t=cOALO9CL8rP6YvYY-1&scaling=scale-down&starting-point-node-id=200%3A58230&show-proto-sidebar=1&mode=design" target="_blank">View Figma Prototype</a>        </div>
 
-            <aside class="more-projects">
-                <h3 class="more-title">
-                    More Projects
-                </h3> 
-                <a class="more-link-image" href="amazon.html">
-                    <img src="images/more-amazon-optimized.jpg" alt="Amazon case study snapshot" class="more-img more1">
-                </a>
-                <a class="word1 more-link" href="amazon.html"><h4>Redesigned Delivery Instructions</h4></a>
-                <a class="more-link-image" href="zeroeyes.html">
-                    <img src="images/more-ze-optimized.jpg" alt="ZeroEyes case study snapshot" class="more-img more2">
-                </a>
-                <a class="word2 more-link" href="zeroeyes.html"><h4>Enhanced Brand Presence</h4></a>
 
-                <a class="more-link-image" href="michoacana.html">
-                    <img src="images/more-michoacana-optimized.jpg" alt="Michoacana case study snapshot" class="more-img more3">
-                </a>
-                <a class="word3 more-link" href="michoacana.html"><h4>Revamped Michoacana Site</h4></a>
-            </aside>
-
-        </div>
+    <nav class="case-next" aria-label="Next case study">
+        <p class="case-next-thanks">Thanks for reading!</p>
+        <span class="case-next-eyebrow">Next project</span>
+        <a class="case-next-link" href="amazon.html">
+            <img class="case-next-logo" src="graphics/amazon-logo.jpg" alt="Amazon">
+            <span class="case-next-title">Feature Redesign</span>
+            <span class="case-next-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18 L18 6 M9 6 L18 6 L18 15"/>
+                </svg>
+            </span>
+        </a>
+    </nav>
     </main>
     <footer>
-        <div class="footer-first">
-            <img class="footer-philly" alt="Philadelphia skyline vector" src="images/footer-philly.svg">
-            
-            <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
+        <!-- Left column: skyline + name/tagline + nav -->
+        <div class="footer-brand">
+            <img class="footer-philly" alt="Philadelphia skyline" src="images/footer-philly.svg">
+            <p class="footer-name">Lucia Garzon</p>
+            <p class="footer-tagline">UI/UX Designer &amp; Researcher</p>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a class="footer-nav-link" href="index.html">Home</a>
+                <a class="footer-nav-link" href="about.html">About</a>
+                <a class="footer-nav-link" href="creative.html">Creative</a>
+                <a class="footer-nav-link" href="projects.html">Archive</a>
+            </nav>
         </div>
-        
-        <div class="footer-icons">
-            <!-- LinkedIn icon -->
-            <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
-                <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
-            </a>
-            <!-- Email icon -->
-            <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
-                <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
-            </a>
-            <!-- Github icon -->
-            <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
-                <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
-            </a>
+
+        <!-- Right column: social icons + credit -->
+        <div class="footer-right">
+            <div class="footer-icons">
+                <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank" aria-label="LinkedIn">
+                    <img alt="LinkedIn" src="images/footer-linkedin.svg" class="footer-linkedin">
+                </a>
+                <a class="icon" href="mailto:lg852@drexel.edu" target="_blank" aria-label="Email">
+                    <img alt="Email" src="images/footer-email.svg" class="footer-email">
+                </a>
+                <a class="icon" href="https://github.com/lucia-garzon" target="_blank" aria-label="GitHub">
+                    <img alt="GitHub" src="images/footer-github.svg" class="footer-github">
+                </a>
+            </div>
+            <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
         </div>
     </footer>
     <script src="js/index.js"></script>
+    <!-- GSAP + ScrollTrigger (scroll animations) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/case-study.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<svg width="35" height="40" viewBox="5 4 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Grabbing (closed) hand — while dragging. Green fill + white outline on a
+       single path (no green rim), soft drop shadow. -->
+  <defs>
+    <filter id="ds" x="-30%" y="-30%" width="170%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0.5" dy="1" stdDeviation="1.2" flood-color="#08281d" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M19 23H18H17H13V21.9635C13 21.1447 9.79985 18.8634 9.79985 18.8634C9.3581 18.5352 9 17.8277 9 17.2704V13.6667C9 12.5213 9.8955 11.5926 11 11.5926V14.7037H12V9.86437C12 9.38681 12.373 9 12.8335 9C13.754 9 14.5 9.77363 14.5 10.7282V10.3829C14.5 9.90533 14.873 9.51852 15.3335 9.51852C16.254 9.51852 17 10.2921 17 11.2467V10.9014C17 10.4239 17.373 10.037 17.8335 10C18.754 10.037 19.5 10.8107 19.5 11.7653V11.4199C19.5 10.9424 19.873 10.5556 20.3335 10.5556C21.254 10.5556 22 11.3292 22 12.2838V17.0043C22 17.5542 21.7627 18.3812 21.4745 18.8573C21.4745 18.8573 20 21.1447 20 21.9635V23H19Z" fill="#005C46" stroke="#ffffff" stroke-width="2.6" stroke-linejoin="round" vector-effect="non-scaling-stroke" filter="url(#ds)"/>
+</svg>

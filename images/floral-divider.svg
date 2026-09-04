@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" fill="none">
+    <!--
+      Section divider: horizontal line broken in the middle by a small
+      pointed leaf, with tiny accent leaves flanking it. Single color at
+      low opacity so nothing competes with the section content nearby.
+      Palette:
+        #005C46 : button color / dark green (everything, at varying opacity)
+
+      How this is built:
+        1. Two horizontal lines flank the center (from x=12-93 and x=127-208).
+        2. Two tiny accent leaves flank the center.
+        3. Central leaf: small almond shape at (110, 20) with a thin vein.
+
+      To adjust:
+        - Bigger / smaller central leaf: change the "9" and "5" values in the
+          central path (M 0 9 C -5 5 ...). Higher numbers = larger leaf.
+        - Louder / quieter overall: change the opacity values on each element
+          (0.55 for lines, 0.65 for the central leaf, 0.55 for accents).
+        - Different color: swap #005C46 for another hex.
+    -->
+
+    <!-- Left line -->
+    <line x1="12" y1="20" x2="80" y2="20" stroke="#005C46" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+
+    <!-- Left accent leaf (tiny) -->
+    <path d="M 90 20 C 87 17 83 17 84 20 C 83 23 87 23 90 20 Z" fill="#005C46" opacity="0.55"/>
+
+    <!-- Central lily pad: uses the same silhouette path as
+         images/hero-lilypad-2.svg (the pad graphic scattered elsewhere on
+         the site), scaled down and recolored to match the surrounding lines
+         so it reads as one calm mark instead of a full colored asset.
+         The wrapping <g> translates the pad's original center (53, 44 in
+         the source viewBox 107x89) to origin, scales it down, then
+         positions the origin at (110, 20) — the middle of this divider. -->
+    <g transform="translate(110 20) scale(0.22) translate(-53 -44)">
+        <path fill="#005C46" opacity="0.65" d="m12.516 41.9252c-3.61938-.0079-6.76533-2.7994-6.34101-6.3932 1.01964-8.6358 6.02411-14.4151 12.68201-20.2903 8.174-7.21319 19.3552-11.56067 31.268-12.15758 11.9128-.5969 23.6618 2.60161 32.8558 8.94458 9.194 6.3429 15.1421 15.3537 16.6336 25.1982 1.4916 9.8445-1.5855 19.7831-8.605 27.7928-7.0194 8.0098-17.4537 13.4889-29.1792 15.3221-11.7254 1.8332-23.8608-.1173-33.9364-5.4544-7.8913-4.18-14.2133-10.2983-18.00753-17.3737-1.67262-3.1191.44373-6.6915 3.90633-7.4054l39.2615-8.0948z"/>
+    </g>
+
+    <!-- Right accent leaf (mirror) -->
+    <path d="M 130 20 C 133 17 137 17 136 20 C 137 23 133 23 130 20 Z" fill="#005C46" opacity="0.55"/>
+
+    <!-- Right line -->
+    <line x1="140" y1="20" x2="208" y2="20" stroke="#005C46" stroke-width="1.4" stroke-linecap="round" opacity="0.55"/>
+</svg>
