@@ -3806,6 +3806,11 @@ body.is-loading {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    /* Spin around the disc's own centre on every browser. Safari/iOS rotate an
+       <svg> element around the SVG origin (0,0) without these, so the disc
+       swung off instead of spinning — which is why it looked static on mobile. */
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
 }
 /* Lotus bloom laid across the disc's wavy top cut so the slice reads as the
    disc peeking out from behind the flower. Sized + centered so the flower's
@@ -4873,7 +4878,15 @@ body.frog-cursor-off [onclick]:hover {
     .case-next-link { gap: 0.9rem; }
 }
 
-/* Mobile — stack icon on top of title so long titles don't cramp. */
+/* Mobile: hide the Next project block entirely — its big title + logo row
+   was cramping layout and causing content cutoffs on phone-width screens.
+   The "Thanks for reading!" line is inside the block so it hides with it. */
+@media screen and (max-width: 700px) {
+    .case-next { display: none !important; }
+}
+
+/* Mobile — stack icon on top of title so long titles don't cramp.
+   (Applied only in the 561–700px sliver, since below 560 the block is hidden.) */
 @media screen and (max-width: 560px) {
     .case-next { margin: 3vh auto 2vh; padding: 0 1.25rem; }
     .case-next-link {
