@@ -3643,26 +3643,20 @@ body.is-loading {
     38%  { transform: translateY(0) scaleY(0.88); }     /* squash on landing */
 }
 
-/* Respect reduced motion: slow calm version instead of no animation */
+/* Respect reduced motion: just show the centered text, hide pads and frog */
 @media (prefers-reduced-motion: reduce) {
-    .pad {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        opacity: 1;
-        transform: none;
-    }
-    .loader-frog {
-        animation: none;
-        opacity: 1;
-        transform: translate(335px, 88px);
-    }
+    .pad, .loader-frog { display: none; }
     .loader-text {
-        animation-duration: 0.01ms !important;
-        opacity: 0.85;
-    }
-    .loader-text .hop-letter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        opacity: 1;
         animation: none;
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
     }
+    .loader-text .hop-letter { animation: none; }
 }
 
 
