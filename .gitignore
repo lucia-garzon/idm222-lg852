@@ -11,3 +11,4 @@
 
 # Unused local GSAP library (not referenced by the site)
 gsap-public/
+.DS_Store
