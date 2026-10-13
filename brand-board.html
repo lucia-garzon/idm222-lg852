@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08201e">
+<title>Lucia Garzon — Personal Brand Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #08201E;
+  --green: #004D48;
+  --mint: #DEFFFD;
+  --teal: #0D96A5;
+  --paper: #F7F8F3;
+  --white: #FFFFFF;
+  --muted: #526764;
+  --line: rgba(8,32,30,.14);
+  --pink: #F3B8B6;
+  --lilac: #DCD5F0;
+  --radius: 22px;
+  --shadow: 0 14px 36px rgba(8,32,30,.07);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.55;
+}
+a { color: inherit; }
+.page { width: min(1440px, 100%); margin: auto; padding: clamp(16px, 3vw, 42px); }
+.topbar { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-bottom:28px; }
+.brand-mark { display:flex; align-items:center; gap:12px; font-family:'Montserrat',sans-serif; font-weight:800; letter-spacing:-.04em; }
+.logo { width:46px; height:46px; border-radius:50%; display:grid; place-items:center; background:var(--green); color:var(--mint); font-size:15px; position:relative; overflow:hidden; }
+.logo::after { content:""; position:absolute; width:26px; height:26px; border:1px solid var(--mint); border-radius: 100% 0 100% 0; transform:rotate(-35deg); right:-4px; bottom:-4px; opacity:.9; }
+.eyebrow { text-transform:uppercase; letter-spacing:.16em; font-size:.72rem; font-weight:600; color:var(--teal); }
+.top-note { font-size:.8rem; color:var(--muted); text-align:right; }
+.hero {
+  display:grid; grid-template-columns: minmax(0,1.35fr) minmax(260px,.65fr);
+  gap:clamp(24px,5vw,70px); align-items:center;
+  background:var(--mint); border-radius:32px; padding:clamp(28px,5vw,72px); position:relative; overflow:hidden;
+}
+.hero::after { content:""; position:absolute; width:340px; height:340px; border:1px solid rgba(0,77,72,.12); border-radius:50%; right:-115px; top:-160px; box-shadow:0 0 0 34px rgba(0,77,72,.025),0 0 0 70px rgba(0,77,72,.025); pointer-events:none; }
+.hero-copy,.hero-aside { position:relative; z-index:1; }
+h1,h2,h3,p { margin-top:0; }
+h1 { font:800 clamp(2.7rem,7.2vw,6.7rem)/.98 'Montserrat',sans-serif; letter-spacing:-.075em; margin:14px 0 22px; max-width:800px; }
+.hero-copy .intro { font-size:clamp(1rem,1.6vw,1.25rem); max-width:700px; color:#23413E; }
+.hero-aside { border-left:1px solid rgba(0,77,72,.22); padding-left:clamp(20px,3vw,38px); }
+.hero-aside h2 { font:700 1rem 'Montserrat',sans-serif; margin-bottom:10px; }
+.hero-aside p { color:#31524F; font-size:.94rem; }
+.pill-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+.pill { border:1px solid rgba(0,77,72,.24); padding:7px 12px; border-radius:99px; font-size:.77rem; font-weight:500; }
+.section-heading { display:flex; align-items:end; justify-content:space-between; gap:20px; margin:46px 0 18px; }
+.section-heading h2 { margin:0; font:700 clamp(1.4rem,3vw,2rem)/1.1 'Montserrat',sans-serif; letter-spacing:-.05em; }
+.section-heading p { margin:0; color:var(--muted); font-size:.85rem; max-width:420px; }
+.grid { display:grid; gap:16px; }
+.grid-3 { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.grid-2 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.card { background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:clamp(20px,2.6vw,32px); min-width:0; box-shadow:var(--shadow); }
+.card h3 { font:700 1.03rem 'Montserrat',sans-serif; margin-bottom:14px; letter-spacing:-.025em; }
+.card p:last-child { margin-bottom:0; }
+.small-label { color:var(--teal); font-size:.7rem; font-weight:600; letter-spacing:.13em; text-transform:uppercase; margin-bottom:9px; }
+.value-card { min-height:180px; display:flex; flex-direction:column; justify-content:space-between; }
+.value-number { color:var(--teal); font:700 2.2rem 'Montserrat',sans-serif; letter-spacing:-.07em; }
+.value-card p { color:var(--muted); font-size:.9rem; }
+.swatches { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+.swatch { min-width:0; }
+.swatch-color { height:100px; border-radius:13px; margin-bottom:10px; border:1px solid rgba(8,32,30,.08); }
+.swatch strong { display:block; font-size:.78rem; font-weight:600; }
+.swatch code { color:var(--muted); font-size:.73rem; }
+.type-sample { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.type-box { background:var(--paper); border-radius:15px; padding:18px; }
+.type-box .sample { font-size:1.65rem; line-height:1.1; margin:8px 0 12px; letter-spacing:-.05em; }
+.type-box:first-child .sample { font-family:'Montserrat',sans-serif; font-weight:700; }
+.type-box:last-child .sample { font-family:'Rubik',sans-serif; font-weight:400; }
+.type-box span { font-size:.72rem; color:var(--muted); }
+.tag-list { display:flex; flex-wrap:wrap; gap:8px; }
+.tag { background:var(--mint); color:var(--green); border-radius:9px; padding:8px 11px; font-size:.82rem; }
+.tag.dark { background:var(--green); color:white; }
+.list { list-style:none; padding:0; margin:0; }
+.list li { padding:11px 0; border-bottom:1px solid var(--line); }
+.list li:last-child { border-bottom:0; padding-bottom:0; }
+.list li::before { content:"↗"; color:var(--teal); font-weight:700; margin-right:10px; }
+.goal-list { display:grid; gap:12px; }
+.goal { display:grid; grid-template-columns:36px 1fr; gap:12px; align-items:start; }
+.goal-num { width:34px; height:34px; display:grid; place-items:center; background:var(--mint); color:var(--green); border-radius:50%; font-weight:700; font-family:'Montserrat',sans-serif; }
+.goal p { margin:2px 0 0; font-size:.9rem; }
+.timeline { font-size:.76rem; color:var(--muted); display:block; margin-top:3px; }
+.quote { background:var(--green); color:var(--mint); padding:clamp(26px,4vw,44px); border-radius:var(--radius); font:600 clamp(1.4rem,3.4vw,2.6rem)/1.2 'Montserrat',sans-serif; letter-spacing:-.05em; }
+.quote small { display:block; font:400 .8rem 'Rubik',sans-serif; letter-spacing:0; color:#B6D9D5; margin-top:20px; }
+.channels { display:flex; gap:12px; flex-wrap:wrap; }
+.channel { flex:1; min-width:130px; padding:17px; border:1px solid var(--line); border-radius:14px; }
+.channel strong { display:block; font-family:'Montserrat',sans-serif; margin-bottom:4px; }
+.channel span { font-size:.8rem; color:var(--muted); }
+.footer { display:flex; justify-content:space-between; gap:16px; padding:26px 2px 4px; color:var(--muted); font-size:.78rem; }
+@media (max-width: 900px) {
+  .hero { grid-template-columns:1fr; }
+  .hero-aside { border-left:0; border-top:1px solid rgba(0,77,72,.22); padding:22px 0 0; }
+  .grid-3 { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .grid-3 > :last-child:nth-child(odd) { grid-column:1 / -1; }
+}
+@media (max-width: 600px) {
+  .page { padding:14px; }
+  .topbar { align-items:flex-start; }
+  .top-note { max-width:120px; font-size:.72rem; }
+  .hero { padding:26px 22px; border-radius:23px; }
+  h1 { font-size:clamp(2.8rem,15vw,4.6rem); }
+  .section-heading { display:block; margin-top:34px; }
+  .section-heading p { margin-top:8px; }
+  .grid-3,.grid-2 { grid-template-columns:1fr; }
+  .grid-3 > :last-child:nth-child(odd) { grid-column:auto; }
+  .swatches { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .swatch-color { height:76px; }
+  .type-sample { grid-template-columns:1fr; }
+  .value-card { min-height:145px; }
+  .footer { flex-direction:column; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="topbar">
+    <div class="brand-mark"><span class="logo" aria-hidden="true">LG</span><span>Lucia Garzon</span></div>
+    <div class="top-note">PERSONAL BRAND BOARD<br>UI/UX DESIGN · PHILADELPHIA, PA</div>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-copy">
+      <div class="eyebrow">Curious by nature. Intentional by design.</div>
+      <h1 id="page-title">Lucia<br>Garzon<span style="color:var(--teal)">.</span></h1>
+      <p class="intro">I help companies, from enterprise organizations to startups, simplify complex digital experiences by connecting customer insights with business goals through a curious, research-informed approach to UX design.</p>
+      <div class="pill-row"><span class="pill">Research-informed</span><span class="pill">Multidisciplinary</span><span class="pill">Customer-driven</span></div>
+    </div>
+    <aside class="hero-aside">
+      <div class="small-label">My focus</div>
+      <h2>Making complex experiences feel clear.</h2>
+      <p>I bring together user needs, research, visual design, and product goals to make digital experiences easier to understand and use.</p>
+      <div class="pill-row"><span class="pill">Enterprise</span><span class="pill">Consumer</span><span class="pill">Web + Mobile</span></div>
+    </aside>
+  </section>
+
+  <div class="section-heading"><h2>What guides my work</h2><p>The principles behind how I think, collaborate, and design.</p></div>
+  <section class="grid grid-3" aria-label="Brand values">
+    <article class="card value-card"><div><div class="small-label">Value 01</div><h3>Empathy</h3><p>Start with people: their needs, context, frustrations, and motivations.</p></div><div class="value-number">01</div></article>
+    <article class="card value-card"><div><div class="small-label">Value 02</div><h3>Collaboration</h3><p>Bring different perspectives together to move toward shared outcomes.</p></div><div class="value-number">02</div></article>
+    <article class="card value-card"><div><div class="small-label">Value 03</div><h3>Attention to detail</h3><p>Make thoughtful decisions across the full experience, from structure to interaction.</p></div><div class="value-number">03</div></article>
+  </section>
+
+  <div class="section-heading"><h2>Visual identity</h2><p>A grounded, nature-inspired palette with a clear and approachable typographic system.</p></div>
+  <section class="grid grid-2">
+    <article class="card">
+      <div class="small-label">Color palette</div><h3>Deep greens, fresh teals, soft mint</h3>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-color" style="background:#08201E"></div><strong>Neutral black</strong><code>#08201E</code></div>
+        <div class="swatch"><div class="swatch-color" style="background:#004D48"></div><strong>Primary dark</strong><code>#004D48</code></div>
+        <div class="swatch"><div class="swatch-color" style="background:#DEFFFD"></div><strong>Primary light</strong><code>#DEFFFD</code></div>
+        <div class="swatch"><div class="swatch-color" style="background:#0D96A5"></div><strong>Secondary mid</strong><code>#0D96A5</code></div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="small-label">Typography</div><h3>Friendly, clear, confident</h3>
+      <div class="type-sample">
+        <div class="type-box"><span>HEADINGS · MONTSERRAT</span><div class="sample">Ideas<br>in focus.</div><span>Bold, geometric, expressive</span></div>
+        <div class="type-box"><span>BODY · RUBIK</span><div class="sample">Thoughtful design starts with understanding.</div><span>Approachable and readable</span></div>
+      </div>
+    </article>
+  </section>
+
+  <div class="section-heading"><h2>How I show up</h2><p>A consistent personality across my portfolio, resume, and professional conversations.</p></div>
+  <section class="grid grid-3">
+    <article class="card"><div class="small-label">Brand voice</div><h3>Engaging · Curious · Warm</h3><p>I ask questions, explain my thinking, and make room for different perspectives without overstating what I know.</p></article>
+    <article class="card"><div class="small-label">Target audience</div><h3>Product teams that value people and outcomes</h3><p>Product teams at technology and enterprise companies, as well as design agencies, working on meaningful digital experiences.</p></article>
+    <article class="card"><div class="small-label">Channels</div><h3>Where my brand lives</h3><div class="channels"><div class="channel"><strong>Portfolio</strong><span>Case studies and process</span></div><div class="channel"><strong>LinkedIn</strong><span>Work, learning, connections</span></div></div></article>
+  </section>
+
+  <div class="section-heading"><h2>My experience & direction</h2><p>What I bring today, where I can grow, and the next steps I’m working toward.</p></div>
+  <section class="grid grid-2">
+    <article class="card">
+      <div class="small-label">Experience themes</div><h3>Connecting disciplines and perspectives</h3>
+      <div class="tag-list"><span class="tag dark">Enterprise tools</span><span class="tag">Consumer products</span><span class="tag">Websites</span><span class="tag">Mobile apps</span><span class="tag">Visual communication</span><span class="tag">UX research</span><span class="tag">Product goals</span></div>
+      <p style="margin-top:18px;color:var(--muted);font-size:.9rem">Experience across different types of products helps me look at problems from more than one angle.</p>
+    </article>
+    <article class="card">
+      <div class="small-label">Challenge → opportunity</div>
+      <h3>Growing in a competitive field</h3>
+      <p><strong>Challenge:</strong> As a junior designer entering a competitive market, I need to clearly communicate the value of my experience.</p>
+      <p><strong>Opportunity:</strong> Use my enterprise and customer-facing project experience, research-led process, and multidisciplinary perspective to tell a distinct story.</p>
+    </article>
+  </section>
+
+  <div class="section-heading"><h2>Goals in motion</h2><p>Specific actions that help turn my brand into consistent progress.</p></div>
+  <section class="grid grid-2">
+    <article class="card">
+      <div class="small-label">Near-term goals</div><h3>Build momentum</h3>
+      <div class="goal-list">
+        <div class="goal"><div class="goal-num">1</div><p>Publish one new case study.<span class="timeline">Portfolio · Next milestone</span></p></div>
+        <div class="goal"><div class="goal-num">2</div><p>Apply to two creative side jobs.<span class="timeline">Target: October 16</span></p></div>
+        <div class="goal"><div class="goal-num">3</div><p>Submit three tailored applications.<span class="timeline">Target: end of October</span></p></div>
+        <div class="goal"><div class="goal-num">4</div><p>Have two coffee chats.<span class="timeline">Networking goal · June</span></p></div>
+      </div>
+    </article>
+    <aside class="quote">“Good design connects what people need with what a product is trying to achieve.”<small>MY DESIGN PHILOSOPHY</small></aside>
+  </section>
+
+  <footer class="footer"><span>Lucia Garzon · UI/UX Designer</span><span>Curious thinking. Thoughtful experiences. Clear outcomes.</span></footer>
+</main>
+<footer aria-label="Footer">
+    <section class="footer-first">
+        <img class="footer-philly" alt="Vector image of Philadelphia skyline" src="images/footer-philly.svg">
+        
+        <p class="footer-text">UI/UX Designer based in Philadelphia, PA</p>
+        <!-- <p class="footer-text">Designed &amp; Developed by Lucia Garzon</p>
+        <p class="footer-text">Designer based in Philadelphia, PA • Website made by me!</p> -->
+    </section>
+    
+    <section class="footer-icons" aria-label="Social media links">
+        <a href="#top" class="skip-link2">
+            Skip social media
+            </a>
+        <!-- LinkedIn icon -->
+        <a class="icon" href="https://www.linkedin.com/in/luciagarzon/" target="_blank">
+            <img alt="LinkedIn icon" src="images/footer-linkedin.svg" class="footer-linkedin">
+        </a>
+        <!-- Email icon -->
+        <a class="icon" href="mailto:lg852@drexel.edu" target="_blank">
+            <img alt="Email icon" src="images/footer-email.svg" class="footer-email">
+        </a>
+        <!-- GitHub icon -->
+        <a class="icon" href="https://github.com/lucia-garzon" target="_blank">
+            <img alt="Github icon" src="images/footer-github.svg" class="footer-github">
+        </a>
+
+    </section>
+
+</footer>
+<script src="js/index.js"></script>
+<script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script> 
+</body>
+</html>
+
+<!-- <div class="about-text"> 
+                <h1>Lucia Garzon</h1>
+                <p>
+                    I am a <b>UI/UX designer</b> based in Philadelphia. My main focus is creating customer-centric solutions stakeholders can rely on, that is research-backed and thoughtful in design! 
+                </p>
+                <p>
+                    I've redesigned products at <a class="link" href="https://www.linkedin.com/company/amazon/" target="_blank"><b>Amazon</b></a> and <a class="link" href="https://www.linkedin.com/company/acuity-insurance/" target="_blank"><b>Acuity Insurance</b></a> and created new experiences at <a class="link" href="https://www.linkedin.com/company/amazon-web-services/" target="_blank"><b>AWS</b></a> and <a class="link" href="https://www.linkedin.com/company/graditude/" target="_blank"><b>Graditude</b></a>. My work spans across different industries, and is ever-expanding as I continue growing as a designer.  
+                </p>
+                <p>
+                    In my free time, I enjoy <a class="link" href="creative.html"><b>making art in any form</b></a>, as well as reading, traveling, and paddle boarding. If you've read this far, <b>say hi</b> via 
+                    <a class="link" href="mailto:lucia.garzon.design@gmail.com" target="_blank"><b>email</b></a> or on <a class="link" href="https://www.linkedin.com/in/luciagarzon/" target="_blank"><b>LinkedIn</b></a>!
+                    </p>
+                    
+                <p>UVP: I help companies, from enterprise organizations to startups, simplify complex digital experiences by connecting customer insights with business goals through a curious, research-informed approach to UX design.</p>
+
+                <p>Target audience: Product teams at tech and enterprise companies and agencies.</p>
+                
+                <p>Values: Empathy, Collaboration, Detail</p>
+
+                <p>Challenges: Junior designer arriving to competitive market</p>
+
+                <p>Opportunities: Junior designer arriving to competitive market</p>
+
+                <p>Voice: Engaging, Curious, Warm</p>
+
+                <p>Metrics + Goals: 1 new case study posted, 2 applications for creative side jobs by Oct 16, 3 tailored applications by end of October, 2 coffee chats by June</p>
+
+                <p>Type: Montserrat, Rubik for body </p>
+
+                <p>Palette:     
+                    --neutral-black: #08201E
+                    --primary-dark: #004D48; 
+                    --primary-light: #DEFFFD; 
+                    --secondary-mid: #0D96A5;</p>
+
+                <p>Channels: Portfolio, LinkedIn </p>
+            </div>      -->
