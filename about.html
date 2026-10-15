@@ -366,11 +366,27 @@
             <p class="footer-credit">Designed &amp; developed by me&nbsp;:)</p>
         </div>
     </footer>
+    
     <script src="js/index.js"></script>
     <!-- GSAP + ScrollTrigger (scroll animations) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/page-animations.js"></script>
+
+
+<script>
+    window.addEventListener("load", () => {
+      if (window.location.hash === "#resume") {
+        setTimeout(() => {
+          document.getElementById("resume")?.scrollIntoView({
+            behavior: "auto",
+            block: "start"
+          });
+        }, 500);
+      }
+    });
+  </script>
+  
 </body>
 
 </html>
